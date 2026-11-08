@@ -1,0 +1,12 @@
+/about-us        /#about        301
+/about           /#about        301
+/our-work        /#our-work     301
+/grantmaking     /#our-work     301
+/fellowship      /#fellowship   301
+/news-media      /#media        301
+/news            /#media        301
+/media           /#media        301
+/contact         /#contact      301
+/contact-us      /#contact      301
+/leadership/*    /#about        301
+/news/*          /#media        301

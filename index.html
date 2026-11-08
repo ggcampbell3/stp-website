@@ -1,0 +1,1087 @@
+<title>Sharing the Power Foundation</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Sharing the Power Foundation is an independent 501(c)(3) that turns clean energy infrastructure into lasting community benefit.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* traditional ampersand: only the & glyph in headings comes from a classic serif */
+@font-face{font-family:'AmpFix';src:local('Georgia'),local('Times New Roman'),local('Noto Serif'),local('DejaVu Serif');font-weight:100 500;unicode-range:U+0026}
+@font-face{font-family:'AmpFix';src:local('Georgia Bold'),local('Georgia-Bold'),local('Times New Roman Bold'),local('TimesNewRomanPS-BoldMT'),local('Noto Serif Bold');font-weight:600 900;unicode-range:U+0026}
+
+/* Layout: a sticky warm-black top bar carries the logo and menu; content runs below it as full-bleed "chapters" — a photo-led hero, a stats ledger, a pillar selector, a large map, and a sunrise-orange fellowship band that shows the whole cohort poster. */
+:root{
+  color-scheme:light;
+  --ink:#1A1714;        /* top bar, dark bands, body text */
+  --ink-2:#2A2520;
+  --paper:#F6F0E8;      /* warm band */
+  --white:#FFFFFF;
+  --sun:#D9711F;        /* brand orange: rules, marks */
+  --ember:#A34F0F;      /* orange text on light */
+  --btn:#B4520F;
+  --amber:#F0A140;      /* orange on dark */
+  --line:#E4DACE;
+  --muted:#5E554D;
+  --on-dark:#D9D1C7;
+  --display:'AmpFix','Fraunces',Georgia,'Times New Roman',serif;
+  --sans:'Work Sans','Segoe UI',system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--white);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important;animation:none!important}}
+h1,h2,h3,h4{font-family:var(--display);font-weight:600;line-height:1.08;margin:0 0 .45em;text-wrap:balance;letter-spacing:-.01em}
+h1{font-size:clamp(2.4rem,5.4vw,4.6rem)}
+h2{font-size:clamp(1.9rem,3.6vw,3rem)}
+h3{font-size:1.3rem}
+p{margin:0 0 1em}
+em.sun{font-style:italic;color:var(--sun)}
+.kicker{font-size:.74rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--ember);margin:0 0 14px;display:block}
+.dark .kicker,.orange .kicker{color:var(--amber)}
+.lede{font-size:1.18rem;color:var(--muted);max-width:44em}
+.fine{font-size:.82rem;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--sans);font-weight:600;font-size:.95rem;text-decoration:none;background:var(--btn);color:#fff;padding:14px 22px;border-radius:999px;border:0;cursor:pointer;transition:background .2s}
+.btn:hover{background:#8F410B}
+.btn.light{background:#fff;color:var(--ink)}
+.btn.light:hover{background:var(--paper)}
+.arrow{font-weight:600;color:var(--ember);text-decoration:none;border-bottom:2px solid var(--sun);padding-bottom:2px}
+
+/* ---------- top bar (option K: cream logo panel angled into an orange menu) ---------- */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:#FBF6EF}
+.bar{position:relative;z-index:50;display:grid;grid-template-columns:auto 1fr auto;align-items:center;background:linear-gradient(90deg,#B4520F,#D9711F 60%,#EE9A45);color:var(--ink)}
+.bar-in{display:flex;align-items:center;justify-content:space-between;gap:24px;align-self:stretch;background:#FBF6EF;padding-block:20px;padding-left:max(40px,env(safe-area-inset-left,0px));padding-right:96px;clip-path:polygon(0 0,100% 0,calc(100% - 60px) 100%,0 100%)}
+.bar .logo img{height:92px;width:auto;display:block}
+.bar-band{background:none;min-width:0}
+.bar-band ol{list-style:none;margin:0;padding:0;display:flex;justify-content:flex-start;flex-wrap:wrap;gap:0 36px}
+.bar-band a{display:block;color:#fff;text-decoration:none;font-weight:600;font-size:1.12rem;padding:12px 0 9px;border-bottom:3px solid transparent;white-space:nowrap}
+.bar-band a:hover{color:#FFE7CF}
+.bar-band a.active{border-bottom-color:#fff}
+.bar > .cta{margin-right:max(40px,env(safe-area-inset-right,0px));margin-left:24px;background:#fff;color:#A34F0F;padding:16px 28px;font-size:1.02rem;white-space:nowrap}
+.bar > .cta:hover{background:#FFF1E2;color:#8F410B}
+@media (max-width:1320px){.bar-band ol{gap:0 24px}.bar-band a{font-size:1rem}.bar-in{padding-right:84px}.bar .logo img{height:80px}.bar > .cta{padding:13px 20px;font-size:.92rem}}
+@media (max-width:1120px){.bar > .cta{display:none}}
+.menu-btn{all:unset;display:none;cursor:pointer;color:var(--ink);font-weight:600;font-size:1rem;padding:10px 4px}
+.menu-btn:focus-visible{outline:3px solid var(--sun)}
+
+/* content gutters */
+.in{padding-left:max(56px,env(safe-area-inset-left,0px));padding-right:max(56px,env(safe-area-inset-right,0px));max-width:1280px}
+.band{padding-block:96px}
+.paper{background:var(--paper)}
+.dark{background:var(--ink);color:var(--on-dark)}
+.dark h2,.dark h3,.dark h4{color:#fff}
+.orange{background:linear-gradient(160deg,#C8621A 0%,#D9711F 45%,#E38A35 100%);color:#FFF4E8}
+.orange h2,.orange h3{color:#fff}
+
+.page{display:none}
+.page.active{display:block}
+
+/* ---------- home hero ---------- */
+.hero{position:relative;min-height:min(78vh,760px);display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:var(--ink)}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:35% 35%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,23,20,0) 30%,rgba(26,23,20,.78) 100%),linear-gradient(90deg,rgba(26,23,20,.45),rgba(26,23,20,0) 60%)}
+.hero .in{position:relative;z-index:1;padding-block:64px 72px;width:100%}
+.hero h1{color:#fff;max-width:13em}
+.hero h1 em{font-style:italic;color:var(--amber)}
+.hero p{font-size:1.18rem;max-width:36em;color:#F2EAE0}
+.hero .kicker{color:var(--amber)}
+.rays{position:absolute;right:-120px;top:-120px;width:520px;height:520px;z-index:1;opacity:.55;pointer-events:none}
+
+/* ledger */
+.ledger{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}
+.ledger div{padding:34px 28px 34px 0;border-right:1px solid var(--line);margin-right:28px}
+.ledger div:last-child{border-right:0;margin-right:0}
+.ledger b{display:block;font-family:var(--display);font-weight:600;font-size:clamp(2.4rem,4vw,3.4rem);line-height:1;color:var(--ink);font-variant-numeric:lining-nums}
+.ledger span{display:block;margin-top:10px;font-size:.92rem;color:var(--muted);max-width:16em}
+
+/* statement */
+.statement{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:start}
+.statement>*{min-width:0}
+.statement h2{font-size:clamp(2.1rem,4vw,3.4rem)}
+.wide-photo{margin-top:56px;width:100%;aspect-ratio:21/8;object-fit:cover;border-radius:4px}
+
+/* pillar selector */
+.selector{display:grid;grid-template-columns:320px 1fr;gap:0;border:1px solid var(--line);background:#fff;margin-top:40px}
+.selector>*{min-width:0}
+.sel-list{display:flex;flex-direction:column;border-right:1px solid var(--line)}
+.sel-list button{all:unset;cursor:pointer;display:grid;grid-template-columns:40px 1fr;gap:6px;align-items:baseline;padding:22px 24px;border-bottom:1px solid var(--line);font-family:var(--display);font-size:1.15rem;line-height:1.25;color:var(--muted);position:relative}
+.sel-list button:last-child{border-bottom:0}
+.sel-list button span{font-size:.85rem;color:#A2968A}
+.sel-list button:hover{color:var(--ink)}
+.sel-list button[aria-selected="true"]{color:var(--ink);background:var(--paper)}
+.sel-list button[aria-selected="true"]::after{content:"";position:absolute;right:-1px;top:0;bottom:0;width:4px;background:var(--sun)}
+.sel-list button[aria-selected="true"] span{color:var(--ember)}
+.sel-list button:focus-visible{outline:3px solid var(--sun);outline-offset:-3px}
+.sel-panel{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.sel-panel>*{min-width:0}
+.sel-panel img{width:100%;height:100%;min-height:360px;object-fit:cover}
+.sel-body{padding:36px 36px 30px;display:flex;flex-direction:column;gap:14px}
+.sel-body b.big{font-family:var(--display);font-weight:600;font-size:3.4rem;line-height:1;color:var(--ember)}
+.sel-body .sl{font-size:1rem;color:var(--ink);margin-top:-4px}
+.sel-body p{color:var(--muted);margin:0}
+.sel-body .partners{margin-top:auto;padding-top:16px;border-top:1px solid var(--line)}
+.sel-body .partners small{display:block;font-size:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.sel-body .partners div{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.sel-body .partners img{height:40px;width:auto;max-width:130px;min-height:0;object-fit:contain}
+.sel-body .arrow{align-self:flex-start}
+.strip{display:grid;grid-template-columns:repeat(4,1fr);margin-top:28px;gap:0}
+.strip div{padding:6px 24px;border-left:3px solid var(--sun)}
+.strip b{display:block;font-family:var(--display);font-weight:600;font-size:2.1rem;line-height:1.1;color:var(--ink)}
+.strip span{font-size:.88rem;color:var(--muted)}
+
+/* map */
+.map-big{margin-top:36px;background:#fff;border:1px solid var(--line);padding:24px}
+.impact-map{width:100%;height:auto;display:block}
+.impact-map .st path{fill:#E9E1D6}
+.impact-map .st.hl path{fill:var(--amber)}
+.impact-map .bd{fill:none;stroke:#fff;stroke-width:1.1;stroke-linejoin:round}
+.impact-map .mk circle{fill:var(--ink);stroke:#fff;stroke-width:2}
+.impact-map .mk path{fill:none;stroke:var(--amber);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.impact-map .mk .lead{stroke:var(--ink);stroke-width:1.2}
+.impact-map .mk .pin{fill:var(--ink);stroke:none}
+.impact-map .lb text{font-family:var(--sans);font-weight:700;font-size:16px;fill:var(--ink);paint-order:stroke;stroke:#fff;stroke-width:3px;stroke-linejoin:round}
+.impact-map .lb text.city{font-weight:500;font-size:13px;fill:var(--muted)}
+.glance{display:grid;grid-template-columns:repeat(6,1fr);gap:0;margin-top:0;border-top:1px solid var(--line)}
+.glance div{padding:22px 18px 6px 0}
+.glance b{display:block;font-family:var(--display);font-weight:600;font-size:1.9rem;line-height:1.05;color:var(--ember)}
+.glance span{display:block;font-size:.86rem;line-height:1.4;color:var(--ink);margin-top:6px}
+.legend{display:flex;gap:10px;align-items:center;font-size:.85rem;color:var(--muted);margin-top:8px}
+.legend i{width:20px;height:20px;border-radius:50%;background:var(--ink);display:grid;place-items:center}
+.legend i::after{content:"";width:7px;height:4px;border-left:2px solid var(--amber);border-bottom:2px solid var(--amber);transform:rotate(-45deg) translate(1px,-1px)}
+
+/* fellowship band with full poster */
+.fel{display:grid;grid-template-columns:1fr 1.15fr;gap:64px;align-items:center}
+.fel>*{min-width:0}
+.fel .lede{color:#FFF1E2}
+.fel-nums{display:flex;gap:40px;flex-wrap:wrap;margin:26px 0 32px}
+.fel-nums b{display:block;font-family:var(--display);font-size:2.6rem;font-weight:600;line-height:1;color:#fff}
+.fel-nums span{font-size:.9rem;color:#FFE2C4}
+.poster-btn{all:unset;cursor:zoom-in;display:block;border-radius:6px;overflow:hidden;box-shadow:0 30px 70px rgba(70,25,0,.35);background:#B85A14}
+.poster-btn img{width:100%;height:auto}
+.poster-btn:focus-visible{outline:3px solid #fff;outline-offset:4px}
+.zoom-hint{font-size:.82rem;color:#FFE2C4;margin-top:10px;text-align:right}
+
+/* news list */
+.news-list{border-top:1px solid var(--line);margin-top:30px}
+.news-row{display:grid;grid-template-columns:200px 1fr auto;gap:32px;align-items:center;padding:26px 0;border-bottom:1px solid var(--line);text-decoration:none}
+.news-row .t{aspect-ratio:3/2;background:var(--ink);overflow:hidden;display:grid;place-items:center;border-radius:4px}
+.news-row .t img{width:100%;height:100%;object-fit:cover;object-position:50% 20%}
+.news-row .t span{font-family:var(--display);font-style:italic;color:var(--amber);font-size:1.1rem;padding:12px;text-align:center}
+.news-row small{display:block;font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ember);margin-bottom:6px}
+.nr-sub{margin:8px 0 0;font-size:.96rem;color:var(--muted);line-height:1.5}
+.news-row h3{font-size:1.3rem;margin:0;line-height:1.3}
+.news-row .go{font-size:1.6rem;color:var(--sun);transition:transform .2s}
+.news-row:hover .go{transform:translateX(6px)}
+.news-row:hover h3{color:var(--ember)}
+
+/* closing */
+.closing{display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap}
+.closing h2{margin:0;max-width:16em}
+
+/* ---------- inner page header ---------- */
+.ph{padding-block:96px 64px;background:var(--paper);position:relative;overflow:hidden}
+.ph h1{max-width:14em}
+.ph .rays{right:-160px;top:-200px;opacity:.35}
+
+/* about */
+.cols2{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.cols2>*{min-width:0}
+.vt{list-style:none;margin:36px 0 0;padding:0;position:relative;max-width:820px}
+.vt::before{content:"";position:absolute;left:94px;top:8px;bottom:8px;width:2px;background:var(--line)}
+.vt li{display:grid;grid-template-columns:80px 1fr;gap:40px;padding:0 0 36px;position:relative}
+.vt li::before{content:"";position:absolute;left:88px;top:8px;width:14px;height:14px;border-radius:50%;background:var(--sun);box-shadow:0 0 0 5px var(--paper)}
+.vt .y{font-family:var(--display);font-size:1.3rem;font-weight:600;color:var(--ember);text-align:right;line-height:1.3}
+.vt h3{margin:0 0 6px}
+.vt p{margin:0;color:var(--muted)}
+.principles{display:grid;grid-template-columns:repeat(2,1fr);gap:0 56px;margin-top:30px}
+.principles>div{display:grid;grid-template-columns:44px 1fr;gap:18px;padding:22px 0;border-top:1px solid var(--line)}
+.principles svg{width:32px;height:32px}
+.principles h3{font-size:1.15rem;margin:0 0 4px}
+.principles p{margin:0;color:var(--muted);font-size:.98rem}
+.claims{display:grid;grid-template-columns:repeat(2,1fr);gap:0;margin-top:30px;border-top:1px solid #3A332C}
+.claims div{padding:30px 32px 30px 0;border-bottom:1px solid #3A332C}
+.claims div:nth-child(odd){border-right:1px solid #3A332C}
+.claims div:nth-child(even){padding-left:32px}
+.claims b{display:block;font-family:var(--display);font-weight:600;font-size:2.6rem;line-height:1;color:var(--amber);margin-bottom:10px}
+.claims h3{font-family:var(--sans);font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#fff;margin:0 0 6px}
+.claims p{margin:0;font-size:.98rem}
+.people{list-style:none;margin:14px 0 0;padding:0;columns:2;column-gap:56px}
+.people li{break-inside:avoid;padding:16px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:76px 1fr;gap:18px;align-items:start}
+.pl-photo{width:76px;height:76px;border-radius:50%;object-fit:cover;object-position:50% 25%;background:var(--paper)}
+.pl-main{min-width:0}
+.pl-head{flex-direction:column;gap:2px!important;padding-top:6px}
+.pl-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px}
+.people details{margin-top:6px}
+.people summary{cursor:pointer;font-size:.85rem;font-weight:600;color:var(--ember);list-style:none;display:inline-block}
+.people summary::-webkit-details-marker{display:none}
+.people summary::after{content:" +"}
+.people details[open] summary::after{content:" –"}
+.people details p{font-size:.94rem;color:var(--muted);margin:10px 0 0;line-height:1.6}
+.people b{font-family:var(--display);font-weight:600;font-size:1.12rem}
+.people span{font-size:.92rem;color:var(--muted)}
+.person{display:grid;grid-template-columns:56px 1fr;gap:16px;align-items:center;padding:16px 0;border-bottom:1px solid var(--line)}
+.person img,.person .ini{width:56px;height:56px;border-radius:50%;object-fit:cover;object-position:50% 20%}
+.person .ini{display:grid;place-items:center;background:var(--paper);font-family:var(--display);font-weight:600;color:var(--ember)}
+.person h4{margin:0;font-size:1.08rem;line-height:1.25}
+.person span{display:block;font-size:.86rem;color:var(--muted);line-height:1.35}
+.group-h{font-family:var(--sans);font-size:.78rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ember);margin:44px 0 0}
+
+.mission-photo{margin:28px 0 0;max-width:420px}
+.mission-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 35%;border-radius:14px;box-shadow:0 18px 40px rgba(90,48,25,.14)}
+.mission-photo figcaption{font-size:.82rem;color:var(--muted);margin-top:10px}
+
+.mission-b{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:stretch}
+.mission-b>*{min-width:0}
+.mb-photo{border-radius:16px;overflow:hidden;min-height:520px;box-shadow:0 18px 40px rgba(90,48,25,.14)}
+.mb-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 35%}
+@media (max-width:980px){.mission-b{grid-template-columns:1fr;gap:32px}.mb-photo{min-height:0;aspect-ratio:4/5;max-width:440px}}
+
+/* our work */
+.frame4{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:36px;counter-reset:f}
+.frame4 div{padding:0 26px 0 0;margin-right:26px;border-right:1px solid var(--line)}
+.frame4 div:last-child{border:0;margin:0}
+.frame4 .n{font-family:var(--display);font-size:3.2rem;font-weight:600;line-height:1;color:var(--sun)}
+.frame4 h3{font-size:1.2rem;margin:12px 0 10px}
+.frame4 ul{margin:0;padding-left:18px;color:var(--muted);font-size:.95rem;line-height:1.5}
+.frame4 li{margin-bottom:8px}
+.chapter{display:grid;grid-template-columns:300px 1fr;gap:64px;padding-block:80px;border-top:1px solid var(--line)}
+.chapter>*{min-width:0}
+.chapter aside{position:sticky;top:40px;align-self:start}
+.chapter aside .num{font-family:var(--display);font-size:5.5rem;font-weight:600;line-height:.85;color:var(--sun)}
+.chapter aside h2{font-size:2rem;margin-top:14px}
+.chapter aside p{font-family:var(--display);font-style:italic;color:var(--muted);font-size:1.12rem}
+.chapter .media{display:grid;grid-template-columns:1.4fr 1fr;gap:14px;margin-bottom:28px}
+.chapter .media img{width:100%;height:100%;aspect-ratio:4/3;object-fit:cover;border-radius:4px}
+.chapter .media.one{grid-template-columns:1fr}
+.chapter .media.one img{aspect-ratio:16/9}
+.nums3{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:2px solid var(--ink);border-bottom:1px solid var(--line);margin:24px 0}
+.nums3 div{padding:18px 18px 18px 0}
+.nums3 b{display:block;font-family:var(--display);font-weight:600;font-size:2.2rem;line-height:1;color:var(--ember)}
+.nums3 span{font-size:.8rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+.prog{display:grid;grid-template-columns:1fr auto;gap:4px 24px;padding:16px 0;border-bottom:1px solid var(--line)}
+.prog h4{margin:0;font-size:1.12rem}
+.prog em{font-style:normal;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ember);align-self:center;white-space:nowrap}
+.prog p{grid-column:1/-1;margin:0;color:var(--muted);font-size:.96rem}
+.logos{display:flex;flex-wrap:wrap;gap:18px;align-items:center;margin-top:22px}
+.logos img{height:42px;width:auto;max-width:150px;object-fit:contain}
+.ladder{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:22px 0;border-top:2px solid var(--ink)}
+.ladder div{padding:16px 16px 16px 0;border-right:1px solid var(--line);margin-right:16px}
+.ladder div:last-child{border:0;margin:0}
+.ladder b{font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ember)}
+.ladder h4{margin:4px 0 6px;font-size:1.05rem}
+.ladder p{margin:0;font-size:.88rem;color:var(--muted);line-height:1.45}
+.cases{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:40px}
+.cases>*{min-width:0}
+.case img{width:100%;aspect-ratio:2/1;object-fit:cover;border-radius:4px;margin-bottom:22px}
+.case small{font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--amber)}
+.case h3{font-size:1.7rem;margin:8px 0 12px}
+.case .row{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #3A332C;border-bottom:1px solid #3A332C;margin:18px 0}
+.case .row div{padding:14px 12px 14px 0}
+.case .row b{display:block;font-family:var(--display);font-size:1.6rem;color:#fff;line-height:1.1}
+.case .row span{font-size:.8rem}
+.case blockquote{margin:0;font-family:var(--display);font-style:italic;font-size:1.1rem;color:#fff;border-left:3px solid var(--sun);padding-left:18px}
+.case blockquote cite{display:block;font-family:var(--sans);font-style:normal;font-size:.82rem;color:var(--on-dark);margin-top:8px}
+
+/* fellowship page */
+.poster-full{max-width:980px;margin:40px auto 0}
+.poster-full .poster-btn{box-shadow:0 30px 70px rgba(26,23,20,.25)}
+.steps3{display:grid;grid-template-columns:repeat(3,1fr);gap:48px;margin-top:30px}
+.steps3 div{border-top:2px solid var(--ink);padding-top:16px}
+.steps3 .n{font-family:var(--display);font-size:1rem;color:var(--ember);font-weight:600}
+.steps3 h3{margin:6px 0 8px}
+.steps3 p{margin:0;color:var(--muted)}
+.bigquote{max-width:900px}
+.bigquote p{font-family:var(--display);font-size:clamp(1.4rem,2.6vw,2rem);line-height:1.35;color:#fff}
+.bigquote footer{margin:0;display:flex;align-items:center;gap:16px}
+.bigquote footer img{width:64px;height:64px;border-radius:50%;object-fit:cover}
+.bigquote cite{font-style:normal;color:var(--on-dark)}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin:28px 0 8px;border-bottom:1px solid var(--line)}
+.tabs button{all:unset;cursor:pointer;padding:12px 16px;font-weight:600;font-size:.95rem;color:var(--muted);border-bottom:3px solid transparent;margin-bottom:-1px}
+.tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--sun)}
+.tabs button:focus-visible{outline:3px solid var(--sun)}
+.fellows{display:grid;grid-template-columns:repeat(3,1fr);gap:0 40px}
+.fellows div{padding:14px 0;border-bottom:1px solid var(--line);min-width:0}
+.fellows b{display:block;font-family:var(--display);font-weight:600;font-size:1.08rem}
+.fellows span{display:block;font-size:.88rem;color:var(--muted)}
+.fellows em{display:block;font-style:normal;font-size:.82rem;font-weight:600;color:var(--ember)}
+
+/* media + contact */
+.videos{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:26px}
+.video{display:flex;gap:18px;align-items:center;text-decoration:none;padding:22px;border:1px solid var(--line);background:#fff}
+.video .pb{width:52px;height:52px;flex:none;border-radius:50%;background:var(--sun);display:grid;place-items:center}
+.video b{display:block;font-family:var(--display);font-size:1.15rem}
+.video small{color:var(--muted)}
+.contact{display:grid;grid-template-columns:1fr 1.2fr;gap:64px}
+.contact>*{min-width:0}
+.contact address{font-style:normal;line-height:1.8;color:var(--muted);margin-top:24px}
+.contact address b{color:var(--ink)}
+form.cf{display:grid;grid-template-columns:1fr 1fr;gap:22px 24px}
+form.cf .full{grid-column:1/-1}
+form.cf label{display:flex;flex-direction:column;gap:6px;font-size:.82rem;font-weight:600;letter-spacing:.04em;min-width:0}
+form.cf input,form.cf select,form.cf textarea{width:100%;min-width:0;font:inherit;font-size:1.02rem;border:0;border-bottom:2px solid var(--ink);background:transparent;padding:10px 2px;color:var(--ink);border-radius:0}
+form.cf textarea{min-height:110px;resize:vertical;border:2px solid var(--ink);padding:10px}
+form.cf input:focus,form.cf select:focus,form.cf textarea:focus{outline:none;border-color:var(--sun)}
+.note{font-size:.95rem;color:var(--ember)}
+.note.err{color:#B3261E}
+
+/* footer */
+footer.site{background:var(--paper);border-top:1px solid var(--line);padding-block:40px;font-size:.88rem;color:var(--muted)}
+footer.site .in{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer.site a{color:var(--muted)}
+
+dialog.lb{border:0;padding:0;background:transparent;max-width:min(1200px,96vw);max-height:96vh}
+dialog.lb::backdrop{background:rgba(20,16,12,.9)}
+dialog.lb img{max-height:94vh;width:auto;margin:0 auto}
+dialog.lb button{position:fixed;top:max(16px,env(safe-area-inset-top,0px));right:max(18px,env(safe-area-inset-right,0px));width:44px;height:44px;border-radius:50%;border:0;background:#fff;font-size:22px;cursor:pointer}
+
+
+/* top: logo, photo + video side by side, then the message */
+.top{background:#FBF6EF;padding-block:52px 64px;border-bottom:1px solid var(--line)}
+.top .in{margin-inline:auto}
+.top-head{text-align:center;margin-bottom:36px}
+.top-logo{height:132px;width:auto;margin:0 auto}
+.top-head p{font-family:var(--display);font-style:italic;font-size:1.2rem;color:var(--muted);margin:0 auto;max-width:34em}
+.top-media{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.top-media>*{min-width:0}
+.tile{margin:0;position:relative;display:block;aspect-ratio:16/10;max-width:100%;border-radius:14px;overflow:hidden;box-shadow:0 18px 40px rgba(90,48,25,.14);background:var(--ink)}
+.tile>img{width:100%;height:100%;object-fit:cover}
+figure.tile>img{object-position:35% 35%}
+.player{text-decoration:none}
+.player::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,23,20,0) 45%,rgba(26,23,20,.65))}
+.player>img{transition:transform .5s}
+.player:hover>img{transform:scale(1.03)}
+.player .play{position:absolute;z-index:1;left:50%;top:50%;transform:translate(-50%,-50%);width:84px;height:84px;border-radius:50%;background:rgba(255,255,255,.95);display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.25);transition:transform .2s}
+.player:hover .play{transform:translate(-50%,-50%) scale(1.06)}
+.player .play svg{width:30px;height:30px;margin-left:5px}
+.player .cap{position:absolute;z-index:1;left:20px;right:20px;bottom:16px;display:flex;justify-content:space-between;align-items:end;gap:12px;color:#fff}
+.player .cap b{font-family:var(--display);font-weight:600;font-size:1.1rem}
+.player .cap span{font-size:.8rem;opacity:.85}
+.vid video{width:100%;height:100%;object-fit:cover;display:block}
+.vid::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,23,20,0) 60%,rgba(26,23,20,.55));pointer-events:none}
+.vid-toggle{position:absolute;z-index:2;left:14px;bottom:14px;width:38px;height:38px;border-radius:50%;border:0;background:rgba(26,23,20,.55);display:grid;place-items:center;cursor:pointer}
+.vid-toggle svg{width:16px;height:16px}
+.vid-full{position:absolute;z-index:2;right:14px;bottom:14px;background:rgba(255,255,255,.94);color:var(--ink);text-decoration:none;font-weight:600;font-size:.82rem;padding:9px 14px;border-radius:999px}
+.vid-full:hover{background:#fff;color:var(--ember)}
+.top-copy{text-align:center;margin-top:48px}
+.top-copy h1{font-size:clamp(2.1rem,4.4vw,3.6rem);max-width:13em;margin-inline:auto}
+.top-copy h1 em{font-style:italic;color:var(--sun)}
+.top-copy p{font-size:1.15rem;color:var(--muted);max-width:38em;margin:0 auto 26px}
+@media (max-width:860px){.top-media{grid-template-columns:1fr}.top-logo{height:101px}}
+@media (max-width:640px){.top{padding-block:36px 48px}.player .play{width:64px;height:64px}}
+
+/* video hero directly under the menu bar */
+.vhero{position:relative;height:min(78vh,760px);min-height:480px;overflow:hidden;background:var(--ink);display:flex;align-items:flex-end;color:#fff}
+.vhero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.vhero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,23,20,.15) 0%,rgba(26,23,20,.25) 45%,rgba(26,23,20,.78) 100%),linear-gradient(90deg,rgba(26,23,20,.45),rgba(26,23,20,0) 65%)}
+.vh-in{position:relative;z-index:1;padding-block:64px 72px;width:100%}
+.vhero h1{color:#fff;max-width:12em;font-size:clamp(2.4rem,5.2vw,4.4rem)}
+.vhero h1 em{font-style:italic;color:var(--amber)}
+.vhero p{font-size:1.18rem;max-width:36em;color:#F2EAE0}
+.vh-btns{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px}
+.vid-toggle{position:absolute;z-index:2;left:auto;right:max(24px,env(safe-area-inset-right,0px));bottom:24px;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.5);background:rgba(26,23,20,.45);display:grid;place-items:center;cursor:pointer}
+.vid-toggle svg{width:16px;height:16px}
+@media (max-width:640px){.vhero{height:auto;min-height:560px}.vh-in{padding-block:48px 56px}}
+
+.vhero{height:min(72vh,720px)}
+.vhero::after{background:linear-gradient(180deg,rgba(26,23,20,0) 70%,rgba(26,23,20,.35))}
+.vh-watch{position:absolute;z-index:2;left:max(56px,env(safe-area-inset-left,0px));bottom:24px;background:rgba(255,255,255,.94);color:var(--ink);text-decoration:none;font-weight:600;font-size:.9rem;padding:10px 18px;border-radius:999px}
+.vh-watch:hover{background:#fff;color:var(--ember)}
+.intro2{background:#FBF6EF;padding-block:72px 80px;border-bottom:1px solid var(--line)}
+.i2-logo{display:flex;justify-content:center;margin-bottom:40px}
+.intro2 .i2-logo img{height:125px;width:auto;max-width:100%;aspect-ratio:auto;object-fit:contain;border-radius:0;box-shadow:none}
+@media (max-width:640px){.i2-logo{margin-bottom:28px}.intro2 .i2-logo img{height:94px}}
+.i2-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.i2-grid>*{min-width:0}
+.intro2 h1{font-size:clamp(2.2rem,4.4vw,3.8rem)}
+.intro2 h1 em{font-style:italic;color:var(--sun)}
+.intro2 p{font-size:1.15rem;color:var(--muted);max-width:34em;margin-bottom:26px}
+.intro2 img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:35% 38%;border-radius:16px;box-shadow:0 18px 40px rgba(90,48,25,.16)}
+@media (max-width:980px){.i2-grid{grid-template-columns:1fr;gap:36px}}
+@media (max-width:640px){.vhero{min-height:0;height:auto;aspect-ratio:16/9}.intro2{padding-block:52px}.vh-watch{left:16px;bottom:14px;font-size:.8rem;padding:8px 14px}.vid-toggle{bottom:14px;right:16px}}
+
+button.vh-watch{border:0;cursor:pointer;font-family:var(--sans)}
+dialog.film{border:0;padding:0;background:#000;width:min(1100px,94vw);border-radius:12px;overflow:visible}
+dialog.film::backdrop{background:rgba(20,16,12,.88)}
+dialog.film video{width:100%;height:auto;display:block;border-radius:12px;background:#000}
+.film-x{position:absolute;top:-52px;right:0;width:42px;height:42px;border-radius:50%;border:0;background:#fff;font-size:24px;line-height:1;cursor:pointer}
+
+/* leadership cards, modeled on the current site */
+.leaders{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:36px}
+.leader{background:#fff;display:flex;flex-direction:column;min-width:0}
+.l-photo{padding:18px 18px 0}
+.l-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 20%;display:block}
+.l-body{padding:18px 18px 22px;display:flex;flex-direction:column;flex:1}
+.l-body h3{font-family:var(--sans);font-weight:700;font-size:1.3rem;margin:0 0 6px;color:var(--ink)}
+.l-title{font-size:.86rem;line-height:1.45;color:var(--ink);margin:0 0 22px}
+.l-title b{font-weight:700}
+.l-bio{margin-top:auto;align-self:flex-start;background:#333;color:#fff;border:0;border-radius:25px;padding:11px 22px;font-family:var(--sans);font-weight:700;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;cursor:pointer}
+.l-bio:hover{background:var(--btn)}
+dialog.bio-dlg{border:0;padding:0;width:min(860px,94vw);max-height:90vh;border-radius:12px;background:#fff;color:var(--ink)}
+dialog.bio-dlg::backdrop{background:rgba(20,16,12,.7)}
+.bd-in{display:grid;grid-template-columns:220px 1fr;gap:32px;padding:40px}
+.bd-in>*{min-width:0}
+.bd-in img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 20%}
+.bd-in h3{font-family:var(--sans);font-size:1.6rem;margin:0 0 6px}
+.bd-in p{font-size:.98rem;line-height:1.7;color:var(--muted)}
+.bd-in .l-title{color:var(--ink);margin-bottom:18px}
+.bio-x{position:sticky;top:12px;float:right;margin:12px 12px 0 0;width:40px;height:40px;border-radius:50%;border:0;background:var(--paper);font-size:22px;cursor:pointer;z-index:1}
+@media (max-width:980px){.leaders{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.leaders{grid-template-columns:1fr}.bd-in{grid-template-columns:1fr;padding:24px}.bd-in img{max-width:200px}}
+
+/* press release pages */
+.art{max-width:calc(820px + 2*56px);padding-block:56px 96px}
+.art-back{display:inline-block;margin-bottom:28px;font-weight:600;color:var(--ember);text-decoration:none}
+.art-back:hover{text-decoration:underline}
+.art h1{font-size:clamp(2rem,4vw,3rem);margin-bottom:.4em}
+.art-fig{margin:32px 0 36px}
+.art-fig img{width:100%;max-height:520px;object-fit:cover;border-radius:12px}
+.art-fig.portrait img{width:auto;max-width:100%;max-height:640px;object-fit:contain}
+.art-fig figcaption{font-size:.82rem;color:var(--muted);margin-top:8px}
+.art-body{font-size:1.08rem;line-height:1.8}
+.art-body p{margin:0 0 1.2em}
+.art-body a{color:var(--ember)}
+.art-body h3{font-family:var(--sans);font-size:1.05rem;margin:2em 0 .5em}
+.art-body blockquote{margin:1.6em 0;padding:4px 0 4px 22px;border-left:4px solid var(--sun);font-family:var(--display);font-style:italic;font-size:1.2rem;line-height:1.55;color:var(--ink)}
+.art-body ul{columns:2;column-gap:40px;padding-left:20px;margin:0 0 1.4em}
+.art-body li{margin-bottom:6px;break-inside:avoid}
+.art-more{margin-top:64px;border-top:1px solid var(--line);padding-top:28px}
+.art-more h2{font-size:1.5rem}
+.art-more a{display:block;text-decoration:none;padding:16px 0;border-bottom:1px solid var(--line)}
+.art-more a small{display:block;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ember);margin-bottom:4px}
+.art-more a b{font-family:var(--display);font-size:1.15rem;font-weight:600}
+.art-more a:hover b{color:var(--ember)}
+@media (max-width:640px){.art-body ul{columns:1}.art{padding-block:36px 64px}}
+
+/* tagline over the intro video, modeled on sharingthepower.org */
+.vhero::after{background:linear-gradient(90deg,rgba(26,23,20,.55) 0%,rgba(26,23,20,.2) 55%,rgba(26,23,20,0) 100%),linear-gradient(180deg,rgba(26,23,20,0) 45%,rgba(26,23,20,.45) 100%)}
+.vh-box{position:absolute;z-index:2;left:max(56px,env(safe-area-inset-left,0px));bottom:64px;width:min(620px,calc(100% - 112px));color:#fff}
+.vh-box h2{margin:0 0 18px;font-family:var(--display);font-weight:600;font-size:clamp(1.8rem,3vw,2.6rem);line-height:1.6;letter-spacing:.5px}
+.vh-box h2 span{background:var(--btn);color:#fff;padding:4px 12px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.vh-box p{font-family:var(--sans);font-size:1.2rem;line-height:1.45;color:#fff;margin:0 0 28px;max-width:30em;text-shadow:0 1px 10px rgba(0,0,0,.35)}
+.vh-play{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:14px;font-family:var(--sans);font-weight:700;font-size:1rem;letter-spacing:1px;text-transform:uppercase;color:#fff;padding:18px 26px 18px 30px;border:1px solid rgba(255,255,255,.56);border-radius:40px;transition:background .2s,border-color .2s}
+.vh-play .pb{width:28px;height:28px;border-radius:50%;border:1.5px solid #fff;display:grid;place-items:center}
+.vh-play .pb svg{width:14px;height:14px;margin-left:2px}
+.vh-play:hover{background:rgba(255,255,255,.14);border-color:#fff}
+.vh-play:focus-visible{outline:3px solid var(--sun);outline-offset:4px}
+dialog.film{border:0;padding:0;background:#000;width:min(1100px,94vw);border-radius:12px;overflow:visible}
+dialog.film::backdrop{background:rgba(20,16,12,.88)}
+dialog.film video{width:100%;height:auto;display:block;border-radius:12px;background:#000}
+.film-x{position:absolute;top:-52px;right:0;width:42px;height:42px;border-radius:50%;border:0;background:#fff;font-size:24px;line-height:1;cursor:pointer}
+@media (max-width:640px){.vhero{aspect-ratio:auto;min-height:0;height:auto;display:block;background:var(--ink)}.vhero video{position:relative;aspect-ratio:16/9;height:auto}.vhero::after{display:none}.vh-box{position:relative;left:auto;bottom:auto;width:auto;margin:0;padding:24px 16px 32px;background:var(--ink)}.vid-toggle{top:12px;bottom:auto}}
+
+/* ---------- responsive ---------- */
+@media (max-width:1200px){
+  .selector{grid-template-columns:260px 1fr}
+  .sel-panel{grid-template-columns:1fr}
+  .sel-panel img{min-height:0;aspect-ratio:16/9;height:auto}
+  .glance{grid-template-columns:repeat(3,1fr)}
+}
+@media (max-width:980px){
+  .bar{display:block;background:#FBF6EF;border-bottom:4px solid var(--sun)}
+  .bar-in{clip-path:none;padding-block:12px;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+  .bar .logo img{height:58px}
+  .menu-btn{display:block}
+  .bar > .cta{display:none}
+  .bar-band{display:none;position:absolute;left:0;right:0;top:100%;z-index:5;background:#FBF6EF;border-top:4px solid var(--sun);border-bottom:1px solid var(--line)}
+  .bar-band.open{display:block}
+  .bar-band ol{flex-direction:column;gap:0;padding:0 max(20px,env(safe-area-inset-right,0px)) 12px max(20px,env(safe-area-inset-left,0px))}
+  .bar-band a{color:var(--ink);padding:14px 0;border-bottom:1px solid var(--line);font-size:1.05rem}
+  .bar-band a.active{color:var(--ember);border-bottom-color:var(--line)}
+  .in{padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px))}
+  .statement,.fel,.cols2,.contact,.cases,.chapter{grid-template-columns:1fr;gap:36px}
+  .chapter aside{position:static}
+  .selector{grid-template-columns:1fr}
+  .sel-list{flex-direction:row;overflow-x:auto;border-right:0;border-bottom:1px solid var(--line)}
+  .sel-list button{grid-template-columns:auto;white-space:nowrap;border-bottom:0;border-right:1px solid var(--line);padding:16px 18px;font-size:1rem}
+  .sel-list button[aria-selected="true"]::after{left:0;right:0;top:auto;bottom:-1px;width:auto;height:4px}
+  .ledger,.strip{grid-template-columns:1fr 1fr}
+  .ledger div:nth-child(2){border-right:0;margin-right:0}
+  .ledger div:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .frame4,.ladder{grid-template-columns:1fr 1fr;row-gap:28px}
+  .frame4 div:nth-child(2),.ladder div:nth-child(2){border-right:0;margin-right:0}
+  .fellows{grid-template-columns:1fr 1fr}
+  .rays{width:360px;height:360px}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .in{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+  .band{padding-block:60px}
+  .ph{padding-block:60px 44px}
+  .hero{min-height:560px}
+  .strip,.glance,.principles,.claims,.steps3,.videos,.fellows,.frame4,.ladder,.nums3,.case .row,form.cf{grid-template-columns:1fr}
+  .frame4 div,.ladder div{border-right:0!important;margin-right:0!important;border-bottom:1px solid var(--line)}
+  .ledger div{padding:22px 14px 22px 0;margin-right:14px}
+  .ledger b{font-size:2.1rem}
+  .hero::after{background:linear-gradient(180deg,rgba(26,23,20,.35) 0%,rgba(26,23,20,.82) 55%,rgba(26,23,20,.9) 100%)}
+  .claims div{border-right:0!important;padding-left:0!important}
+  .chapter .media{grid-template-columns:1fr}
+  .people{columns:1}
+  .news-row{grid-template-columns:96px 1fr;gap:16px}
+  .news-row .go{display:none}
+  .news-row h3{font-size:1.05rem}
+  .map-big{padding:10px}
+  .wide-photo{aspect-ratio:4/3}
+  .vt::before{left:62px}.vt li{grid-template-columns:50px 1fr;gap:28px}.vt li::before{left:56px}.vt .y{font-size:1.05rem}
+}
+</style>
+
+<header class="bar">
+  <div class="bar-in">
+    <a class="logo" href="#home" aria-label="Sharing the Power Foundation home"><img src="img/stp-logo.png" alt="Sharing the Power Foundation"></a>
+    <button class="menu-btn" id="menu" aria-expanded="false" aria-controls="nav">Menu</button>
+  </div>
+  <nav class="bar-band" aria-label="Main" id="nav">
+    <ol>
+      <li><a href="#home" data-page="home">Home</a></li>
+      <li><a href="#about" data-page="about">About Us</a></li>
+      <li><a href="#our-work" data-page="our-work">Our Work</a></li>
+      <li><a href="#fellowship" data-page="fellowship">Fellowship</a></li>
+      <li><a href="#media" data-page="media">Media &amp; Press</a></li>
+      <li><a href="#contact" data-page="contact">Contact Us</a></li>
+    </ol>
+  </nav>
+  <a class="btn cta" href="#contact">Partner with us</a>
+</header>
+
+<main>
+<!-- ================= HOME ================= -->
+<section class="page" id="page-home">
+  <div class="vhero">
+    <video id="intro-vid" src="img/intro-loop.mp4" poster="img/video-still.jpg" autoplay muted loop playsinline preload="auto" aria-label="Sharing the Power Foundation intro video, playing silently"></video>
+    <div class="vh-box">
+      <h2><span>Building Healthy Communities</span><br><span>in Rural &amp; Urban America</span></h2>
+      <p>Learn how Sharing the Power Foundation invests in clean energy, good jobs and the next generation of leaders in the communities we serve.</p>
+      <button class="vh-play" id="film-open" type="button">Watch video<span class="pb" aria-hidden="true"><svg viewBox="0 0 24 24" fill="#fff"><path d="M9 7l8 5-8 5z"/></svg></span></button>
+    </div>
+    <button class="vid-toggle" id="vid-toggle" type="button" aria-label="Pause background video"><svg viewBox="0 0 24 24" fill="#fff"><path class="i-pause" d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/><path class="i-play" d="M8 5l11 7-11 7z" style="display:none"/></svg></button>
+  </div>
+  <div class="intro2">
+    <div class="in i2-grid">
+      <div>
+        <h1>Clean energy that <em>stays</em> in the community.</h1>
+        <p>We are an independent 501(c)(3) that turns energy infrastructure investment into lasting community benefit: workforce training, lower energy bills, healthy food, STEM pathways and a real seat at the table.</p>
+        <a class="btn" href="#our-work">See our work →</a>
+      </div>
+      <img src="img/hero.jpg" alt="A father and his young daughter planting seedlings at a community garden">
+    </div>
+  </div>
+  <div class="in">
+    <div class="ledger" aria-label="Impact at a glance">
+      <div><b>$25M+</b><span>Community impact funds managed as an independent fiduciary</span></div>
+      <div><b>90+</b><span>HBCU Energy &amp; Sustainability Fellows placed</span></div>
+      <div><b>$3M+</b><span>Community grants distributed, 2021–2026</span></div>
+      <div><b>20</b><span>States with community investments</span></div>
+    </div>
+  </div>
+
+  <div class="band">
+    <div class="in">
+      <div class="statement">
+        <div><span class="kicker">Who we are</span><h2>Philanthropy done <em class="sun">with</em> communities, not to them.</h2></div>
+        <div>
+          <p class="lede">Founded in 2021, the Foundation is funded by contributions from clean energy project revenue generated through Community Impact PPAs. We fund and support organizations that build healthy communities in rural and urban America.</p>
+          <p>With the guidance and contributions of our corporate partners, including Microsoft and Google, we provide essential financial and programmatic support to community-based organizations nationwide, and we prepare the next generation of energy and sustainability leaders through our HBCU fellowship.</p>
+          <a class="arrow" href="#about">About the Foundation</a>
+        </div>
+      </div>
+      <img class="wide-photo" src="img/community-meeting.jpg" alt="Residents seated in a circle at a community listening session">
+    </div>
+  </div>
+
+  <div class="band paper">
+    <div class="in">
+      <span class="kicker">Five investment pillars</span>
+      <h2>Our investment pillars at work</h2>
+      <p class="lede">Investing in communities and opportunities to create lasting impact where clean energy and data centers are built.</p>
+      <div class="selector">
+        <div class="sel-list" role="tablist" aria-label="Investment pillars" id="sel-list"></div>
+        <div class="sel-panel" role="tabpanel" id="sel-panel" aria-live="polite"></div>
+      </div>
+      <div class="strip">
+        <div><b>$3M+</b><span>Community grants distributed (2021–2026)</span></div>
+        <div><b>90+</b><span>HBCU Clean Energy Fellows supported</span></div>
+        <div><b>20</b><span>States with community investments</span></div>
+        <div><b>5</b><span>Years of impact</span></div>
+      </div>
+      <p class="fine" style="margin-top:16px">*Partner organization results.</p>
+    </div>
+  </div>
+
+  <div class="band">
+    <div class="in">
+      <span class="kicker">Where we invest</span>
+      <h2>Our Impact</h2>
+      <div class="map-big">
+        <svg class="impact-map" viewBox="20 40 1010 560" role="img" aria-labelledby="map-t map-d"><title id="map-t">Map of Sharing the Power Foundation community grant investments</title><desc id="map-d">Grant investments in California, Nebraska, Texas, Louisiana, Mississippi, Alabama, Georgia, Florida, Tennessee, North Carolina, Virginia, West Virginia, Maryland, Pennsylvania, New York, Ohio, Indiana, Illinois, Michigan and Washington, DC.</desc><g class="st"><path d="M145.0,407.0L148.8,406.9L150.1,400.8L147.4,400.0L148.0,391.6L152.3,389.0L153.8,380.4L162.7,373.6L159.8,369.6L156.8,356.1L159.9,331.0L166.5,331.4L169.9,334.9L172.6,331.4L176.0,313.3L239.3,324.2L264.6,327.9L246.8,456.2L208.1,450.4L171.7,429.4L142.3,411.7Z"/><path d="M277.0,237.1L333.1,243.9L361.4,246.5L395.3,249.0L393.8,271.8L389.6,340.6L372.4,339.3L348.5,337.5L315.2,334.3L264.6,327.9L268.3,298.9Z"/><path d="M393.8,271.8L422.4,273.4L464.7,274.8L509.9,275.2L516.4,277.6L513.5,285.7L518.5,293.2L522.3,295.2L522.8,343.8L489.0,343.9L432.5,342.7L389.6,340.6Z"/><path d="M939.7,114.8L939.7,114.8L939.7,114.8ZM937.9,116.1L937.9,116.1L937.9,116.1ZM936.3,112.2L936.3,112.2L936.3,112.2ZM932.1,116.0L932.1,116.0L932.1,116.0ZM933.5,124.7L933.5,124.7L933.5,124.7ZM931.3,119.2L931.3,119.2L931.3,119.2ZM930.1,116.2L930.1,116.2L930.1,116.2ZM910.1,150.1L904.5,145.1L890.8,102.3L894.2,99.2L900.0,86.1L898.1,82.5L899.9,73.8L899.0,67.4L905.9,47.6L912.4,52.2L922.6,45.8L929.7,49.7L938.7,79.8L944.5,79.8L946.1,86.9L951.9,88.0L957.0,94.7L952.7,98.6L950.2,105.5L946.7,104.2L943.8,110.3L938.9,113.6L937.2,109.7L935.7,117.5L931.0,110.0L930.1,122.8L918.0,130.9L912.7,138.3Z"/><path d="M927.6,186.7L927.6,186.7L927.6,186.7ZM918.3,188.3L921.2,184.4L924.5,186.7ZM870.9,167.6L884.0,164.8L902.9,160.6L909.4,154.7L914.3,158.4L909.4,165.7L917.0,171.2L921.7,177.7L930.9,176.7L920.0,183.3L917.8,179.3L912.7,186.3L910.5,182.7L909.8,182.1L905.4,176.0L898.7,178.0L871.1,183.9Z"/><path d="M479.4,70.6L510.7,70.7L510.7,62.1L515.6,64.1L520.1,77.3L530.7,78.7L531.5,81.2L540.3,78.2L563.3,87.3L565.8,90.7L576.6,85.7L578.0,88.8L587.6,87.9L596.1,90.7L581.9,97.5L558.9,119.3L560.2,121.1L555.9,122.2L556.4,135.6L551.0,139.0L547.5,147.2L551.2,149.8L549.7,153.6L549.3,165.9L563.9,174.8L564.8,177.8L572.2,182.1L576.3,193.2L549.2,194.4L490.5,195.2L490.7,154.3L484.4,147.3L489.1,139.8L488.6,130.9L485.5,123.3L484.9,102.4L480.5,89.3L481.3,77.7Z"/><path d="M849.1,245.8L849.7,244.3L850.7,241.4L860.6,230.8L853.7,226.3L849.9,220.7L849.6,213.8L854.9,204.0L870.0,208.9L869.1,216.3L868.9,217.1L866.5,221.4L871.4,222.4L873.1,237.2L865.3,257.1L858.5,254.2L849.3,246.3Z"/><path d="M376.8,65.6L404.3,67.7L444.8,69.8L479.4,70.6L481.3,77.7L480.5,89.3L484.9,102.4L485.5,123.3L488.6,130.9L489.1,139.8L459.8,139.3L412.4,137.2L371.0,134.3Z"/><path d="M372.4,339.3L389.6,340.6L432.5,342.7L489.0,343.9L522.8,343.8L522.9,355.2L526.7,380.5L526.4,420.7L519.5,418.4L512.4,413.4L499.2,415.2L491.5,419.7L481.1,413.7L476.0,418.5L466.5,412.6L461.6,412.5L453.9,408.5L451.6,410.6L438.3,403.9L429.3,402.6L423.9,398.2L425.7,353.9L371.6,350.7Z"/><path d="M369.0,155.7L371.0,134.3L412.4,137.2L459.8,139.3L489.1,139.8L484.4,147.3L490.7,154.3L490.5,195.2L488.2,195.2L490.8,203.8L487.5,211.9L490.6,218.2L476.4,209.5L467.0,209.5L465.7,211.5L456.7,206.1L403.7,203.9L365.2,201.0Z"/><path d="M369.0,155.7L365.2,201.0L361.4,246.5L333.1,243.9L277.0,237.1L243.5,232.2L247.1,209.5L256.0,153.8L257.8,142.0L298.3,147.9L339.2,152.9Z"/><path d="M871.1,183.9L898.7,178.0L901.7,193.4L893.4,197.0L884.7,198.3L874.0,208.3L874.1,200.9Z"/><path d="M502.0,261.8L521.3,262.0L544.8,261.2L570.9,259.5L576.4,264.7L575.5,272.5L578.0,279.5L589.7,289.8L591.3,297.2L600.9,298.4L597.6,313.2L614.0,326.3L613.7,333.4L621.1,339.9L620.1,349.4L616.8,351.3L615.6,351.4L614.6,351.5L611.9,363.1L600.2,363.9L605.1,357.3L603.6,352.2L549.9,354.6L522.9,355.2L522.8,343.8L522.3,295.2L518.5,293.2L513.5,285.7L516.4,277.6L509.9,275.2Z"/><path d="M264.6,327.9L315.2,334.3L348.5,337.5L372.4,339.3L371.6,350.7L370.9,350.7L366.6,407.5L362.8,453.2L338.7,451.3L295.1,446.9L296.2,452.0L264.2,448.2L262.9,458.3L246.8,456.2Z"/><path d="M522.9,355.2L549.9,354.6L603.6,352.2L605.1,357.3L600.2,363.9L611.9,363.1L612.6,367.2L604.6,377.6L607.1,383.1L602.8,386.7L598.4,393.0L598.6,400.3L595.3,401.6L593.3,409.4L589.7,410.8L591.7,415.1L587.5,420.3L590.7,429.7L589.3,433.0L535.0,434.6L534.7,422.5L526.4,420.7L526.7,380.5Z"/><path d="M849.1,245.8L849.3,246.3L849.1,245.8ZM844.8,244.5L850.7,241.4L849.7,244.3L849.3,249.3L854.7,258.0L861.2,262.6L863.7,270.2L852.5,272.5Z"/><path d="M490.5,195.2L549.2,194.4L576.3,193.2L579.2,198.7L577.4,201.6L579.9,210.5L587.0,215.3L595.5,223.8L593.2,236.0L581.5,240.7L583.6,247.8L581.2,257.7L577.4,259.3L576.4,264.7L570.9,259.5L544.8,261.2L521.3,262.0L502.0,261.8L496.8,233.9L490.6,218.2L487.5,211.9L490.8,203.8L488.2,195.2Z"/><path d="M621.1,339.9L624.3,334.0L631.5,337.1L632.2,329.8L639.0,327.2L639.3,319.7L646.7,315.0L655.3,318.6L660.7,313.4L665.9,314.2L668.6,308.8L674.1,312.8L677.0,305.1L683.6,298.2L682.5,295.0L693.5,291.5L692.5,284.2L698.5,283.2L703.8,289.8L713.8,292.6L720.6,292.4L726.9,287.9L733.2,294.7L733.7,301.6L740.9,311.0L747.1,313.2L741.1,320.4L735.1,324.6L728.9,334.2L719.7,338.7L704.2,340.7L672.0,343.1L644.7,346.0L641.4,349.5L616.8,351.3L620.1,349.4ZM615.6,351.4L614.6,351.5L615.6,351.4Z"/><path d="M198.0,39.0L232.8,46.1L265.4,51.8L302.7,57.4L340.3,62.1L376.8,65.6L371.0,134.3L369.0,155.7L339.2,152.9L298.3,147.9L257.8,142.0L256.0,153.8L252.5,147.5L249.6,151.0L236.6,148.4L234.6,150.9L224.8,149.1L224.0,141.5L219.3,138.5L214.5,118.2L208.0,122.6L205.1,119.7L208.6,113.6L208.1,109.0L213.4,96.2L208.8,95.5L200.8,79.7L195.2,74.2L196.8,68.7L193.2,61.5Z"/><path d="M886.1,110.5L886.6,105.2L890.8,102.3L904.5,145.1L910.1,150.1L909.4,154.7L902.9,160.6L884.0,164.8L882.2,163.3L880.5,145.7L883.1,132.9L881.8,127.9L887.9,122.0Z"/><path d="M70.9,70.2L76.9,73.7L80.1,79.9L78.9,86.8L86.1,91.4L98.1,90.6L102.8,94.6L112.0,93.8L138.7,94.7L170.5,102.3L175.6,112.3L157.4,136.6L161.6,143.2L157.9,150.4L148.8,190.7L100.4,179.1L83.6,174.7L32.5,159.9L31.0,156.6L33.6,146.4L32.8,139.9L45.3,120.6L57.1,92.4L64.9,70.5Z"/><path d="M197.7,201.0L247.1,209.5L243.5,232.2L277.0,237.1L268.3,298.9L264.6,327.9L239.3,324.2L176.0,313.3Z"/><path d="M93.2,50.8L93.2,50.8L93.2,50.8ZM98.7,24.5L98.7,24.5L98.7,24.5ZM98.8,20.3L98.8,20.3L98.8,20.3ZM97.6,23.4L97.6,23.4L97.6,23.4ZM95.0,31.0L95.0,31.0L95.0,31.0ZM95.5,17.9L95.5,17.9L95.5,17.9ZM93.6,19.5L93.6,19.5L93.6,19.5ZM95.2,12.9L95.2,12.9L95.2,12.9ZM91.0,21.2L98.1,21.7L95.6,26.6ZM91.1,19.0L91.1,19.0L91.1,19.0ZM183.5,35.9L170.7,92.4L170.5,102.3L138.7,94.7L112.0,93.8L102.8,94.6L98.1,90.6L86.1,91.4L78.9,86.8L80.1,79.9L76.9,73.7L70.9,70.2L65.8,69.1L64.1,65.1L65.9,57.2L70.7,53.9L66.9,51.0L67.5,34.1L66.4,23.4L69.7,20.1L76.9,27.1L90.1,33.0L94.6,32.8L96.5,39.0L92.4,52.3L96.1,51.9L97.9,41.7L101.7,37.5L100.8,27.0L102.3,20.9L100.0,14.3L140.0,25.3Z"/><path d="M641.9,146.2L641.9,146.2L641.9,146.2ZM635.6,150.3L635.6,150.3L635.6,150.3ZM584.0,113.2L584.0,113.2L584.0,113.2ZM583.2,116.1L583.2,116.1L583.2,116.1ZM581.2,115.1L581.2,115.1L581.2,115.1ZM579.6,117.2L579.6,117.2L579.6,117.2ZM579.7,114.3L579.7,114.3L579.7,114.3ZM579.1,113.0L579.1,113.0L579.1,113.0ZM579.2,118.4L579.2,118.4L579.2,118.4ZM576.0,114.0L576.0,114.0L576.0,114.0ZM560.2,121.1L568.0,119.6L576.1,115.0L580.1,120.4L585.3,123.0L590.2,127.9L606.7,131.3L611.9,133.7L622.6,135.0L628.2,140.2L627.3,147.0L630.9,147.5L632.4,153.0L629.0,156.5L626.1,165.6L628.0,166.1L635.7,157.0L641.6,147.6L635.4,165.1L635.3,173.6L632.4,180.7L633.3,185.2L630.8,195.3L634.1,205.6L634.1,212.3L587.0,215.3L579.9,210.5L577.4,201.6L579.2,198.7L576.3,193.2L572.2,182.1L564.8,177.8L563.9,174.8L549.3,165.9L549.7,153.6L551.2,149.8L547.5,147.2L551.0,139.0L556.4,135.6L555.9,122.2Z"/><path d="M734.8,373.6L749.4,367.0L771.9,364.7L777.6,371.4L798.1,368.4L822.7,386.1L816.3,392.2L813.5,403.5L800.6,418.9L792.1,423.7L792.9,426.8L786.1,434.5L773.9,422.7L771.2,414.4L765.6,411.7L761.9,405.8L748.3,396.1L741.0,385.3L731.6,381.5Z"/><path d="M170.5,102.3L170.7,92.4L183.5,35.9L198.0,39.0L193.2,61.5L196.8,68.7L195.2,74.2L200.8,79.7L208.8,95.5L213.4,96.2L208.1,109.0L208.6,113.6L205.1,119.7L208.0,122.6L214.5,118.2L219.3,138.5L224.0,141.5L224.8,149.1L234.6,150.9L236.6,148.4L249.6,151.0L252.5,147.5L256.0,153.8L247.1,209.5L197.7,201.0L148.8,190.7L157.9,150.4L161.6,143.2L157.4,136.6L175.6,112.3Z"/><path d="M100.4,179.1L148.8,190.7L197.7,201.0L176.0,313.3L172.6,331.4L169.9,334.9L166.5,331.4L159.9,331.0L156.8,356.1L83.2,245.5Z"/><path d="M857.5,117.8L886.1,110.5L887.9,122.0L881.8,127.9L883.1,132.9L880.5,145.7L882.2,163.3L884.0,164.8L870.9,167.6L867.0,150.2L863.6,148.5L861.2,139.5L862.0,133.9Z"/><path d="M910.5,182.7L912.7,186.3L910.5,182.7ZM908.4,188.4L908.4,188.4L908.4,188.4ZM906.7,195.9L906.7,195.9L906.7,195.9ZM901.7,193.4L898.7,178.0L905.4,176.0L909.8,182.1L906.7,181.2L907.6,190.7Z"/></g><g class="st hl"><path d="M647.9,492.4L647.9,492.4L647.9,492.4ZM641.6,383.9L689.2,379.6L702.4,427.0L709.5,439.9L705.9,450.0L708.6,457.1L708.2,464.7L710.7,468.7L660.7,473.9L666.2,486.4L663.7,490.0L655.9,487.8L653.3,481.7L651.5,490.1L646.4,489.4L642.1,455.0L643.6,386.1Z"/><path d="M814.5,594.4L814.5,594.4L814.5,594.4ZM812.7,595.9L812.7,595.9L812.7,595.9ZM807.4,599.0L807.4,599.0L807.4,599.0ZM793.7,604.2L800.4,597.6L805.0,600.1ZM789.5,605.4L789.5,605.4L789.5,605.4ZM786.4,605.4L786.4,605.4L786.4,605.4ZM777.4,558.3L777.4,558.3L777.4,558.3ZM770.2,606.1L770.2,606.1L770.2,606.1ZM720.4,495.2L720.4,495.2L720.4,495.2ZM710.7,468.7L714.2,474.9L765.7,471.4L769.6,475.6L768.7,466.0L780.1,466.0L787.0,486.2L794.9,499.6L806.0,513.6L806.6,521.8L820.0,544.3L822.8,554.1L823.8,574.5L819.7,586.0L806.9,589.7L800.6,577.8L791.9,575.3L785.4,563.2L777.5,556.8L766.4,542.8L771.1,533.2L764.6,529.8L767.3,534.2L764.7,537.1L761.8,533.4L763.5,517.1L758.8,505.0L755.0,504.8L746.0,498.3L740.3,490.6L732.1,486.7L727.4,487.4L713.6,500.7L707.4,499.8L705.7,493.6L695.8,488.3L680.6,485.8L663.7,490.0L666.2,486.4L660.7,473.9Z"/><path d="M689.2,379.6L712.7,376.8L734.8,373.6L731.6,381.5L741.0,385.3L748.3,396.1L761.9,405.8L765.6,411.7L771.2,414.4L773.9,422.7L786.1,434.5L782.5,442.3L781.3,454.4L778.2,460.1L780.1,466.0L768.7,466.0L769.6,475.6L765.7,471.4L714.2,474.9L710.7,468.7L708.2,464.7L708.6,457.1L705.9,450.0L709.5,439.9L702.4,427.0Z"/><path d="M640.3,229.8L647.2,230.6L651.9,227.5L685.6,223.9L685.8,225.3L692.5,284.2L693.5,291.5L682.5,295.0L683.6,298.2L677.0,305.1L674.1,312.8L668.6,308.8L665.9,314.2L660.7,313.4L655.3,318.6L646.7,315.0L639.3,319.7L637.9,317.4L646.5,298.4L643.4,287.9L645.0,283.6Z"/><path d="M864.2,329.1L864.2,329.1L864.2,329.1ZM863.3,349.6L863.3,349.6L863.3,349.6ZM755.5,333.9L780.3,331.0L812.0,325.5L858.8,315.9L855.9,317.4L859.3,322.9L847.3,332.7L855.9,329.5L863.2,329.3L865.6,334.5L859.7,344.3L843.0,343.4L854.2,347.0L850.4,355.8L859.1,353.5L855.6,361.1L851.3,360.8L843.8,364.5L834.4,376.6L833.4,384.0L822.7,386.1L798.1,368.4L777.6,371.4L771.9,364.7L749.4,367.0L734.8,373.6L712.7,376.8L712.6,371.3L717.2,369.1L721.0,362.5L726.2,361.7L737.7,350.1L740.8,350.5L747.2,345.2L750.7,345.5Z"/><path d="M756.1,208.9L767.5,200.2L768.5,206.3L800.3,200.5L840.8,192.1L847.1,196.5L849.6,202.3L854.9,204.0L849.6,213.8L849.9,220.7L853.7,226.3L860.6,230.8L850.7,241.4L844.8,244.5L816.4,250.5L782.2,256.8L764.5,259.8L761.1,239.1Z"/><path d="M371.6,350.7L425.7,353.9L423.9,398.2L429.3,402.6L438.3,403.9L451.6,410.6L453.9,408.5L461.6,412.5L466.5,412.6L476.0,418.5L481.1,413.7L491.5,419.7L499.2,415.2L512.4,413.4L519.5,418.4L526.4,420.7L534.7,422.5L535.0,434.6L535.4,457.9L539.8,462.9L539.5,466.9L545.4,476.2L545.5,484.4L542.3,490.2L543.0,502.0L538.8,507.4L540.6,510.3L534.8,511.4L522.4,517.4L523.6,509.1L518.3,510.5L519.9,519.4L523.1,518.8L510.3,529.5L491.9,539.1L480.2,548.3L480.3,546.1L489.2,541.3L484.3,541.9L477.4,546.5L469.3,564.2L467.8,575.8L471.4,591.7L474.4,595.1L466.6,596.5L464.0,593.4L451.7,592.0L440.1,585.0L434.3,583.6L431.4,574.1L427.9,569.9L427.6,559.4L419.8,552.0L418.9,547.9L412.0,540.7L405.1,521.7L390.3,505.7L377.7,504.6L366.4,505.4L361.0,517.2L356.7,521.5L337.1,510.9L329.9,503.6L328.1,491.9L322.9,479.9L315.7,475.3L306.2,462.7L301.6,459.9L296.2,452.0L295.1,446.9L338.7,451.3L362.8,453.2L366.6,407.5L370.9,350.7Z"/><path d="M733.2,294.7L737.8,293.4L738.5,285.3L741.4,279.5L743.9,282.7L746.3,273.0L753.6,269.4L757.8,263.4L760.9,246.6L761.1,239.1L764.5,259.8L782.2,256.8L784.1,268.5L794.3,257.4L800.3,258.2L804.5,253.3L813.9,260.3L812.8,264.9L802.5,259.1L802.8,266.0L796.5,276.6L794.0,275.0L790.3,285.9L783.7,282.8L779.9,297.4L775.9,305.1L776.5,309.2L761.2,318.0L749.9,318.6L747.1,313.2L740.9,311.0L733.7,301.6Z"/><path d="M576.4,264.7L577.4,259.3L581.2,257.7L583.6,247.8L581.5,240.7L593.2,236.0L595.5,223.8L587.0,215.3L634.1,212.3L633.9,216.7L640.3,229.8L645.0,283.6L643.4,287.9L646.5,298.4L637.9,317.4L639.3,319.7L639.0,327.2L632.2,329.8L631.5,337.1L624.3,334.0L621.1,339.9L613.7,333.4L614.0,326.3L597.6,313.2L600.9,298.4L591.3,297.2L589.7,289.8L578.0,279.5L575.5,272.5Z"/><path d="M77.1,374.3L77.1,374.3L77.1,374.3ZM74.7,384.2L74.7,384.2L74.7,384.2ZM65.1,358.3L65.1,358.3L65.1,358.3ZM58.2,374.3L58.2,374.3L58.2,374.3ZM56.6,355.0L56.6,355.0L56.6,355.0ZM50.2,355.1L50.2,355.1L50.2,355.1ZM46.8,353.4L46.8,353.4L46.8,353.4ZM32.5,159.9L83.6,174.7L100.4,179.1L83.2,245.5L156.8,356.1L159.8,369.6L162.7,373.6L153.8,380.4L152.3,389.0L148.0,391.6L147.4,400.0L150.1,400.8L148.8,406.9L145.0,407.0L99.4,401.6L97.9,398.1L98.7,387.7L96.5,382.2L86.4,369.8L82.1,369.2L81.6,362.4L76.3,361.7L69.7,356.7L65.0,349.2L48.8,344.2L46.4,340.4L49.7,328.1L45.9,324.5L47.3,321.2L41.5,313.2L34.8,296.1L36.2,288.9L39.6,285.9L31.4,274.2L33.2,260.8L38.4,270.1L35.8,257.2L33.2,259.9L29.3,254.5L27.0,243.0L20.1,228.9L24.0,209.1L18.4,197.1L18.9,193.0L26.6,183.7L31.2,172.8Z"/><path d="M825.8,266.9L827.9,269.9L825.8,266.9Z"/><path d="M849.8,284.9L848.9,285.1L849.8,284.9ZM847.2,281.4L847.2,281.4L847.2,281.4ZM782.2,256.8L816.4,250.5L844.8,244.5L852.5,272.5L863.7,270.2L862.5,280.4L855.4,283.8L851.6,285.2L847.6,275.5L845.5,279.1L841.3,274.1L846.3,271.3L839.0,266.2L841.5,251.7L836.7,254.0L837.9,262.7L836.2,268.7L843.7,284.1L834.6,281.5L829.8,277.6L826.9,280.1L827.0,273.7L827.9,269.9L825.8,266.9L813.9,260.3L804.5,253.3L800.3,258.2L794.3,257.4L784.1,268.5Z"/><path d="M677.0,130.8L677.0,130.8L677.0,130.8ZM663.4,133.1L663.4,133.1L663.4,133.1ZM662.3,138.5L662.3,138.5L662.3,138.5ZM660.8,135.5L660.8,135.5L660.8,135.5ZM658.7,142.4L658.7,142.4L658.7,142.4ZM656.5,149.6L656.5,149.6L656.5,149.6ZM655.4,152.7L655.4,152.7L655.4,152.7ZM645.5,139.8L645.5,139.8L645.5,139.8ZM651.9,227.5L658.6,215.5L659.9,204.7L658.8,198.0L652.3,184.2L651.8,174.8L655.1,167.9L654.9,159.7L661.1,153.5L663.5,147.8L663.9,155.9L667.7,153.2L667.2,145.5L674.1,141.9L670.4,138.3L675.3,132.7L684.5,135.1L686.6,137.8L696.7,139.9L701.2,146.9L698.7,148.9L702.1,153.9L702.3,162.4L699.1,169.4L695.4,171.4L694.1,177.1L698.9,180.1L704.6,170.6L709.8,167.6L715.2,172.4L721.5,191.1L720.9,199.8L716.2,199.3L715.1,206.5L708.2,221.7L685.8,225.3L685.6,223.9ZM601.3,92.3L610.0,85.8L610.1,88.6ZM585.3,123.0L593.8,117.3L600.5,115.7L618.5,100.5L624.3,99.6L615.4,111.7L628.2,114.3L633.0,120.8L643.6,121.3L651.8,115.2L661.9,113.9L669.9,111.0L669.7,117.6L676.4,118.3L683.4,114.8L684.4,121.4L694.0,127.5L681.2,128.7L676.4,126.5L674.2,130.9L671.1,128.2L662.8,127.2L660.9,130.3L652.5,131.2L637.8,139.6L632.4,153.0L630.9,147.5L627.3,147.0L628.2,140.2L622.6,135.0L611.9,133.7L606.7,131.3L590.2,127.9Z"/><path d="M644.4,493.1L644.4,493.1L644.4,493.1ZM639.3,492.8L639.3,492.8L639.3,492.8ZM635.1,493.8L635.1,493.8L635.1,493.8ZM631.7,493.5L631.7,493.5L631.7,493.5ZM589.3,433.0L590.7,429.7L587.5,420.3L591.7,415.1L589.7,410.8L593.3,409.4L595.3,401.6L598.6,400.3L598.4,393.0L602.8,386.7L641.6,383.9L643.6,386.1L642.1,455.0L646.4,489.4L636.1,489.7L624.7,495.4L617.6,484.9L619.0,477.0L582.5,479.1L584.3,466.9L595.3,448.2L590.9,444.9L591.3,435.6Z"/><path d="M899.2,195.6L899.2,195.6L899.2,195.6ZM896.7,198.0L896.7,198.0L896.7,198.0ZM868.9,217.1L866.5,221.4L868.9,217.1ZM815.5,153.8L815.5,153.8L815.5,153.8ZM814.1,153.7L814.1,153.7L814.1,153.7ZM767.5,200.2L776.4,192.1L780.3,186.0L774.8,175.9L783.7,171.7L795.7,170.3L799.7,171.9L809.0,169.2L819.3,161.0L814.7,150.3L814.9,146.4L820.4,141.2L828.6,127.9L832.2,124.3L857.5,117.8L862.0,133.9L861.2,139.5L863.6,148.5L867.0,150.2L870.9,167.6L871.1,183.9L874.1,200.9L874.0,208.3L890.9,204.2L894.6,199.5L899.5,201.7L885.7,212.9L871.6,219.2L869.1,216.3L870.0,208.9L854.9,204.0L849.6,202.3L847.1,196.5L840.8,192.1L800.3,200.5L768.5,206.3Z"/><path d="M720.6,223.0L720.6,223.0L720.6,223.0ZM718.6,222.2L718.6,222.2L718.6,222.2ZM685.8,225.3L708.2,221.7L717.6,225.4L719.0,223.5L725.5,227.4L732.9,223.2L737.5,223.2L748.4,213.0L756.1,208.9L761.1,239.1L760.9,246.6L757.8,263.4L753.6,269.4L746.3,273.0L743.9,282.7L741.4,279.5L738.5,285.3L737.8,293.4L733.2,294.7L726.9,287.9L720.6,292.4L713.8,292.6L703.8,289.8L698.5,283.2L692.5,284.2Z"/><path d="M611.9,363.1L614.6,351.5L615.6,351.4L616.8,351.3L641.4,349.5L644.7,346.0L672.0,343.1L704.2,340.7L719.7,338.7L755.5,333.9L750.7,345.5L747.2,345.2L740.8,350.5L737.7,350.1L726.2,361.7L721.0,362.5L717.2,369.1L712.6,371.3L712.7,376.8L689.2,379.6L641.6,383.9L602.8,386.7L607.1,383.1L604.6,377.6L612.6,367.2Z"/><path d="M855.4,283.8L862.5,280.4L858.3,288.2L856.5,301.3L852.6,300.6L852.8,292.0ZM849.8,284.9L848.9,285.1L849.8,284.9ZM747.1,313.2L749.9,318.6L761.2,318.0L776.5,309.2L775.9,305.1L779.9,297.4L783.7,282.8L790.3,285.9L794.0,275.0L796.5,276.6L802.8,266.0L802.5,259.1L812.8,264.9L813.9,260.3L825.8,266.9L827.9,269.9L827.0,273.7L824.5,278.6L829.6,278.7L831.8,282.6L838.1,282.8L845.9,287.3L849.1,305.4L846.3,310.4L854.8,308.3L858.8,315.9L812.0,325.5L780.3,331.0L755.5,333.9L719.7,338.7L728.9,334.2L735.1,324.6L741.1,320.4Z"/><path d="M365.2,201.0L403.7,203.9L456.7,206.1L465.7,211.5L467.0,209.5L476.4,209.5L490.6,218.2L496.8,233.9L502.0,261.8L509.9,275.2L464.7,274.8L422.4,273.4L393.8,271.8L395.3,249.0L361.4,246.5Z"/><path d="M637.5,497.3L637.5,497.3L637.5,497.3ZM628.5,497.9L628.5,497.9L628.5,497.9ZM623.7,510.1L623.7,510.1L623.7,510.1ZM609.5,520.7L609.5,520.7L609.5,520.7ZM605.9,521.2L605.9,521.2L605.9,521.2ZM602.1,522.3L602.1,522.3L602.1,522.3ZM576.5,511.4L576.5,511.4L576.5,511.4ZM535.0,434.6L589.3,433.0L591.3,435.6L590.9,444.9L595.3,448.2L584.3,466.9L582.5,479.1L619.0,477.0L617.6,484.9L624.7,495.4L619.2,498.9L623.7,502.2L625.7,497.6L628.2,501.2L627.3,507.1L622.8,507.7L626.2,513.3L632.4,513.8L634.1,521.7L623.8,515.7L619.7,515.3L612.5,521.1L608.1,515.4L600.9,522.7L590.3,517.4L584.2,507.8L578.8,505.8L570.5,513.0L553.5,508.2L540.6,510.3L538.8,507.4L543.0,502.0L542.3,490.2L545.5,484.4L545.4,476.2L539.5,466.9L539.8,462.9L535.4,457.9Z"/></g><path class="bd" d="M646.4,489.4L642.1,455.0L643.6,386.1L641.6,383.9L689.2,379.6L702.4,427.0L709.5,439.9L705.9,450.0L708.6,457.1L708.2,464.7L710.7,468.7L660.7,473.9L666.2,486.4L663.7,490.0M145.0,407.0L148.8,406.9L150.1,400.8L147.4,400.0L148.0,391.6L152.3,389.0L153.8,380.4L162.7,373.6L159.8,369.6L156.8,356.1L159.9,331.0L166.5,331.4L169.9,334.9L172.6,331.4L176.0,313.3L239.3,324.2L264.6,327.9L246.8,456.2M710.7,468.7L714.2,474.9L765.7,471.4L769.6,475.6L768.7,466.0L780.1,466.0M689.2,379.6L712.7,376.8L734.8,373.6L731.6,381.5L741.0,385.3L748.3,396.1L761.9,405.8L765.6,411.7L771.2,414.4L773.9,422.7L786.1,434.5M651.9,227.5L685.6,223.9L685.8,225.3L692.5,284.2L693.5,291.5L682.5,295.0L683.6,298.2L677.0,305.1L674.1,312.8L668.6,308.8L665.9,314.2L660.7,313.4L655.3,318.6L646.7,315.0L639.3,319.7L637.9,317.4L646.5,298.4L643.4,287.9L645.0,283.6L640.3,229.8M393.8,271.8L422.4,273.4L464.7,274.8L509.9,275.2L516.4,277.6L513.5,285.7L518.5,293.2L522.3,295.2L522.8,343.8L489.0,343.9L432.5,342.7L389.6,340.6M910.1,150.1L904.5,145.1L890.8,102.3M909.8,182.1L905.4,176.0L898.7,178.0L871.1,183.9L870.9,167.6L884.0,164.8L902.9,160.6L909.4,154.7M912.7,186.3L910.5,182.7M560.2,121.1L555.9,122.2L556.4,135.6L551.0,139.0L547.5,147.2L551.2,149.8L549.7,153.6L549.3,165.9L563.9,174.8L564.8,177.8L572.2,182.1L576.3,193.2L549.2,194.4L490.5,195.2L490.7,154.3L484.4,147.3L489.1,139.8L488.6,130.9L485.5,123.3L484.9,102.4L480.5,89.3L481.3,77.7L479.4,70.6M849.7,244.3L850.7,241.4L860.6,230.8L853.7,226.3L849.9,220.7L849.6,213.8L854.9,204.0L870.0,208.9L869.1,216.3M868.9,217.1L866.5,221.4M849.3,246.3L849.1,245.8M712.7,376.8L712.6,371.3L717.2,369.1L721.0,362.5L726.2,361.7L737.7,350.1L740.8,350.5L747.2,345.2L750.7,345.5L755.5,333.9L780.3,331.0L812.0,325.5L858.8,315.9M822.7,386.1L798.1,368.4L777.6,371.4L771.9,364.7L749.4,367.0L734.8,373.6M489.1,139.8L459.8,139.3L412.4,137.2L371.0,134.3L376.8,65.6M522.8,343.8L522.9,355.2L526.7,380.5L526.4,420.7L519.5,418.4L512.4,413.4L499.2,415.2L491.5,419.7L481.1,413.7L476.0,418.5L466.5,412.6L461.6,412.5L453.9,408.5L451.6,410.6L438.3,403.9L429.3,402.6L423.9,398.2L425.7,353.9L371.6,350.7L372.4,339.3M767.5,200.2L768.5,206.3L800.3,200.5L840.8,192.1L847.1,196.5L849.6,202.3L854.9,204.0M850.7,241.4L844.8,244.5L816.4,250.5L782.2,256.8L764.5,259.8L761.1,239.1L756.1,208.9M490.5,195.2L488.2,195.2L490.8,203.8L487.5,211.9L490.6,218.2L476.4,209.5L467.0,209.5L465.7,211.5L456.7,206.1L403.7,203.9L365.2,201.0L369.0,155.7L371.0,134.3M526.4,420.7L534.7,422.5L535.0,434.6L535.4,457.9L539.8,462.9L539.5,466.9L545.4,476.2L545.5,484.4L542.3,490.2L543.0,502.0L538.8,507.4L540.6,510.3M296.2,452.0L295.1,446.9L338.7,451.3L362.8,453.2L366.6,407.5L370.9,350.7L371.6,350.7M365.2,201.0L361.4,246.5M277.0,237.1L333.1,243.9L361.4,246.5L395.3,249.0L393.8,271.8L389.6,340.6L372.4,339.3L348.5,337.5L315.2,334.3L264.6,327.9L268.3,298.9L277.0,237.1L243.5,232.2L247.1,209.5L256.0,153.8L257.8,142.0L298.3,147.9L339.2,152.9L369.0,155.7M898.7,178.0L901.7,193.4M874.0,208.3L874.1,200.9L871.1,183.9M509.9,275.2L502.0,261.8L521.3,262.0L544.8,261.2L570.9,259.5L576.4,264.7L575.5,272.5L578.0,279.5L589.7,289.8L591.3,297.2L600.9,298.4L597.6,313.2L614.0,326.3L613.7,333.4L621.1,339.9L620.1,349.4L616.8,351.3L615.6,351.4L614.6,351.5L611.9,363.1L600.2,363.9L605.1,357.3L603.6,352.2L549.9,354.6L522.9,355.2M782.2,256.8L784.1,268.5L794.3,257.4L800.3,258.2L804.5,253.3L813.9,260.3L812.8,264.9L802.5,259.1L802.8,266.0L796.5,276.6L794.0,275.0L790.3,285.9L783.7,282.8L779.9,297.4L775.9,305.1L776.5,309.2L761.2,318.0L749.9,318.6L747.1,313.2L740.9,311.0L733.7,301.6L733.2,294.7L737.8,293.4L738.5,285.3L741.4,279.5L743.9,282.7L746.3,273.0L753.6,269.4L757.8,263.4L760.9,246.6L761.1,239.1M576.4,264.7L577.4,259.3L581.2,257.7L583.6,247.8L581.5,240.7L593.2,236.0L595.5,223.8L587.0,215.3L634.1,212.3M639.3,319.7L639.0,327.2L632.2,329.8L631.5,337.1L624.3,334.0L621.1,339.9M611.9,363.1L612.6,367.2L604.6,377.6L607.1,383.1L602.8,386.7L598.4,393.0L598.6,400.3L595.3,401.6L593.3,409.4L589.7,410.8L591.7,415.1L587.5,420.3L590.7,429.7L589.3,433.0L535.0,434.6M32.5,159.9L83.6,174.7L100.4,179.1L83.2,245.5L156.8,356.1M863.7,270.2L852.5,272.5L844.8,244.5M576.3,193.2L579.2,198.7L577.4,201.6L579.9,210.5L587.0,215.3M502.0,261.8L496.8,233.9L490.6,218.2M692.5,284.2L698.5,283.2L703.8,289.8L713.8,292.6L720.6,292.4L726.9,287.9L733.2,294.7M747.1,313.2L741.1,320.4L735.1,324.6L728.9,334.2L719.7,338.7L704.2,340.7L672.0,343.1L644.7,346.0L641.4,349.5L616.8,351.3M615.6,351.4L614.6,351.5M849.8,284.9L848.9,285.1M862.5,280.4L855.4,283.8M827.0,273.7L827.9,269.9M825.8,266.9L827.9,269.9L825.8,266.9L813.9,260.3M708.2,221.7L685.8,225.3M632.4,153.0L630.9,147.5L627.3,147.0L628.2,140.2L622.6,135.0L611.9,133.7L606.7,131.3L590.2,127.9L585.3,123.0M602.8,386.7L641.6,383.9M624.7,495.4L617.6,484.9L619.0,477.0L582.5,479.1L584.3,466.9L595.3,448.2L590.9,444.9L591.3,435.6L589.3,433.0M256.0,153.8L252.5,147.5L249.6,151.0L236.6,148.4L234.6,150.9L224.8,149.1L224.0,141.5L219.3,138.5L214.5,118.2L208.0,122.6L205.1,119.7L208.6,113.6L208.1,109.0L213.4,96.2L208.8,95.5L200.8,79.7L195.2,74.2L196.8,68.7L193.2,61.5L198.0,39.0M884.0,164.8L882.2,163.3L880.5,145.7L883.1,132.9L881.8,127.9L887.9,122.0L886.1,110.5M857.5,117.8L862.0,133.9L861.2,139.5L863.6,148.5L867.0,150.2L870.9,167.6M70.9,70.2L76.9,73.7L80.1,79.9L78.9,86.8L86.1,91.4L98.1,90.6L102.8,94.6L112.0,93.8L138.7,94.7L170.5,102.3L175.6,112.3L157.4,136.6L161.6,143.2L157.9,150.4L148.8,190.7L100.4,179.1M719.7,338.7L755.5,333.9M176.0,313.3L197.7,201.0L247.1,209.5M183.5,35.9L170.7,92.4L170.5,102.3M197.7,201.0L148.8,190.7"/><g class="mk"><g transform="translate(671.7 438.2)"><circle r="11"/><path d="M-4.8 0.2l3.3 3.3 6.4-6.6"/></g><g transform="translate(785.7 528.8)"><circle r="11"/><path d="M-4.8 0.2l3.3 3.3 6.4-6.6"/></g><g transform="translate(736.0 433.8)"><circle r="11"/><path d="M-4.8 0.2l3.3 3.3 6.4-6.6"/></g><g transform="translate(665.4 275.0)"><circle r="11"/><path d="M-4.8 0.2l3.3 3.3 6.4-6.6"/></g><g transform="translate(804.0 357.2)"><circle r="11"/><path d="M-4.8 0.2l3.3 3.3 6.4-6.6"/></g><g transform="translate(805.7 231.6)"><circle r="11"/><path d="M-4.8 0.2l3.3 3.3 6.4-6.6"/></g><g transform="translate(436.2 479.2)"><circle r="11"/><path d="M-4.8 0.2l3.3 3.3 6.4-6.6"/></g><g transform="translate(765.2 289.5)"><circle r="11"/><path d="M-4.8 0.2l3.3 3.3 6.4-6.6"/></g><g transform="translate(615.1 276.2)"><circle r="11"/><path d="M-4.8 0.2l3.3 3.3 6.4-6.6"/></g><g transform="translate(69.5 290.6)"><circle r="11"/><path d="M-4.8 0.2l3.3 3.3 6.4-6.6"/></g><line class="lead" x1="827.6" y1="267.5" x2="861.6" y2="321.5"/><circle class="pin" cx="827.6" cy="267.5" r="2.2"/><g transform="translate(869.6 327.5)"><circle r="11"/><path d="M-4.8 0.2l3.3 3.3 6.4-6.6"/></g><line class="lead" x1="830.6" y1="262.2" x2="863.6" y2="287.2"/><g transform="translate(872.6 292.2)"><circle r="11"/><path d="M-4.8 0.2l3.3 3.3 6.4-6.6"/></g><g transform="translate(683.2 194.8)"><circle r="11"/><path d="M-4.8 0.2l3.3 3.3 6.4-6.6"/></g><g transform="translate(618.1 443.4)"><circle r="11"/><path d="M-4.8 0.2l3.3 3.3 6.4-6.6"/></g><g transform="translate(839.0 177.5)"><circle r="11"/><path d="M-4.8 0.2l3.3 3.3 6.4-6.6"/></g><g transform="translate(723.8 259.0)"><circle r="11"/><path d="M-4.8 0.2l3.3 3.3 6.4-6.6"/></g><g transform="translate(672.8 368.6)"><circle r="11"/><path d="M-4.8 0.2l3.3 3.3 6.4-6.6"/></g><g transform="translate(811.7 309.2)"><circle r="11"/><path d="M-4.8 0.2l3.3 3.3 6.4-6.6"/></g><g transform="translate(434.2 244.8)"><circle r="11"/><path d="M-4.8 0.2l3.3 3.3 6.4-6.6"/></g><g transform="translate(567.9 488.0)"><circle r="11"/><path d="M-4.8 0.2l3.3 3.3 6.4-6.6"/></g><circle class="pin" cx="499.0" cy="246.4" r="2.6"/></g><g class="lb"><text x="671.7" y="422.2" text-anchor="middle">AL</text><text x="785.7" y="512.8" text-anchor="middle">FL</text><text x="736.0" y="417.8" text-anchor="middle">GA</text><text x="665.4" y="259.0" text-anchor="middle">IN</text><text x="804.0" y="341.2" text-anchor="middle">NC</text><text x="805.7" y="215.6" text-anchor="middle">PA</text><text x="436.2" y="463.2" text-anchor="middle">TX</text><text x="765.2" y="273.5" text-anchor="middle">WV</text><text x="615.1" y="260.2" text-anchor="middle">IL</text><text x="69.5" y="274.6" text-anchor="middle">CA</text><text x="883.6" y="332.5">Washington, DC</text><text x="886.6" y="297.2">MD</text><text x="683.2" y="178.8" text-anchor="middle">MI</text><text x="618.1" y="427.4" text-anchor="middle">MS</text><text x="839.0" y="161.5" text-anchor="middle">NY</text><text x="723.8" y="243.0" text-anchor="middle">OH</text><text x="672.8" y="352.6" text-anchor="middle">TN</text><text x="811.7" y="293.2" text-anchor="middle">VA</text><text x="434.2" y="228.8" text-anchor="middle">NE</text><text x="567.9" y="472.0" text-anchor="middle">LA</text><text class="city" x="495.0" y="264.4" text-anchor="middle">Omaha</text></g></svg>
+        <div class="legend"><i aria-hidden="true"></i>Community grant investments</div>
+      </div>
+      <div class="glance" aria-label="Community impact at a glance">
+        <div><b>20 states</b><span>with community grant investments</span></div>
+        <div><b>$3M+</b><span>community grants distributed and administered</span></div>
+        <div><b>$1M+</b><span>scholarships awarded to our HBCU Energy &amp; Sustainability Fellows</span></div>
+        <div><b>2,500+</b><span>workers retrained and placed in good-paying jobs*</span></div>
+        <div><b>10,000+</b><span>households supported with energy bill assistance and weatherization*</span></div>
+        <div><b>35M+</b><span>meals served in food-insecure communities*</span></div>
+      </div>
+      <p class="fine" style="margin-top:14px">*Results from grantees funded.</p>
+    </div>
+  </div>
+
+  <div class="band orange">
+    <div class="in fel">
+      <div>
+        <span class="kicker" style="color:#FFE2C4">Energy &amp; Sustainability Fellowship</span>
+        <h2>Meet the 2026 HBCU Energy &amp; Sustainability Fellows</h2>
+        <p class="lede">Our fellowship carries HBCU students from campus to careers in clean energy, sustainability and data center operations, with paid placements at the organizations doing the work.</p>
+        <div class="fel-nums">
+          <div><b>90+</b><span>Fellows placed</span></div>
+          <div><b>$1M+</b><span>Scholarships &amp; stipends</span></div>
+          <div><b>22</b><span>Fellows in 2026</span></div>
+        </div>
+        <a class="btn light" href="#fellowship">Meet the fellows →</a>
+      </div>
+      <div>
+        <button class="poster-btn" data-zoom aria-label="Enlarge the 2026 fellows poster"><img src="img/fellows-2026.jpg" alt="The 22 fellows of the 2026 HBCU Energy and Sustainability Fellowship Program, with their universities and placements"></button>
+        <p class="zoom-hint">Click to enlarge</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="band">
+    <div class="in">
+      <span class="kicker">Media &amp; Press</span>
+      <h2>Latest news</h2>
+      <div class="news-list" id="home-news"></div>
+    </div>
+  </div>
+
+  <div class="band dark">
+    <div class="in closing"><div><span class="kicker">Partner with us</span><h2>Let’s design the community benefit for your next project.</h2></div><a class="btn" href="#contact">Start the conversation →</a></div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="page" id="page-about">
+  <div class="ph">
+    <svg class="rays" viewBox="0 0 200 200" aria-hidden="true"><g stroke="#D9711F" stroke-width="1" fill="none"><line x1="144.0" y1="100.0" x2="196.0" y2="100.0"/><line x1="142.5" y1="111.4" x2="169.5" y2="118.6"/><line x1="138.1" y1="122.0" x2="183.1" y2="148.0"/><line x1="131.1" y1="131.1" x2="150.9" y2="150.9"/><line x1="122.0" y1="138.1" x2="148.0" y2="183.1"/><line x1="111.4" y1="142.5" x2="118.6" y2="169.5"/><line x1="100.0" y1="144.0" x2="100.0" y2="196.0"/><line x1="88.6" y1="142.5" x2="81.4" y2="169.5"/><line x1="78.0" y1="138.1" x2="52.0" y2="183.1"/><line x1="68.9" y1="131.1" x2="49.1" y2="150.9"/><line x1="61.9" y1="122.0" x2="16.9" y2="148.0"/><line x1="57.5" y1="111.4" x2="30.5" y2="118.6"/><line x1="56.0" y1="100.0" x2="4.0" y2="100.0"/><line x1="57.5" y1="88.6" x2="30.5" y2="81.4"/><line x1="61.9" y1="78.0" x2="16.9" y2="52.0"/><line x1="68.9" y1="68.9" x2="49.1" y2="49.1"/><line x1="78.0" y1="61.9" x2="52.0" y2="16.9"/><line x1="88.6" y1="57.5" x2="81.4" y2="30.5"/><line x1="100.0" y1="56.0" x2="100.0" y2="4.0"/><line x1="111.4" y1="57.5" x2="118.6" y2="30.5"/><line x1="122.0" y1="61.9" x2="148.0" y2="16.9"/><line x1="131.1" y1="68.9" x2="150.9" y2="49.1"/><line x1="138.1" y1="78.0" x2="183.1" y2="52.0"/><line x1="142.5" y1="88.6" x2="169.5" y2="81.4"/></g><circle cx="100" cy="100" r="34" fill="none" stroke="#D9711F" stroke-width="1"/></svg>
+    <div class="in">
+      <span class="kicker">About Us</span>
+      <h1>A trusted partner investing in healthy communities in rural and urban America</h1>
+      <p class="lede">Sharing the Power Foundation contributes to causes that provide renewable energy access in vulnerable urban and rural communities. From Appalachia to Atlanta, these organizations promote access to clean air, water and renewable energy; residential and commercial weatherization and energy efficiency; workforce training in clean energy careers; and effective solutions to expand the availability of affordable food and transportation.</p>
+    </div>
+  </div>
+
+  <div class="band">
+    <div class="in mission-b">
+      <div class="mb-photo"><img src="img/stem-girl.jpg" alt="A smiling young girl wearing a medal" loading="lazy"></div>
+      <div>
+        <span class="kicker">Our mission</span>
+        <h2>Turning energy infrastructure into lasting community benefit</h2>
+        <p>Sharing the Power Foundation is a 501(c)(3) non-profit organization that provides funding and resources to organizations and programs that build healthy communities in rural and urban America. The Foundation identifies programs that focus on workforce training, weatherization, utility bill payment assistance, renewable energy education and access to clean air, water and healthy food. Through its college internship program, Sharing the Power prepares the next generation of energy business and sustainability leaders for careers in the public and private sectors.</p>
+        <p>In 2020, Volt Energy Utility founder Gilbert Campbell envisioned a process through which the basic tool used to finance major solar projects, the power purchase agreement (PPA), could produce a funding stream to support environmental justice causes. A percentage of revenue generated by these projects would be dedicated to funding a foundation. Volt developed the Environmental Justice PPA, which later became the Community Impact PPA. In 2021, with the assistance and support of Microsoft, Sharing the Power Foundation became a reality. Since that time, corporate partners such as Google and others have also supported the Foundation.</p>
+        <p>We partner with environmental causes by funding grassroots solutions to complex environmental challenges, and we invest in the next generation of environmental leaders by equipping students with the experience, professional development, and funding they need to thrive in sustainability and clean energy careers. With the continued collaboration of the communities we serve, and the guidance and generous contributions of our corporate partners, Sharing the Power Foundation continues to be a leader in providing essential financial and programmatic support to community-based organizations nationwide.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="band">
+    <div class="in">
+      <span class="kicker">Our community-led approach</span>
+      <h2>Grantmaking that starts with listening</h2>
+      <p class="lede">Partnership with the local community is paramount. That keeps our solutions authentic, sustainable and transformative.</p>
+      <div class="principles">
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="#D9711F" stroke-width="1.6" stroke-linecap="round"><path d="M4 5h16v10H9l-4 4V5z"/><path d="M8 10h.01M12 10h.01M16 10h.01"/></svg><div><h3>Listening first</h3><p>We engage community leaders, residents and local organizations to understand their priorities, needs and vision.</p></div></div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="#D9711F" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="7" r="3"/><circle cx="5" cy="10" r="2"/><circle cx="19" cy="10" r="2"/><path d="M6.5 20c0-3 2.5-5.5 5.5-5.5s5.5 2.5 5.5 5.5M1.5 19c0-2 1.5-3.5 3.5-3.5M22.5 19c0-2-1.5-3.5-3.5-3.5"/></svg><div><h3>Community advisory groups</h3><p>Local advisory groups guide our grantmaking and help decide the most impactful solutions.</p></div></div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="#D9711F" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11l3-3 3 2 4-4M3 13l5 5c1 1 2.5 1 3.5 0l7-7"/><path d="M14 6h4v4"/></svg><div><h3>Shared decision-making</h3><p>We design grant programs with these groups so funding builds on existing local strengths.</p></div></div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="#D9711F" stroke-width="1.6" stroke-linecap="round"><path d="M4 20V13M10 20V9M16 20V11M22 20H2M21 4l-6 5-4-3-7 5"/></svg><div><h3>Capacity building</h3><p>We invest in the organizational capacity of local nonprofits so impact lasts beyond the grant period.</p></div></div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="#D9711F" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg><div><h3>Accountability &amp; transparency</h3><p>We keep communication open and measure outcomes together with the community.</p></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="band dark">
+    <div class="in">
+      <span class="kicker">The value of trust</span>
+      <h2>Credibility is a record, not a claim</h2>
+      <p class="lede" style="color:var(--on-dark)">Every figure we report is backed by a fund we held, a program we ran, or a partner who will take the call.</p>
+      <div class="claims">
+        <div><b>$25M+</b><h3>Funds under management</h3><p>Held as an independent 501(c)(3) fiduciary, with audit-ready board and 990 records.</p></div>
+        <div><b>100%</b><h3>Relationships protected</h3><p>Zero program failures through the federal LIHEAP funding freeze.</p></div>
+        <div><b>Adopted</b><h3>As a national template</h3><p>Partners have used our grantee framework to vet, approve and track investments in other states.</p></div>
+        <div><b>Vetted</b><h3>Every grant partner</h3><p>Screened through Thomson Reuters CLEAR, 990 review and board approval before any award.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="band paper">
+    <div class="in">
+      <h2>Leadership</h2>
+      <p class="lede">The Foundation’s leaders come from a broad range of backgrounds and have a diversity of expertise and experiences that spans science and technology, public policy, education, communications, law and business.</p>
+      <div class="leaders" id="leaders"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= OUR WORK ================= -->
+<section class="page" id="page-our-work">
+  <div class="ph">
+    <svg class="rays" viewBox="0 0 200 200" aria-hidden="true"><g stroke="#D9711F" stroke-width="1" fill="none"><line x1="144.0" y1="100.0" x2="196.0" y2="100.0"/><line x1="142.5" y1="111.4" x2="169.5" y2="118.6"/><line x1="138.1" y1="122.0" x2="183.1" y2="148.0"/><line x1="131.1" y1="131.1" x2="150.9" y2="150.9"/><line x1="122.0" y1="138.1" x2="148.0" y2="183.1"/><line x1="111.4" y1="142.5" x2="118.6" y2="169.5"/><line x1="100.0" y1="144.0" x2="100.0" y2="196.0"/><line x1="88.6" y1="142.5" x2="81.4" y2="169.5"/><line x1="78.0" y1="138.1" x2="52.0" y2="183.1"/><line x1="68.9" y1="131.1" x2="49.1" y2="150.9"/><line x1="61.9" y1="122.0" x2="16.9" y2="148.0"/><line x1="57.5" y1="111.4" x2="30.5" y2="118.6"/><line x1="56.0" y1="100.0" x2="4.0" y2="100.0"/><line x1="57.5" y1="88.6" x2="30.5" y2="81.4"/><line x1="61.9" y1="78.0" x2="16.9" y2="52.0"/><line x1="68.9" y1="68.9" x2="49.1" y2="49.1"/><line x1="78.0" y1="61.9" x2="52.0" y2="16.9"/><line x1="88.6" y1="57.5" x2="81.4" y2="30.5"/><line x1="100.0" y1="56.0" x2="100.0" y2="4.0"/><line x1="111.4" y1="57.5" x2="118.6" y2="30.5"/><line x1="122.0" y1="61.9" x2="148.0" y2="16.9"/><line x1="131.1" y1="68.9" x2="150.9" y2="49.1"/><line x1="138.1" y1="78.0" x2="183.1" y2="52.0"/><line x1="142.5" y1="88.6" x2="169.5" y2="81.4"/></g><circle cx="100" cy="100" r="34" fill="none" stroke="#D9711F" stroke-width="1"/></svg>
+    <div class="in">
+      <span class="kicker">Our Work</span>
+      <h1>Grantmaking with a purpose</h1>
+      <p class="lede">Every grant starts with the community. Residents, local leaders and community organizations help decide where funding goes, and we work alongside them to deliver, track and report on the results together.</p>
+    </div>
+  </div>
+
+  <div class="chapter in" id="p1">
+    <aside><div class="num">01</div><h2>Workforce &amp; Economic Development</h2><p>Building the talent pipeline from community to clean energy career.</p></aside>
+    <div>
+      <div class="media one"><img src="img/workforce-collage.jpg" alt="Workers installing rooftop solar, a technician insulating a wall, and a researcher in a lab" loading="lazy" style="aspect-ratio:16/10;object-position:50% 20%"></div>
+      <p>We fund training that puts people to work in the clean energy economy, including coalfield retraining, weatherization and efficiency crews, and solar installation, in cities, rural counties and remote communities alike. Construction crews leave when a project is energized. Workforce dollars written into the PPA last for decades.</p>
+      <div class="nums3"><div><b>2,500+</b><span>People trained</span></div><div><b>800</b><span>Jobs created</span></div><div><b>72</b><span>New businesses</span></div></div>
+      <div class="prog"><h4>Coalfield Development</h4><em>Central Appalachia · WV</em><p>PATH fast-track training with paid stipends, on-the-job crews, and solar and land reclamation social enterprises for displaced miners.</p></div>
+      <div class="prog"><h4>Center for Coalfield Justice</h4><em>Southwestern PA</em><p>Just-transition organizing and advocacy for workers and families in coal-impacted counties.</p></div>
+      <div class="prog"><h4>Appalachian Voices</h4><em>Central Appalachia</em><p>The Appalachian Solar Finance Fund, unlocking solar projects and local installation jobs on mine-impacted land.</p></div>
+      <div class="prog"><h4>Weatherization &amp; efficiency crews</h4><em>Omaha · Tulsa · Indianapolis</em><p>Certified training for insulation, air sealing and HVAC technicians, hired from the neighborhoods they serve.</p></div>
+      <div class="logos"><img src="img/coalfield.jpg" alt="Coalfield Development" loading="lazy"><img src="img/ccj.jpg" alt="Center for Coalfield Justice" loading="lazy"><img src="img/appvoices.jpg" alt="Appalachian Voices" loading="lazy"></div>
+      <p class="fine" style="margin-top:16px">Outcome figures are Coalfield Development results since 2010, as reported by the organization.</p>
+    </div>
+  </div>
+
+  <div class="chapter in" id="p2">
+    <aside><div class="num">02</div><h2>Energy Affordability</h2><p>Cutting the household energy burden with dollars that reach the meter.</p></aside>
+    <div>
+      <div class="media"><img src="img/bill-assist.jpg" alt="Residents meeting with staff at a community assistance center" loading="lazy"><img src="img/weatherization.jpg" alt="A technician installing insulation in a home" loading="lazy"></div>
+      <p>Many families spend 20–30% of their income on energy, and one in four skip bills to get by. Federal dollars cover part of the bill. We fund the permanent upgrades and the repairs federal programs will not pay for, at no cost to the household.</p>
+      <div class="nums3"><div><b>10,000+</b><span>Households supported*</span></div><div><b>0</b><span>Program failures</span></div><div><b>$0</b><span>Household cost</span></div></div>
+      <div class="prog"><h4>Home envelope upgrades</h4><em>STPF funded</em><p>Attic and wall insulation, air sealing and duct repair: permanent bill reduction that outlasts any grant cycle.</p></div>
+      <div class="prog"><h4>Systems &amp; safety repairs</h4><em>STPF funded</em><p>Furnace and water heater repair plus the health and safety fixes that would otherwise disqualify a home from federal weatherization.</p></div>
+      <div class="prog"><h4>Emergency bill assistance</h4><em>Gap funding</em><p>When LIHEAP froze mid-program, we became the gap funder and paid arrears directly to the utility so no grantee stopped serving households.</p></div>
+      <div class="prog"><h4>United Way of the Midlands</h4><em>Omaha, NE</em><p>Screens households and clears arrears with Lincoln Electric System. Need is verified locally and dollars move in days.</p></div>
+      <div class="logos"><img src="img/uwm.png" alt="United Way of the Midlands" loading="lazy"><img src="img/haf.png" alt="Hispanic Access Foundation" loading="lazy"><img src="img/vipl.png" alt="Virginia Interfaith Power &amp; Light" loading="lazy"></div>
+      <p class="fine" style="margin-top:16px">*Partner organization results.</p>
+    </div>
+  </div>
+
+  <div class="chapter in" id="p3">
+    <aside><div class="num">03</div><h2>STEM Education</h2><p>Before the fellowship and the scholarship, there is a four-year-old behind the wheel of an electric car asking how the sun makes it move.</p></aside>
+    <div>
+      <div class="media"><img src="img/stem-students.jpg" alt="Students building a solar and wind model in a lab" loading="lazy"><img src="img/ev-academy.jpg" alt="Preschoolers driving small electric go-karts at the EV academy" loading="lazy" style="object-position:50% 70%"></div>
+      <p>We invest across the whole ladder, from play-based clean energy literacy for preschoolers to paid fellowships and career placement for college students, including the Electric Go-Kart Academy at Howard University’s Early Learning Program.</p>
+      <div class="ladder">
+        <div><b>Ages 3–6</b><h4>Early learning</h4><p>Play-based clean energy and EV literacy at Howard’s Early Learning Program.</p></div>
+        <div><b>K–12</b><h4>School-age STEM</h4><p>Campus greening and youth environmental programs via the HBCU Green Fund.</p></div>
+        <div><b>Undergrad</b><h4>Fellowship</h4><p>Paid fellows placed with grassroots energy organizations and employers.</p></div>
+        <div><b>Career</b><h4>Scholarships &amp; placement</h4><p>$1M+ awarded and 90+ fellows placed.</p></div>
+      </div>
+      <div class="logos"><img src="img/southern.png" alt="Southern University" loading="lazy"><img src="img/tuskegee.png" alt="Tuskegee University" loading="lazy"><img src="img/howard.png" alt="Howard University" loading="lazy"></div>
+      <p style="margin-top:24px"><a class="arrow" href="#fellowship">Explore the fellowship</a></p>
+    </div>
+  </div>
+
+  <div class="chapter in" id="p4">
+    <aside><div class="num">04</div><h2>Healthy Communities</h2><p>Food access, clean air and clean water where energy gets built.</p></aside>
+    <div>
+      <div class="media"><img src="img/farmers-market.jpg" alt="Neighbors shopping for fresh vegetables at a community market" loading="lazy"><img src="img/food-volunteers.jpg" alt="Volunteers handing out fresh produce" loading="lazy"></div>
+      <p>Utility-scale projects are often sited on agricultural and rural land. We write food security into community benefit planning before the first panel goes up, and back organizations that put fresh food within reach.</p>
+      <div class="nums3"><div><b>35M</b><span>Meals served</span></div><div><b>974K</b><span>Lbs food diverted in 2025</span></div><div><b>30+</b><span>Stores in schools</span></div></div>
+      <div class="prog"><h4>Goodr</h4><em>Atlanta, GA</em><p>Food recovery and no-cost grocery access, including a 26-foot shoppable truck and free grocery stores inside schools.</p></div>
+      <div class="prog"><h4>Dreaming Out Loud</h4><em>Washington, DC</em><p>Food hub and Black farm CSA serving Wards 7 and 8.</p></div>
+      <div class="prog"><h4>Happily Natural Day</h4><em>Richmond, VA</em><p>The Sankofa Community Orchard: five acres and 150+ fruit trees.</p></div>
+      <div class="prog"><h4>West Atlanta Watershed Alliance</h4><em>Atlanta, GA</em><p>Urban agriculture training and greenspace stewardship.</p></div>
+      <div class="prog"><h4>Building Bridges Across the River</h4><em>Washington, DC</em><p>Community farms and food access east of the Anacostia.</p></div>
+      <div class="logos"><img src="img/goodr-logo.png" alt="Goodr" loading="lazy"><img src="img/wawa.png" alt="West Atlanta Watershed Alliance" loading="lazy"></div>
+      <p class="fine" style="margin-top:16px">Meal, diversion and school figures as reported by Goodr.</p>
+    </div>
+  </div>
+
+  <div class="chapter in" id="p5">
+    <aside><div class="num">05</div><h2>Community Engagement</h2><p>Building trust before the deal, not after it.</p></aside>
+    <div>
+      <div class="media"><img src="img/convening-circle.jpg" alt="Residents, developers and local officials seated together in a circle" loading="lazy"><img src="img/convening-stage.jpg" alt="Panelists on stage at a policy conference" loading="lazy"></div>
+      <p>We host forums, policy conferences and listening sessions, and we provide plain-language education on siting, load, water and tax impacts so communities negotiate from knowledge rather than rumor.</p>
+      <div class="nums3"><div><b>100+</b><span>Organizations supported</span></div><div><b>20</b><span>States</span></div><div><b>1</b><span>Table, no side rooms</span></div></div>
+      <div class="prog"><h4>Tunica Policy Conference</h4><em>Tunica, MS</em><p>An annual Delta convening. We host the community dinner and sponsor the energy policy panel.</p></div>
+      <div class="prog"><h4>Virginia Environmental Justice Collaborative</h4><em>Virginia</em><p>Statewide coalition advancing environmental justice policy with frontline communities.</p></div>
+      <div class="prog"><h4>Hispanic Access Foundation</h4><em>National</em><p>Connects Latino communities to conservation, energy and health resources.</p></div>
+      <div class="prog"><h4>Clark Atlanta University</h4><em>Atlanta, GA</em><p>Hosts the Environmental Justice &amp; Sustainability Summit and our listening sessions.</p></div>
+      <div class="logos"><img src="img/naacp.png" alt="NAACP" loading="lazy"><img src="img/mspolicy.png" alt="Mississippi Policy Conference, Tunica" loading="lazy"><img src="img/haf.png" alt="Hispanic Access Foundation" loading="lazy"></div>
+    </div>
+  </div>
+
+  <div class="band dark" id="cases">
+    <div class="in">
+      <span class="kicker">Case studies</span>
+      <h2>Already running alongside the data center buildout</h2>
+      <p class="lede" style="color:var(--on-dark)">Two hyperscalers, two different structures, both deployed through Sharing the Power.</p>
+      <div class="cases">
+        <article class="case">
+          <img src="img/ms-collage.jpg" alt="Microsoft logo over scenes from a community resource fair" loading="lazy">
+          <small>Microsoft · Founding partner</small>
+          <h3>The first Community Impact PPA</h3>
+          <p>No precedent and no template. Microsoft became the first off-taker to dedicate PPA revenue to community benefit, with the 110 MW Hickory Solar project built with Volt Energy Utility funding workforce, STEM and convening programs.</p>
+          <div class="row"><div><b>First</b><span>Off-taker to fund communities</span></div><div><b>110 MW</b><span>Hickory Solar</span></div><div><b>Largest</b><span>Funder to date</span></div></div>
+          <blockquote>“The importance of ensuring benefits flowing from renewable energy development directly into communities has never been more important.”<cite>Sandhya Ganapathy, CEO, EDP Renewables North America</cite></blockquote>
+        </article>
+        <article class="case">
+          <img src="img/google-collage.jpg" alt="Google logo over scenes from a community energy assistance event" loading="lazy">
+          <small>Google · Verified impact</small>
+          <h3>Google Community Investment Funds</h3>
+          <p>No Community Impact PPA and no defined project. Google trusted the Foundation to run its entire community investment mandate across three data center states, from vetting partners to disbursement and reporting.</p>
+          <div class="row"><div><b>$2M</b><span>Total program value</span></div><div><b>3 states</b><span>NE · OK · IN</span></div><div><b>1,350+</b><span>Households reached</span></div></div>
+          <p><b style="color:#fff">Result:</b> funds fully deployed with zero program failures through the federal funding freeze. Google adopted our grantee framework as its template for other states.</p>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <div class="band paper">
+    <div class="in cols2" style="align-items:center">
+      <div>
+        <span class="kicker">The next wave of infrastructure</span>
+        <h2>From the energy transition to data centers</h2>
+        <p>Data centers are essential, and often unpopular and misunderstood. They face the same consent bottleneck as energy projects, with higher stakes. The model transfers intact: neutral convening and trust-building, independent 501(c)(3) fund management, and community benefit written into the deal with OKRs and audit-ready reporting.</p>
+        <a class="btn" href="#contact" style="margin-top:8px">Talk with our team →</a>
+      </div>
+      <img src="img/datacenter.jpg" alt="A data center campus at dusk" loading="lazy" style="width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:4px">
+    </div>
+  </div>
+</section>
+
+<!-- ================= FELLOWSHIP ================= -->
+<section class="page" id="page-fellowship">
+  <div class="band orange">
+    <div class="in">
+      <span class="kicker" style="color:#FFE2C4">Students</span>
+      <h1 style="color:#fff">The Energy &amp; Sustainability Fellowship</h1>
+      <p class="lede" style="color:#FFF1E2">The clean energy movement needs leaders who reflect the communities it serves. Our fellowship helps students from diverse backgrounds, especially at HBCUs, build the skills, experience and networks for careers in clean energy and environmental justice.</p>
+      <div class="fel-nums"><div><b>90+</b><span>Fellows placed</span></div><div><b>$1M+</b><span>Scholarships &amp; stipends</span></div><div><b>4</b><span>Fields of study</span></div><div><b>22</b><span>Fellows in 2026</span></div></div>
+      <div class="poster-full">
+        <button class="poster-btn" data-zoom aria-label="Enlarge the 2026 fellows poster"><img src="img/fellows-2026.jpg" alt="The 22 fellows of the 2026 HBCU Energy and Sustainability Fellowship Program, with their universities and placements"></button>
+        <p class="zoom-hint">Click to enlarge · Fellowships are awarded on an invitation-only basis.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="band">
+    <div class="in">
+      <span class="kicker">How it works</span>
+      <h2>From campus to career</h2>
+      <div class="steps3">
+        <div><span class="n">Step 1</span><h3>Leadership training</h3><p>Fellows build skills in clean energy, sustainability and community-centered research.</p></div>
+        <div><span class="n">Step 2</span><h3>Paid summer placement</h3><p>Paid internships with grassroots environmental and clean energy organizations in the public, private or government sectors.</p></div>
+        <div><span class="n">Step 3</span><h3>Campus ambassadors</h3><p>After the summer, fellows serve as Energy &amp; Sustainability Ambassadors on their campuses.</p></div>
+      </div>
+      <div class="steps3" style="margin-top:48px">
+        <div><h3>STEM fellowship tracks</h3><p>Data infrastructure, environmental science, energy engineering and policy.</p></div>
+        <div><h3>Data center career pathways</h3><p>Curriculum built with Microsoft, Google and Amazon, mapping campus study to operations-floor roles.</p></div>
+        <div><h3>Research &amp; employer matching</h3><p>HBCU research placements and direct employer-to-fellow matching for faster placement.</p></div>
+      </div>
+      <div class="logos" style="margin-top:40px"><img src="img/howard.png" alt="Howard University" loading="lazy"><img src="img/morehouse.png" alt="Morehouse College" loading="lazy"><img src="img/alcorn.png" alt="Alcorn State University" loading="lazy"><img src="img/hbcu.png" alt="Historically Black Colleges and Universities" loading="lazy"><img src="img/microsoft.png" alt="Microsoft" loading="lazy"><img src="img/google.png" alt="Google" loading="lazy"><img src="img/amazon.png" alt="Amazon" loading="lazy"></div>
+    </div>
+  </div>
+
+  <div class="band dark">
+    <div class="in bigquote">
+      <p>“As an applied physicist, being a Fellow has shown me how to contribute my technical skills with a policy-oriented approach. I learned how to approach research at the intersection of community-centered work and innovation, and I cannot wait to bring these skills into my career.”</p>
+      <footer><img src="img/kaiwan.jpg" alt="Kaiwan Bilal" loading="lazy"><cite>Kaiwan Bilal, University of Michigan, 2026 Clean Energy Fellow</cite></footer>
+    </div>
+  </div>
+
+  <div class="band">
+    <div class="in">
+      <span class="kicker">Our fellows</span>
+      <h2>Meet the cohorts</h2>
+      <div class="tabs" role="tablist" aria-label="Fellowship cohort year" id="fel-tabs"></div>
+      <div class="fellows" id="fellows" role="tabpanel"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MEDIA ================= -->
+<section class="page" id="page-media">
+  <div class="ph">
+    <div class="in"><span class="kicker">Media &amp; Press</span><h1>News &amp; Media</h1><p class="lede">Expressing our views on clean energy and environmental justice. Press releases, articles and media events from the Sharing the Power Foundation.</p></div>
+  </div>
+  <div class="band">
+    <div class="in">
+      <div class="news-list" id="media-news" style="margin-top:0"></div>
+      <h2 style="margin-top:72px">Media resources</h2>
+      <p class="lede" style="margin-top:6px">Watch the videos below to learn more about the Sharing the Power Foundation people and how they are changing the way power is distributed equitably.</p>
+      <div class="videos">
+        <a class="video" href="https://vimeo.com/698375719/e5eb67c000" target="_blank" rel="noopener"><span class="pb"><svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M7 4l13 8-13 8z"/></svg></span><span><b>Meet Aissa Dearing-Benton</b><small>2022 Environmental Justice Ambassador Fellow · Vimeo</small></span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="page" id="page-article">
+  <article class="art in" id="art"></article>
+</section>
+
+<section class="page" id="page-contact">
+  <div class="band">
+    <div class="in contact">
+      <div>
+        <span class="kicker">Contact Us</span>
+        <h1>Let’s build it together.</h1>
+        <p class="lede">We’d welcome the chance to design the community benefit program for your next project, from program design to grantmaking and impact reporting.</p>
+        <address><b>Sharing the Power Foundation</b><br>2001 L Street NW, Suite 500, PMB 50532<br>Washington, DC 20036</address>
+        <img src="img/thank-you.jpg" alt="A multigenerational group of neighbors smiling together outdoors" loading="lazy" style="margin-top:32px;width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:4px">
+      </div>
+      <form class="cf" novalidate>
+        <label for="cf-first">First name<input id="cf-first" name="first" type="text" required autocomplete="given-name"></label>
+        <label for="cf-last">Last name<input id="cf-last" name="last" type="text" required autocomplete="family-name"></label>
+        <label for="cf-email">Email<input id="cf-email" name="email" type="email" required autocomplete="email"></label>
+        <label for="cf-phone">Phone<input id="cf-phone" name="phone" type="tel" autocomplete="tel"></label>
+        <label class="full" for="cf-org">Organization<input id="cf-org" name="org" type="text" autocomplete="organization"></label>
+        <label class="full" for="cf-reason">Reason for inquiry<select id="cf-reason" name="reason"><option>Corporate partnership or Community Impact PPA</option><option>Community organization or grant partner</option><option>Fellowship or student programs</option><option>Media</option><option>Other</option></select></label>
+        <label class="full" for="cf-msg">Message<textarea id="cf-msg" name="message"></textarea></label>
+        <div class="full" style="display:flex;gap:18px;align-items:center;flex-wrap:wrap"><button class="btn" type="submit">Send message</button><span class="note" role="status"></span></div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="in">
+    <span>© 2026 Sharing the Power Foundation · 2001 L Street NW, Suite 500, PMB 50532, Washington, DC 20036</span>
+    <span><a href="https://www.linkedin.com/company/sharing-the-power-foundation" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://twitter.com/sharingthepower" target="_blank" rel="noopener">X</a> · <a href="https://www.instagram.com/sharingthepowerfoundation" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.sharingthepower.org/privacy">Privacy Policy</a> · <a href="https://www.sharingthepower.org/terms">Terms of Use</a></span>
+  </div>
+</footer>
+
+<dialog class="bio-dlg" id="bio-dlg" aria-label="Leader biography"><button class="bio-x" id="bio-close" type="button" aria-label="Close">×</button><div class="bd-in"></div></dialog>
+<dialog class="film" id="film" aria-label="Sharing the Power Foundation video"><button class="film-x" id="film-close" type="button" aria-label="Close video">×</button><video id="film-vid" src="img/stp-intro-film.mp4" poster="img/stp-intro-film-poster.jpg" controls playsinline preload="none"></video></dialog>
+<dialog class="lb" id="lb"><button aria-label="Close" onclick="document.getElementById('lb').close()">×</button><img alt=""></dialog>
+
+<script>
+const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;');
+
+const PRESS=[{"id": "press-2026-fellows", "kicker": "Press release", "date": "September 30, 2026", "title": "Sharing the Power Foundation Celebrates Five-Year Milestone and Announces 2026 Class of Clean Energy Fellows", "sub": "Twenty-two emerging clean energy leaders from 18 universities nationwide join a program that has now awarded more than $1 million in scholarships.", "img": "img/fellows-2026.jpg", "imgAlt": "The 2026 HBCU Energy and Sustainability Fellows", "portrait": true, "blocks": [["p", "WASHINGTON, DC, UNITED STATES, September 30, 2026 /EINPresswire.com/ -- Sharing the Power Foundation (www.sharingthepower.org), a national nonprofit dedicated to equitable access to clean energy and environmental opportunity, announced its 2026 Class of Clean Energy Fellows — 22 high-achieving students representing 18 universities across the United States. The announcement marks a landmark moment for the Foundation celebrating more than $1 million in scholarships awarded over its first five years of operation."], ["p", "Sharing the Power Foundation Clean Energy Fellows Program is among the nation's most comprehensive undergraduate and graduate workforce development initiatives in the clean energy sector. Designed for students pursuing careers at the intersection of energy, technology, and policy, the program offers a powerful combination of financial support, professional access, and real-world experience. Fellows receive merit-based scholarships and paid internships, alongside a rigorous weekly seminar series that puts them in direct dialogue with senior leaders across utilities, technology, finance, manufacturing, renewable energy development, and public policy. The program is intentional in its reach, drawing from HBCUs, land-grant institutions, and research universities ensuring that the talent pipeline for the clean energy economy reflects the communities it is meant to serve."], ["p", "\"We're proud to celebrate a significant milestone for Sharing the Power Foundation: more than $1 million in scholarships awarded over our first five years. But the true impact of this milestone is measured in the students. We are investing in their talent, their determination, and their commitment to shaping a cleaner, more sustainable future,” said Lauren Strickland, Fellowship Director, Sharing the Power Foundation."], ["p", "This year's class represents a remarkable range of disciplines from applied physics and computer engineering to environmental science and public policy united by a shared commitment to a cleaner, more equitable future. Upon completing the program, undergraduate Fellows return to their home campuses as Foundation Ambassadors, championing sustainability initiatives, and guiding peers toward careers in clean energy. Graduate Fellows and alumni carry the program's values directly into the workforce, joining the growing network of Sharing the Power alumni who are shaping the clean energy economy from the inside."], ["p", "The Foundation introduced a landmark new initiative: the Energy Equity for All Pitch Competition challenging Fellows to develop and present innovative, actionable solutions to real-world energy and environmental challenges. The competition represents the Foundation's commitment to educating the next generation of clean energy leaders and empowering them to be problem-solvers and entrepreneurs from the earliest stages of their careers."], ["quote", "\"As an applied physicist, being a Fellow has shown me how to contribute my technical skills with a policy-oriented approach. I learned how to approach research at the intersection of community-centered work and innovation, and I cannot wait to bring these skills into my career.\" — Kaiwan Bilal, University of Michigan, 2026 Clean Energy Fellow"], ["quote", "\"Being part of the Fellowship has helped me see how engineering and clean energy can create meaningful impact in communities. As a Computer Engineering student, the program has strengthened my professional development and given me a clearer sense of how I want to apply my technical skills.\" — Isaiah Harris, Tuskegee University, 2026 Clean Energy Fellow"], ["p", "The Foundation's initial funding was provided by Microsoft and anchored by Volt Energy Utility's Community Impact Power Purchase Agreement (CIPPA). A percentage of revenue generated by utility-scale solar projects developed by Volt Energy Utility and purchased by Microsoft is contributed to the Foundation. This model serves as the financial and strategic backbone of the Fellows Program through Microsoft and other Volt corporate partners. “We are honored to be part of the Fellows journey and deeply grateful to Microsoft and our new corporate partners for their commitment to developing tomorrow's clean energy leaders,” said Volt Energy Utility, CEO and the foundation’s chairman of the board Gilbert Campbell."], ["p", "The Foundation is proud to recognize the following members of the 2026 Clean Energy Fellows Class:"], ["ul", ["Abby Armstrong - West Virginia University", "Keeley Bernard - Western Michigan University", "Kaiwan Bilal - University of Michigan", "Fiifi Botchway - Cornell University", "Iman Burdine - San Francisco State University", "Skyler Carrillo - Tuskegee University", "Joseph Carter - Texas Southern University", "Quentin Clarke - North Carolina State University", "Camryn Cummings - Alabama Agricultural and Mechanical University", "Giliad Dawite - Howard University", "Millena Desta - Ohio State University", "Tatiyana Haddock - Howard University", "Isaiah Harris - Tuskegee University", "Isaiah Hawkins - Prairie View Agricultural and Mechanical University", "Nancy Henry Naiho - Lehigh University", "Leslie Johnson - Morgan State University", "Austin King - Howard University", "Aryan Luitel - Alabama Agricultural and Mechanical University", "Sulaiman Matthew Wilson - Howard University", "Ayomikun Oyeniyi - Talladega College", "Arianna Smith Forte' - Spelman College", "Paris Williamson - Xavier University"]], ["h", "About Sharing the Power Foundation"], ["p", "Sharing the Power Foundation (www.sharingthepower.org) is a national nonprofit organization dedicated to advancing equitable access to the benefits of the clean energy economy. The Foundation provides financial support to organizations and programs that build healthy, resilient communities in rural and urban settings nationwide — addressing workforce development, residential weatherization, utility bill assistance, access to clean water and air, and the inclusion of women-, minority-, and veteran-owned businesses in the clean energy sector. The Foundation is funded primarily through contributions generated by utility-scale solar projects developed by Volt Energy Utility, LLC and its corporate partners through Volt Energy Utility's Community Impact Power Purchase Agreement (CIPPA) — a first-of-its-kind financial structure designed to direct clean energy revenue toward communities most in need."]]}, {"id": "press-hickory-solar", "kicker": "Press release", "date": "February 10, 2025", "title": "Sharing the Power Foundation to receive funds from Hickory Solar Project developed for Microsoft", "sub": "The project will contribute funding to enable Sharing the Power Foundation to offer financial assistance to organizations and causes that ensure equal access to clean air, water, and renewable energy.", "img": "img/news-hickory-solar.jpg", "imgAlt": "Rows of solar panels at a utility-scale solar project", "credit": "Image Source: EDP Renewables North America LLC", "blocks": [["p", "<strong>February 10, 2025</strong> — EDP Renewables North America LLC (<a href=\"http://www.edpr.com/north-america\" target=\"_blank\" rel=\"noopener\">EDPR NA</a>) announced today that it has delivered on three new utility-scale solar projects totaling 400 megawatts (MW). Microsoft has agreed to purchase 389 MW of electricity and renewable energy credits (RECs) from the projects through long-term virtual power purchase agreements (VPPAs). The delivery of these projects brings the total operational portfolio to five projects between the two companies in the US."], ["p", "In Southern Illinois, EDPR NA commissioned the 140 MW Wolf Run Solar Project (<a href=\"https://www.edpr.com/north-america/wolf-run-solar-park\" target=\"_blank\" rel=\"noopener\">Wolf Run</a>) near Jacksonville and the 110 MW Hickory Solar Project (<a href=\"https://www.edpr.com/north-america/hickory-solar-park\" target=\"_blank\" rel=\"noopener\">Hickory</a>) near Jerseyville in November last year. The 150 MW Cattlemen II Solar Project (<a href=\"https://www.edpr.com/north-america/cattlemen-solar-park\" target=\"_blank\" rel=\"noopener\">Cattlemen II</a>) located near Austin, Texas, came online in December."], ["p", "<a href=\"https://www.edpr.com/north-america/EDPRNA-Volt-Energy-Utility-Announce-Solar-Project-with-Microsoft\" target=\"_blank\" rel=\"noopener\">EDPR NA developed Hickory</a> and Microsoft agreed to purchase electricity and RECs.<sup>1</sup> Hickory uses an Environmental Justice PPA (EJ PPA) developed by Microsoft and <a href=\"https://www.voltenergyutility.com/\" target=\"_blank\" rel=\"noopener\">Volt Energy Utility, LLC (Volt Energy Utility)</a>, a minority-owned renewable energy developer focused on making clean energy investments in rural and urban communities disproportionately impacted by pollution and vulnerable to the impacts of climate change. With the EJ PPA, Hickory will contribute funding to enable <a href=\"#about\">Sharing the Power Foundation</a> to offer financial assistance to organizations and causes that ensure equal access to clean air, water, and renewable energy, as well as offer availability to energy assistance programs; and opportunities to pursue workforce training in clean energy careers."], ["p", "Wolf Run and Hickory have contributed $4.8 million to landowners<sup>2</sup>, who lease a portion of their land to the projects, and millions of dollars to local governments through tax payments, ensuring critical services, schools, road maintenance, and other local initiatives are well-funded. The two Illinois projects created 500 construction jobs and 5 permanent jobs."], ["p", "Cattlemen II in Texas will also contribute millions in taxes, benefiting the local school district and local government. The project created approximately 300 construction jobs and will support several permanent jobs in the area."], ["p", "The operations of these three projects will continue to increase local spending, often seen by service providers, restaurants, hotels, and other retailers near the project communities, with more than $10.4 million spent to date during construction."], ["quote", "\"The importance of ensuring benefits flowing from renewable energy development directly into communities has never been more important,\" added Sandhya Ganapathy, CEO, EDP Renewables North America. \"Through these three additional projects, we're keeping our promise – and indeed the industry's promise – to contribute to the nation's growing energy demand and in that process invest in long-lasting economic growth of our communities.\""], ["quote", "\"It's exciting when projects achieve commercial operations and begin generating clean energy in support of grid decarbonization,\" stated Kourtney Nelson, Senior Director of Renewable Energy Procurement, Microsoft. \"We're pleased with EDPR NA and Volt Energy Utility's collaboration on Hickory and the positive impact the project will have with community grants and investing in future renewable energy leaders.\""], ["h", "About EDP Renewables North America"], ["p", "EDP Renewables North America LLC (EDPR NA), its affiliates, and its subsidiaries develop, construct, own, and operate wind farms, solar parks, and energy storage systems throughout North America. Headquartered in Houston, Texas, with 61 wind farms, 26 solar parks, and eight regional offices across North America, EDPR NA has developed more than 12,000 megawatts (MW) and operates more than 11,400 MW of onshore utility-scale renewable energy projects. With more than 1,000 employees, EDPR NA’s highly qualified team has a proven capacity to execute projects across the continent."], ["h", "About Volt Energy Utility"], ["p", "Volt Energy Utility (Volt) is a minority-owned national utility-scale solar developer occupying a very unique position in our industry, Volt Energy Utility (<a href=\"http://www.voltenergyutility.com/\" target=\"_blank\" rel=\"noopener\">www.voltenergyutility.com</a>) is committed to providing historically marginalized communities with equal access to the benefits of renewable energy and opportunities to participate in the clean energy economy. This commitment is our core mission and practiced in every aspect of our business. Over ten years ago, Volt Energy Utility founder and CEO Gilbert Campbell co-founded Volt Energy, which developed several distributed generation solar roof top projects. In 2020, he founded a separate company, Volt Energy Utility, LLC, established with the primary mission to provide services and expertise to satisfy the increased demand for utility-scale solar."], ["h", "About Sharing The Power Foundation"], ["p", "The Sharing the Power Foundation has been established to offer financial assistance to organizations and causes that serve historically underserved urban and rural communities through programs that support their immediate environmental and clean energy needs. The foundation’s primary areas of focus are: ensuring equal access to renewable energy resources, clean air and water; increasing the availability of energy assistance programs; and expanding opportunities to pursue workforce training in clean energy careers. Funded primarily by revenue produced by solar projects created through the Volt Energy Utility Environmental Justice Power Purchase Agreement (EJPPA), the foundation provides corporate partners/offtakers opportunities to fund environmental organizations of their choice, or through the guidance and recommendation of the foundation. Microsoft was the first company to join with Volt to dedicate to the foundation a portion of revenue produced through the EJPPA."]]}, {"id": "press-moriah-hamilton", "kicker": "Fellowship news", "date": "", "title": "Moriah Hamilton, a senior at Howard University and 2023 Environmental Justice Ambassador Fellow, selected as a Schwarzman Scholar", "sub": "Selected to pursue a fully funded master’s in global affairs at Tsinghua University in China.", "img": "img/moriah-hamilton.jpg", "imgAlt": "Moriah Hamilton", "portrait": true, "blocks": [["p", "<strong>WASHINGTON</strong> — Howard University senior <strong>Moriah Hamilton</strong> has been named to this year’s cohort of Schwarzman Scholars. The 150 scholars named to this year’s cohort were selected from a record high of 5,000 candidates worldwide. This year’s scholars hail from 38 countries and 105 universities from around the world."], ["p", "Scholars will attend a one-year, fully funded master’s degree program in global affairs at Schwarzman College, Tsinghua University in Beijing, China. Designed to prepare the next generation of global leaders, Schwarzman Scholars continues to be one of the most selective graduate fellowship programs in the world."], ["p", "With the incoming class, the Schwarzman Scholars network now includes over 1,300 members from 104 countries and 459 institutions worldwide. Schwarzman Scholars alumni have demonstrated immense leadership capacity, trailblazing in a number of industries and collaborating to tackle pressing issues around the world."], ["p", "Hamilton is a senior civil and environmental engineering major with a minor in computer science and a focus on sustainable infrastructure. As president of Howard University’s Engineering Without Borders chapter and a UNICEF Climate Change youth ambassador, she has led projects expanding equitable access to energy and infrastructure in underserved communities across the Global South. Drawing on her experiences in the U.S. and China, Hamilton aims to innovative development in Guyana and the wider Caribbean region through engineering and sustainable infrastructure."], ["quote", "“As a Schwarzman Scholar, I prioritize any opportunity to gain more intimate knowledge of global cultures and communities,” Hamilton said. “The knowledge and experience I will gain at Tsinghua University will better position me to implement and innovate infrastructure and systems for development in the Global South, particularly relating to renewable energy systems and sustainable infrastructure.”"], ["p", "Ishmael Williams (B.S. ’19), a magna cum laude graduate in nutritional science, has also been selected. He has a diversified background demonstrating strong community engagement including healthcare education leadership and work to promote financial empowerment."], ["p", "“Our tenth cohort fills me with optimism for the future,” said <strong>Stephen A. Schwarzman</strong>, founding trustee of Schwarzman Scholars. “This year’s selected Scholars are keenly interested in learning about China and broadening their understanding of global affairs, which are both now more important than ever. Our network, now ten classes strong, is already starting to make a global impact, and I am proud of our program’s continued success. I look forward to watching this inspiring community continue to grow.”"], ["p", "\"I am excited to welcome the tenth cohort to the Schwarzman Scholars and Tsinghua University communities,\" said <strong>Xue Lan</strong>, Dean of Schwarzman College. “This class embodies Schwarzman College’s commitment to fostering global connections, advancing knowledge, and nurturing leaders who will address the most pressing challenges of our time. They will bring tremendous vitality and international experience to Tsinghua campus.”"], ["p", "Scholars are selected through a competitive application process designed to identify leadership potential, intellect, and strength of character. Close to 400 candidates were invited to interview with panels of CEOs, government leaders, university presidents, and non-profit executives, among others."], ["p", "Starting in August 2025, the Scholars selected for the tenth cohort will engage in a graduate curriculum focused on leadership, global affairs, and China. The students are taught by leading faculty from Tsinghua as well as from many globally recognized international universities, and attend lectures delivered by global thought leaders. Scholars gain unique exposure to China through mentoring, internships, and experiential learning."], ["p", "Additionally, career development is provided to help Scholars excel in various fields upon graduation. The program’s unique combination of coursework, cultural immersion, and personal and professional development equips Schwarzman Scholars with a well-rounded understanding of China’s changing role in the world, critically important to leadership in any field in the 21st century."], ["p", "For more information, please contact pressroom@schwarzmanscholars.org"]]}];
+const NEWS=PRESS.map(a=>({src:a.kicker+(a.date?' · '+a.date:''),title:a.title,sub:a.sub,url:'#'+a.id,img:a.img}));
+
+// leadership
+const BOARD=[["Gilbert Campbell", "Foundation Board Chair · Founder & CEO, Volt Energy Utility", "Gilbert Campbell is Founder and CEO of Volt Energy Utility, a national renewable energy firm that finances and develops utility-scale solar and energy storage projects for large corporate clients, municipalities, and other institutions.|Gilbert serves on the Board of Directors at The Solar Energy Industries Association (SEIA), The Renewable Energy Buyers Alliance (REBA), The American Association of Blacks in Energy (AABE), is an Advisory Board Member at 3Degrees, and is a Founding Member of Renewables Forward. Gilbert also co-founded Volt Energy, a national distributed generation solar development company. Under Gilbert’s leadership, Volt Energy successfully developed solar projects for numerous public and private sector clients including Accenture, Exelon/Pepco, The Cheesecake Factory, Subaru, District of Columbia Government, Howard University and Wake Forest University.|Gilbert is an advocate and spokesperson for diversity, equity and inclusion in clean energy, environmental justice and sustainability, and regularly advises federal and local officials, corporations and other key stakeholders on policies and best practices. Gilbert has been nationally recognized for his efforts and has testified before Congress regarding the need for increased minority participation in the renewable energy sector.|In 2016, the Obama Administration presented Gilbert with the White House Champions of Change Award for his leadership in advancing climate change equity. Gilbert was named to EBONY magazine’s 2014 Power 100 List, which recognizes influential achievements by African Americans annually."], ["Eli Hopson", "Foundation Board Member · Executive Director & Chief Operating Officer, Coalition for Green Capital", "Eli Hopson is the Executive Director and Chief Operating Officer at the Coalition for Green Capital, which works to create and serve sustainable finance institutions that serve low income and disadvantaged communities. Previously Eli served as the inaugural CEO of the DC Green Bank, Vice President of Legal and Chief Compliance Officer at Eagle Creek Renewable Energy and its predecessor Cube Hydro Partners.|Hopson’s experience also includes roles at Latham & Watkins LLP, the Union of Concerned Scientists, the U.S. House of Representatives Committee on Science, Georgetown Climate Center, and the Office of Energy Efficiency and Renewable Energy at the U.S. Department of Energy. He received his bachelor’s degree and Master of Engineering in environmental engineering from the Massachusetts Institute of Technology, and a law degree from the Georgetown University Law Center."], ["Erik Lensch", "Foundation Board Member · CEO, Leyline Renewable Capital, LLC", "Erik Lensch is the CEO of Leyline Renewable Capital, a team of former project developers that combat climate change by providing capital to accelerate the deployment of renewable energy projects. Erik is active in renewable energy advocacy, education, and advancement efforts and brings a sales, finance, and management background to Leyline.|Previously, he was CEO and Managing Director at Entropy Solar Integrators, part of York Capital Management, a large global hedge fund. Prior to joining Entropy, Erik spent eight years as the CEO and Founder of Argand Energy Solutions, a commercial and utility scale solar company."], ["Dr. Pamela Carpenter", "Foundation Board Member · Founder, The Healing Oak, LLC", "Dr. Pam Page Carpenter is the Founder of The Healing Oak, LLC. She has served as the Director of Education and Workforce programs for the PowerAmerica Institute and the Future Renewable Electric Energy Delivery and Management (FREEDM) Systems Center headquartered at North Carolina State University.|Dr. Carpenter has developed and led science, technology, engineering, and mathematics (STEM) programs for secondary and post-secondary education for renewable energy, sustainability, and alternative transportation. She was affiliated associate professor in the Technology, Engineering, and Design department at NC State and earned her doctorate in Technology, Engineering, and Design in the College of Education at NC State University. She is a consultant in clean energy education, training, and workforce. Dr. Carpenter is also a psychotherapist working with clients in a holistic and wellness model to empower her clients. She lives in Raleigh, NC."], ["Nedra Dickson", "Foundation Board Member · Managing Director, Accenture", "Nedra Dickson, Managing Director, leads Accenture’s Client Global Supplier Diversity and Sustainability Programs across 20 countries. With strong expertise in procurement transformation and supplier relationship management, she has managed over $2B in contingent labor spend.|Within her current roles, Nedra oversees Accenture’s procurement and client opportunities with diverse-owned businesses globally. To create an inclusive procurement community, Nedra is credited with expanding Accenture’s award-winning, world-renowned diverse supplier mentoring program, the Diverse Supplier Development Program (DSDP). This program represents a customized curriculum set around helping to grow and develop diverse businesses, to support their successful integration into Accenture’s global supply chain.|Nedra holds several Board of Director positions within the supplier diversity community: Women Business Enterprise National Council (WBENC), Georgia Minority Supplier Diversity Council (GMSDC), Canadian Aboriginal Supplier Development Council (CAMSC), Disability:IN, National LGBT Chamber of Commerce (NGLCC), and Founding Board Member of GSDA – Global Supplier Diversity Alliance.|Nedra was recognized by Atlanta Business Chronicle as one of the Top Diversity and Inclusion Officers of Atlanta, Global Supplier Diversity Champion by NGLCC, Georgia Top 25 Women in their Female Success Factor Series, WE magazine as one of America’s Top 100 Leaders in Corporate Supplier Diversity, Top 25 Women in Power Impacting Diversity, WBENC Corporate Mentor of the Year, USAPCC-SE region Mentor of the Year, Top 30 Champions in Diversity, and she was selected in Leadership Atlanta – class of 2022.|Nedra grew up in Arkansas and holds an MBA from the University of Southern California, a BS degree from Florida State University and a BA degree from California State University, Northridge. Nedra enjoys traveling and has been to over 65 countries. She also enjoys reading and playing golf in her spare time."], ["Paula Glover", "Foundation Board Member · President, Alliance to Save Energy", "Paula R. Glover has served as President of the Alliance to Save Energy since January 2021 and has been a member of the Board of Directors since 2017. Ms. Glover is the seventh president in the Alliance’s 45-year history. Her leadership at the Alliance is driven by her belief that universal adoption of energy efficiency is foundational to achieving energy affordability, economic growth, and decarbonization. She is responsible for working with the Alliance’s diverse coalition of stakeholders to find lasting, consensus-based solutions. During her tenure, the Alliance has secured billions of dollars in federal funding for energy efficiency programs, amplified its work on energy justice, and worked to advance the next generation of technologies with the Active Efficiency Collaborative.|Ms. Glover previously served as President and CEO of the American Association of Blacks in Energy, a non-profit professional association whose focus is to ensure that African Americans and other minorities have input into the discussions and development of energy policy, regulations, and environmental issues. She serves on the board of the Keystone Policy Center and Groundswell, a community solar development organization. She is also a Trustee for Cardigan Mountain School, a junior boarding school in Canaan, NH. She received her B.S. in Marketing Management from the University of Delaware."], ["Dr. Aisha Dickerson", "Foundation Board Member · Bloomberg Assistant Professor of American Health in Environmental Challenges, Johns Hopkins School of Public Health", "Dr. Aisha S. Dickerson is Assistant Professor of Epidemiology and a Bloomberg Assistant Professor of American Health in Environmental Challenges at the Johns Hopkins Bloomberg School of Public Health. She is an environmental neuro-epidemiologist with primary research interests in environmental risk factors for neurodevelopmental and neurodegenerative disorders, including autism spectrum disorder, amyotrophic lateral sclerosis, and dementia.|Dr. Dickerson currently serves as Principal Investigator on an NIH-supported research grant on parental occupational exposures and risk of autism in offspring in Denmark. Additionally, she investigates the influence of disparities in autism assessment and service provision along with environmental justice issues in underserved communities.|Dr. Dickerson holds a B.S. in Biology and M.S.P.H. in Epidemiology from the University of Alabama at Birmingham and a Ph.D. in Epidemiology from the University of Texas Health Science Center at Houston. She received a year of postdoctoral training at the US Environmental Protection Agency before completing a postdoctoral fellowship at the Harvard T.H. Chan School of Public Health."], ["Dr. Janelle Burke", "Foundation Board Member · Director of the Interdisciplinary Environmental Studies Program, Howard University", "Dr. Janelle Burke is an Associate Professor of Biology and Director of the Interdisciplinary Environmental Studies Program at Howard University. Trained as a botanist, her research expertise is in plant evolution and diversity.|At Howard University, she has served in a leadership role to develop and grow the Environmental Studies and Science program, which was launched in 2016. She has also been instrumental in securing multiple grants and partnerships to support this program and its associated student opportunities. She has a passion for developing innovative, interdisciplinary curricula that prepare HBCU students for leadership roles in environmental and sustainability careers."], ["Dr. Olubemiga Olatidoye", "Foundation Board Member · Professor of Engineering, Clark Atlanta University", "Dr. Olugbemiga Olatidoye is a Professor of Engineering and the Founder and Director of the Visualization, Simulation and Design Laboratory (ViSiDeL), a virtual reality lab, at Clark Atlanta University (CAU). Other centers that he directs at CAU are the Center for Alternative, Renewable Energy, Technology and Training (CARET2), Atlanta University Center (AUC) Sustainable Campus Community Initiatives (ASCCI), Center for Additive Manufacturing (CAM), Atlanta Electronic Commerce Resource Center (AECRC), Army High Performance Computing Research Center (AHPCRC) and DoD Major Shared Resource Center (Army Research Laboratory (ARL), Army Corps of Engineers Waterways Experiment Station (CEWES), Aeronautical Systems Center (ASC) Wright-Patterson Air Force Base) and Georgia Industrial Assessment Center (GIAC). All centers are Department of Defense (DoD) and Department of Energy (DOE) funded projects.|He served as the Coordinator of the Dual Degree Engineering Program at CAU, which led to the creation of the Engineering Department at CAU in 1994. Dr. Olatidoye received his Bachelor’s degree in Architectural Engineering in the area of Structures from North Carolina A&T State University in 1982. He completed his Master’s degree in Architecture at Virginia Polytechnic Institute and State University, and a Master’s degree in Civil Engineering in Engineering Computer Graphics at Georgia Tech, Atlanta. Other degrees from Georgia Tech are in Knowledge Engineering and a Doctorate with emphasis on Intelligent Graphics. He was a member of the Board of Directors at Georgia Tech."], ["Eric Grant", "Foundation Board Member · Partner, Volt Energy Utility", "Eric is responsible for Volt’s external affairs, marketing and communications. He also directs the management and governance of the Environmental Justice Community Impact Fund, as stipulated in the Environmental Justice Power Purchase Agreement™.|Eric has over 20 years of experience in the energy sector. As former vice president of government affairs and communications for WGL Energy and Washington Gas, he directed the company’s multi-state government and public affairs, federal government affairs, external and crisis communications, media relations, branding and corporate giving. His government affairs team led the lobbying efforts for the landmark utility infrastructure repair and replacement law in Maryland and the District of Columbia. Early in his career, he served as manager of state government affairs at The American Petroleum Institute. For almost a decade, he served as spokesperson, director of communications, public affairs and corporate philanthropy at The Washington Post.|His non-profit experience includes five years as director of cause marketing and mega city grants for Special Olympics, Inc., structuring major corporate sponsorships with such companies as Lands’ End, Subaru, Raymond Co., AMF, and Hoyle Cards. He has served on several boards including Volt Energy, LLC, the DC and Maryland Chambers of Commerce, Red Cross – National Capital Region, and the Black Student Fund. Eric is a graduate of Dartmouth College and the Landegger International Business Executive Program at Georgetown University."]];
+const STAFF=[["Lauren Strickland", "Deputy Executive Director, Sharing the Power Foundation", "Lauren Strickland is the Deputy Executive Director for the Sharing the Power Foundation. She previously served as the Director of Clean Jobs and Environmental Justice Programs for the Foundation, a national philanthropic non-profit that advances environmental justice and an inclusive clean energy future through grantmaking and seeding the next generation of environmental leaders. In this role, Lauren leads special programs and supports strategic efforts for the Foundation.|Lauren is an inaugural 2023 Dream.Org Green for All Business Council Fellow. The fellowship provides clean energy career opportunities for fellows with leading diverse-owned clean tech firms. Prior to joining the Sharing the Power Foundation, Lauren worked as a business development executive in the hospitality industry for over ten years, developing innovative strategies and leading expansion efforts for leading hospitality groups. She has been recognized as Leader of the Year by the Denihan Hospitality Group.|Lauren is a lifelong social justice advocate. She served on the board of IMPACT, a political advocacy and social impact non-profit based in Washington, DC, where she oversaw key partnerships with Capitol Hill and other key lawmakers across the country. Lauren has served on KIPP DC’s Ambassador Board and has worked with two presidential campaigns and various state-level campaigns. Lauren graduated from Howard University with a Journalism degree from Howard’s School of Communications."], ["Tylitha H. Stewart", "Senior Advisor, Sharing the Power Foundation", "Tylitha H. Stewart, Senior Advisor, assists Sharing the Power in strategic planning and operational efficiency. She has extensive experience and proven success as an executive strategist, operator, and transformation advisor who has spent more than two decades building businesses, products, and growth strategies across Fortune 50 companies, the public sector, and non-profit organizations.|Tylitha served as SVP and Global Head of Consumer Digital Services at Hewlett-Packard (HP) and spent roughly a decade at Microsoft, where her work ranged from finance and business performance to product marketing and ultimately global consumer strategy and go-to-market for Surface Devices & Accessories. Her executive resume documents responsibility for global product management, strategy and planning for a $4 billion first-party devices and accessories business across 46 markets, as well as earlier responsibility for investment strategy and performance across Microsoft’s multi-billion-dollar devices business.|Tylitha is also Founder and Principal of Vayana Consulting, a strategy and transformation advisory firm helping leaders and organizations turn ambitious ideas into clear strategies and measurable results."], ["Jaron Dandridge", "Director of Community Engagement and Program Evaluation", "Jaron Dandridge serves as the Director of Community Engagement and Program Evaluation for Sharing the Power Foundation, overseeing outreach to the awardee organizations which receive foundation grants. He maintains a specific focus on evaluating the organizations’ overall effectiveness in accomplishing the primary funding objectives and measuring the use of grant funds across major impact categories, which may include: services that provide assistance and programs to communities in need of access to clean air, water and renewable energy; workforce training opportunities in clean energy careers; home weatherization and utility bill payment assistance; and outreach programs to small and diverse businesses geared towards participation in the clean energy economy. Jaron also engages in community needs assessment designed to provide corporate partners with recommendations on historically marginalized communities which may need assistance.|Jaron has been a champion of community engagement throughout his professional career. As a member of the Henrico County Planning Commission in his hometown of Richmond, Virginia, he is an advisor to the municipal governing body on issues and policies affecting numerous community stakeholders relating to energy, planning, land use regulations, rezoning requests, and development. An engineer by training, Jaron spent a large portion of his professional career as a manufacturing manager for several large companies across Virginia and Maryland, where he was recognized as a standout leader and spearheaded several continuous improvement projects.|Jaron received his Bachelor of Science in Electrical Engineering from Hampton University. Before transitioning to management, his career included working as a Nuclear Test Engineer for Newport News Shipbuilding, now Northrop Grumman. Most recently, he worked in the aerospace industry as a manager at Eaton Corporation in Beltsville, Maryland. Jaron also serves as a liaison between the foundation and Volt Energy Utility, which established the Sharing the Power Foundation as an independent not-for-profit entity."], ["Jean Nelson-Houpert", "Financial Counselor, Sharing the Power Foundation", "Jean Nelson-Houpert is the Chief Financial Officer (CFO) of Volt Energy Utility, a national minority-owned utility-scale developer in Washington, DC, and the Financial Counselor at Sharing the Power Foundation. She oversees all financial aspects of the company, ensuring its continued success and stability. Jean volunteers financial counsel to the Sharing the Power Foundation to support organizations that provide services to urban and rural communities disproportionately affected by climate change, air and water pollution, and inaccessibility to renewable energy opportunities.|With over 25 years of experience in finance, public, and corporate accounting, Jean served as the inaugural Chief Financial Officer and Interim CEO at the DC Green Bank for three years, leading the organization from its inception until September 2023. She began her career in public accounting as a financial institution specialist with Grant Thornton, LLP, and has served in corporate positions as interim CEO, Chief Financial Officer, and Director of Accounting at various organizations.|Jean received her Bachelor of Business Administration (BBA) in Finance, graduating cum laude from Temple University’s Fox School of Business, and a Master of Jurisprudence in Labor and Employment from Tulane Law School. She also holds a certification from Columbia Business School in environmental, social, and governance (ESG) investing and a certificate in Sustainable Management.|Jean serves on the Board of Directors of Women of Renewable Industries and Sustainable Energy (WRISE), the Advisory Council of the Washington Area Community Investment Fund (Wacif), and the advisory boards of Village Capital and Halcyon House."], ["Destiny Okonkwo", "Fellowship Operations & Partnerships Lead, Sharing the Power Foundation", "Destiny Okonkwo serves as the Fellowship Operations & Partnerships Lead at the Sharing the Power Foundation, where she oversees key aspects of the Foundation’s HBCU Energy and Sustainability Fellowship, including program operations, Fellow engagement, professional development, and strategic partnerships. Through her work, she is committed to expanding opportunities and creating meaningful pathways for the next generation of leaders in clean energy, sustainability, and environmental justice.|Destiny earned both her Master of Public Administration, with a concentration in Urban Planning and Environmental Policy, and her Bachelor of Arts in Political Science from Texas Southern University. Her professional and academic experiences reflect her passion for environmental justice, public policy, community development, and energy equity."]];
+
+// fellows
+const FELLOWS={
+ 2026:[['Isaiah Harris','Tuskegee University','Aptar CSP Technologies'],['Isaiah Hawkins','Prairie View A&M University','The Walt Disney Company'],['Abby Armstrong','West Virginia University','Sharing the Power Foundation'],['Keeley Bernard','Western Michigan University','Runway'],['Kaiwan Bilal','University of Michigan','Lawrence Berkeley National Laboratory'],['Fiifi Botchway','Cornell University','Google'],['Austin King','Howard University','DuPont'],['Aryan Luitel','Alabama A&M University','Adobe'],['Sulaiman Matthew-Wilson','Howard University','World Wildlife Fund'],['Ayomikun Oyeniyi','Talladega College','Microsoft'],['Joseph Carter','Texas Southern University','Congressional Black Caucus'],['Quentin Clarke','North Carolina State University','Nike'],['Nancy Henry-Naiho','Lehigh University','EY-Parthenon'],['Arianna Smith-Forte','Spelman College','Meta'],['Paris Williamson','Xavier University','Cincinnati Children’s Hospital'],['Giliad Dawite','Howard University','Goldman Sachs'],['Millena Desta','Ohio State University','Bloomberg Philanthropies'],['Tatiyana Haddock','Howard University','The Office of Barack and Michelle Obama'],['Camryn Cummings','Alabama A&M University','Office of Mayor O’Connell, Nashville'],['Skyler Carrillo','Tuskegee University','Southern Company'],['Iman Burdine','San Francisco State University','Amazon'],['Leslie Johnson','Morgan State University','Exelon / Pepco']],
+ 2025:[['Andrew Love','Howard University'],['Andrew Moore','Clark Atlanta University'],['Danaya Derouen','Prairie View A&M University'],['Gabriella Gilmore','Ohio State University'],["Ja'Niya Lewis",'Texas Southern University'],['Jasean Robertson','Howard University'],['Jasmine Engel','Florida A&M University'],['Jordan Adeyemi','Clark University'],['Julian Warren','Howard University'],['Jyanne Guide','NC A&T State University'],['Kamara Chima','Claflin University'],['Kaylah Lee','Winston-Salem State University'],['Khandie Anijah-Obi','Howard University'],['Luca Crist','Cornell University'],['Nathan Lewis','Morehouse College'],['Odera Uwolloh','Philander Smith University'],['Quinton Elijah McKnight','Howard University'],['Tatum St. Louis','SUNY College of Environmental Science and Forestry'],['Thabo Ibrahim Traore','Alabama A&M University'],['Wagar Ahmed','Howard University']],
+ 2024:[['Amina Blount','NC A&T State University'],['Asia Alexander','Howard University'],['Brianna Mitchell','NC A&T State University'],['Chelsea Ubazi','Howard University'],['Christopher Landers','Tuskegee University'],['Curtis Jordan','Norfolk State University'],['Destiny Okonkwo','Texas Southern University'],['Ebubechukwu Duruji','Philander Smith University'],['Elijah Steiner','University of Toronto Mississauga'],['Emery Sumberlin','Clark Atlanta University'],['Gloria Ekezie','Texas Southern University'],['Jamal Grimes','Howard University'],['Jayden Lott','University of Wisconsin-Madison'],['Jesse Awuah','Howard University'],['Kendell Young','Spelman College'],['Malcolm Doster','NC A&T State University'],['Mason Brown','Morehouse College'],['Tyler Booty','Prairie View A&M University'],['Victoria Matthews','Howard University'],['Will-Josh Njeumi','University of Maryland, College Park'],['Yvan Djoumessi','University of Maryland, College Park']],
+ 2023:[['Anyiah Chambers','Kentucky State University'],['Beleil Lamb','Howard University'],['Chase Knox','Howard University'],['Fayed Troy','Hampton University'],['Jelani Pierre','Howard University'],['Kamaria Marshall','Texas Southern University'],['Karrington Stanley','Claflin University'],['Kimora Oliver','Howard University'],['Malachi Cheeks','University of Wisconsin-Madison'],['Moriah Hamilton','Howard University'],['Obiajuru Nwadiokwu','Edward Waters University'],['Serena Echols','Spelman College'],['Thailer Ragland','Morehouse College'],['Theo Daniels','Howard University']],
+ 2022:[['Aissa Dearing Benton','Howard University'],['Nijai Dixon','Clark Atlanta University'],['Reagan Russell','Howard University'],['Zoe Landers','Clark Atlanta University'],['Camryn Millon','Virginia State University'],['Keturah Tamar Caldwell','Virginia State University']]
+};
+
+// news
+const row=n=>`<a class="news-row" href="${n.url}"><div class="t">${n.img?`<img src="${n.img}" alt="">`:`<span>${esc(n.txt)}</span>`}</div><div><small>${esc(n.src)}</small><h3>${esc(n.title)}</h3>${n.sub?`<p class="nr-sub">${esc(n.sub)}</p>`:''}</div><span class="go" aria-hidden="true">→</span></a>`;
+document.getElementById('home-news').innerHTML=NEWS.map(row).join('');
+document.getElementById('media-news').innerHTML=NEWS.map(row).join('');
+
+// people
+const PHOTOS={"Gilbert Campbell": "img/team/gilbert-campbell.jpg", "Lauren Strickland": "img/team/lauren-strickland.jpg", "Jaron Dandridge": "img/team/jaron-dandridge.jpg", "Eli Hopson": "img/team/eli-hopson.jpg", "Jean Nelson-Houpert": "img/team/jean-nelson-houpert.jpg", "Erik Lensch": "img/team/erik-lensch.jpg", "Dr. Pamela Carpenter": "img/team/pamela-carpenter.jpg", "Nedra Dickson": "img/team/nedra-dickson.jpg", "Paula Glover": "img/team/paula-glover.jpg", "Dr. Aisha Dickerson": "img/team/aisha-dickerson.jpg", "Dr. Janelle Burke": "img/team/janelle-burke.jpg", "Dr. Olubemiga Olatidoye": "img/team/olubemiga-olatidoye.jpg", "Eric Grant": "img/team/eric-grant.jpg", "Tylitha H. Stewart": "img/team/tylitha-h-stewart.jpg", "Destiny Okonkwo": "img/team/destiny-okonkwo.jpg"};
+const person=([n,r,bio])=>`<li><img class="pl-photo" src="${PHOTOS[n]||''}" alt="${esc(n)}" loading="lazy"><div class="pl-main"><div class="pl-head"><b>${esc(n)}</b><span>${esc(r)}</span></div>${bio?`<details><summary>Full bio</summary>${bio.split('|').map(x=>`<p>${esc(x)}</p>`).join('')}</details>`:''}</div></li>`;
+
+// fellows
+const tabs=document.getElementById('fel-tabs'), fl=document.getElementById('fellows');
+const years=Object.keys(FELLOWS).sort().reverse();
+function showYear(y){
+  tabs.querySelectorAll('button').forEach(b=>b.setAttribute('aria-selected',b.dataset.y===y));
+  fl.innerHTML=FELLOWS[y].map(([n,u,o])=>`<div><b>${esc(n)}</b><span>${esc(u)}</span>${o?`<em>${esc(o)}</em>`:''}</div>`).join('');
+}
+tabs.innerHTML=years.map(y=>`<button role="tab" data-y="${y}">${y} · ${FELLOWS[y].length} fellows</button>`).join('');
+tabs.addEventListener('click',e=>{const b=e.target.closest('button'); if(b) showYear(b.dataset.y);});
+showYear(years[0]);
+
+// pillar selector (slide 12)
+const PILLARS=[
+ {t:'Workforce & Economic Development',img:'img/solar-crew-wide.jpg',alt:'A clean energy crew installing solar panels at sunset',v:'2,500+',sl:'workers retrained and placed in good-paying jobs*',d:'Supporting job training, workforce development and economic opportunity in communities hosting clean energy projects and data centers.',logos:[['appvoices.jpg','Appalachian Voices'],['coalfield.jpg','Coalfield Development']],id:'p1'},
+ {t:'Energy Affordability',img:'img/weatherization.jpg',alt:'A technician installing insulation in a home',v:'10,000+',sl:'households supported with energy burden relief*',d:'Helping to lower energy costs and expand access to clean, reliable and affordable energy in under-resourced communities.',logos:[['uwm.png','United Way of the Midlands'],['haf.png','Hispanic Access Foundation'],['vipl.png','Virginia Interfaith Power & Light']],id:'p2'},
+ {t:'STEM Education',img:'img/stem-students.jpg',alt:'Students building a solar and wind model in a lab',v:'$1M+',sl:'scholarships awarded to our HBCU Energy & Sustainability Fellows',d:'Investing in the next generation of clean energy leaders through STEM education, scholarships and hands-on learning.',logos:[['southern.png','Southern University'],['tuskegee.png','Tuskegee University']],id:'p3'},
+ {t:'Healthy Communities',img:'img/food-volunteers.jpg',alt:'Volunteers handing out fresh produce',v:'35M',sl:'meals served*',d:'Supporting food security, health and wellness initiatives that build stronger, more resilient communities.',logos:[['goodr-logo.png','Goodr'],['wawa.png','West Atlanta Watershed Alliance']],id:'p4'},
+ {t:'Community Engagement',img:'img/convening-stage.jpg',alt:'Panelists on stage at a policy conference',v:'100+',sl:'community organizations supported in 20 states',d:'Building lasting relationships through local grants, community partnerships and ongoing engagement.',logos:[['naacp.png','NAACP'],['mspolicy.png','Mississippi Policy Conference, Tunica']],id:'p5'}
+];
+const sl=document.getElementById('sel-list'), sp=document.getElementById('sel-panel');
+sl.innerHTML=PILLARS.map((p,i)=>`<button role="tab" id="pt-${i}" aria-controls="sel-panel" data-i="${i}"><span>0${i+1}</span>${esc(p.t)}</button>`).join('');
+PILLARS.forEach(p=>{const i=new Image(); i.src=p.img;});
+function showPillar(i){
+  const p=PILLARS[i];
+  sl.querySelectorAll('button').forEach(b=>{const on=+b.dataset.i===i; b.setAttribute('aria-selected',on); b.tabIndex=on?0:-1;});
+  sp.setAttribute('aria-labelledby','pt-'+i);
+  sp.innerHTML=`<img src="${p.img}" alt="${esc(p.alt)}"><div class="sel-body"><b class="big">${p.v}</b><span class="sl">${esc(p.sl)}</span><p>${esc(p.d)}</p><a class="arrow" href="#our-work" data-jump="${p.id}">Read more about this pillar</a><div class="partners"><small>Select partners</small><div>${p.logos.map(([f,a])=>`<img src="img/${f}" alt="${esc(a)}">`).join('')}</div></div></div>`;
+}
+sl.addEventListener('click',e=>{const b=e.target.closest('button'); if(b) showPillar(+b.dataset.i);});
+sl.addEventListener('keydown',e=>{if(!['ArrowDown','ArrowUp','ArrowLeft','ArrowRight'].includes(e.key))return; e.preventDefault(); const cur=+document.activeElement.dataset.i||0; const n=(cur+(e.key==='ArrowDown'||e.key==='ArrowRight'?1:-1)+5)%5; showPillar(n); sl.querySelector(`[data-i="${n}"]`).focus();});
+showPillar(0);
+
+// poster lightbox
+const lb=document.getElementById('lb');
+document.addEventListener('click',e=>{const z=e.target.closest('[data-zoom]'); if(!z) return; lb.querySelector('img').src=z.querySelector('img').src; lb.querySelector('img').alt=z.querySelector('img').alt; lb.showModal();});
+lb.addEventListener('click',e=>{if(e.target===lb) lb.close();});
+
+// contact form
+document.querySelector('form.cf').addEventListener('submit',e=>{
+  e.preventDefault();
+  const f=e.target, note=f.querySelector('.note');
+  const bad=[...f.querySelectorAll('[required]')].filter(i=>!i.value.trim()||(i.type==='email'&&!/^\S+@\S+\.\S+$/.test(i.value)));
+  if(bad.length){note.className='note err';note.textContent='Please add your first name, last name and a valid email.';bad[0].focus();return;}
+  note.className='note';note.textContent='Thank you. Our team will be in touch shortly. (Draft preview: this form is not connected yet.)';
+  f.reset();
+});
+
+// mobile menu
+const nav=document.getElementById('nav'), menu=document.getElementById('menu');
+menu.addEventListener('click',()=>{const o=nav.classList.toggle('open'); menu.setAttribute('aria-expanded',o); menu.textContent=o?'Close':'Menu';});
+
+// routing
+const pages=['home','about','our-work','fellowship','media','contact'];
+const artEl=document.getElementById('art');
+function renderArticle(a){
+  const body=a.blocks.map(([t,v])=>t==='p'?`<p>${v}</p>`:t==='h'?`<h3>${esc(v)}</h3>`:t==='quote'?`<blockquote>${esc(v)}</blockquote>`:t==='ul'?`<ul>${v.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:'').join('');
+  const others=PRESS.filter(x=>x.id!==a.id).map(x=>`<a href="#${x.id}"><small>${esc(x.kicker)}${x.date?' · '+esc(x.date):''}</small><b>${esc(x.title)}</b></a>`).join('');
+  artEl.innerHTML=`<a class="art-back" href="#media">← All news &amp; media</a><span class="kicker">${esc(a.kicker)}${a.date?' · '+esc(a.date):''}</span><h1>${esc(a.title)}</h1><p class="lede">${esc(a.sub)}</p><figure class="art-fig${a.portrait?' portrait':''}"><img src="${a.img}" alt="${esc(a.imgAlt||'')}">${a.credit?`<figcaption>${esc(a.credit)}</figcaption>`:''}</figure><div class="art-body">${body}</div><aside class="art-more"><h2>More news</h2>${others}</aside>`;
+  document.title=a.title+' | Sharing the Power Foundation';
+}
+let pendingJump=null;
+document.addEventListener('click',e=>{const a=e.target.closest('[data-jump]'); if(a){pendingJump=a.dataset.jump; if(location.hash==='#our-work'){e.preventDefault(); jump();}}});
+function jump(){const el=pendingJump&&document.getElementById(pendingJump); pendingJump=null; if(el) el.scrollIntoView({behavior:'smooth',block:'start'});}
+function route(){
+  const p=(location.hash||'#home').slice(1); const art=PRESS.find(a=>a.id===p);
+  if(art) renderArticle(art); else document.title='Sharing the Power Foundation';
+  const page=art?'article':(pages.includes(p)?p:'home');
+  document.querySelectorAll('.page').forEach(s=>s.classList.toggle('active',s.id==='page-'+page));
+  document.querySelectorAll('.bar-band a').forEach(a=>a.classList.toggle('active',a.dataset.page===(page==='article'?'media':page)));
+  nav.classList.remove('open'); menu.setAttribute('aria-expanded','false'); menu.textContent='Menu';
+  window.scrollTo({top:0});
+  if(pendingJump) requestAnimationFrame(jump);
+}
+window.addEventListener('hashchange',route); route();
+
+// intro video: autoplay muted loop, pause control, respect reduced motion
+(()=>{const v=document.getElementById('intro-vid'),b=document.getElementById('vid-toggle'); if(!v||!b) return;
+ const set=pl=>{b.querySelector('.i-pause').style.display=pl?'':'none';b.querySelector('.i-play').style.display=pl?'none':'';b.setAttribute('aria-label',pl?'Pause video':'Play video');};
+ if(matchMedia('(prefers-reduced-motion: reduce)').matches){v.removeAttribute('autoplay');v.pause();set(false);}
+ v.addEventListener('play',()=>set(true)); v.addEventListener('pause',()=>set(false));
+ b.addEventListener('click',()=>{v.paused?v.play().catch(()=>{}):v.pause();});
+ v.play?.().catch(()=>set(false));})();
+
+const LEADERS=[["Gilbert Campbell", "img/team/gilbert-campbell.jpg", "Foundation Board Chair", ["Founder & CEO", "Volt Energy Utility"], "Gilbert Campbell is Founder and CEO of Volt Energy Utility, a national renewable energy firm that finances and develops utility-scale solar and energy storage projects for large corporate clients, municipalities, and other institutions.|Gilbert serves on the Board of Directors at The Solar Energy Industries Association (SEIA), The Renewable Energy Buyers Alliance (REBA), The American Association of Blacks in Energy (AABE), is an Advisory Board Member at 3Degrees, and is a Founding Member of Renewables Forward. Gilbert also co-founded Volt Energy, a national distributed generation solar development company. Under Gilbert’s leadership, Volt Energy successfully developed solar projects for numerous public and private sector clients including Accenture, Exelon/Pepco, The Cheesecake Factory, Subaru, District of Columbia Government, Howard University and Wake Forest University.|Gilbert is an advocate and spokesperson for diversity, equity and inclusion in clean energy, environmental justice and sustainability, and regularly advises federal and local officials, corporations and other key stakeholders on policies and best practices. Gilbert has been nationally recognized for his efforts and has testified before Congress regarding the need for increased minority participation in the renewable energy sector.|In 2016, the Obama Administration presented Gilbert with the White House Champions of Change Award for his leadership in advancing climate change equity. Gilbert was named to EBONY magazine’s 2014 Power 100 List, which recognizes influential achievements by African Americans annually."], ["Lauren Strickland", "img/team/lauren-strickland.jpg", "Deputy Executive Director", ["Sharing the Power Foundation"], "Lauren Strickland is the Deputy Executive Director for the Sharing the Power Foundation. She previously served as the Director of Clean Jobs and Environmental Justice Programs for the Foundation, a national philanthropic non-profit that advances environmental justice and an inclusive clean energy future through grantmaking and seeding the next generation of environmental leaders. In this role, Lauren leads special programs and supports strategic efforts for the Foundation.|Lauren is an inaugural 2023 Dream.Org Green for All Business Council Fellow. The fellowship provides clean energy career opportunities for fellows with leading diverse-owned clean tech firms. Prior to joining the Sharing the Power Foundation, Lauren worked as a business development executive in the hospitality industry for over ten years, developing innovative strategies and leading expansion efforts for leading hospitality groups. She has been recognized as Leader of the Year by the Denihan Hospitality Group.|Lauren is a lifelong social justice advocate. She served on the board of IMPACT, a political advocacy and social impact non-profit based in Washington, DC, where she oversaw key partnerships with Capitol Hill and other key lawmakers across the country. Lauren has served on KIPP DC’s Ambassador Board and has worked with two presidential campaigns and various state-level campaigns. Lauren graduated from Howard University with a Journalism degree from Howard’s School of Communications."], ["Tylitha H. Stewart", "img/team/tylitha-h-stewart.jpg", "Senior Advisor", ["Sharing the Power Foundation"], "Tylitha H. Stewart, Senior Advisor, assists Sharing the Power in strategic planning and operational efficiency. She has extensive experience and proven success as an executive strategist, operator, and transformation advisor who has spent more than two decades building businesses, products, and growth strategies across Fortune 50 companies, the public sector, and non-profit organizations.|Tylitha served as SVP and Global Head of Consumer Digital Services at Hewlett-Packard (HP) and spent roughly a decade at Microsoft, where her work ranged from finance and business performance to product marketing and ultimately global consumer strategy and go-to-market for Surface Devices & Accessories. Her executive resume documents responsibility for global product management, strategy and planning for a $4 billion first-party devices and accessories business across 46 markets, as well as earlier responsibility for investment strategy and performance across Microsoft’s multi-billion-dollar devices business.|Tylitha is also Founder and Principal of Vayana Consulting, a strategy and transformation advisory firm helping leaders and organizations turn ambitious ideas into clear strategies and measurable results."], ["Jaron Dandridge", "img/team/jaron-dandridge.jpg", "Director of Community Engagement and Program Evaluation", [], "Jaron Dandridge serves as the Director of Community Engagement and Program Evaluation for Sharing the Power Foundation, overseeing outreach to the awardee organizations which receive foundation grants. He maintains a specific focus on evaluating the organizations’ overall effectiveness in accomplishing the primary funding objectives and measuring the use of grant funds across major impact categories, which may include: services that provide assistance and programs to communities in need of access to clean air, water and renewable energy; workforce training opportunities in clean energy careers; home weatherization and utility bill payment assistance; and outreach programs to small and diverse businesses geared towards participation in the clean energy economy. Jaron also engages in community needs assessment designed to provide corporate partners with recommendations on historically marginalized communities which may need assistance.|Jaron has been a champion of community engagement throughout his professional career. As a member of the Henrico County Planning Commission in his hometown of Richmond, Virginia, he is an advisor to the municipal governing body on issues and policies affecting numerous community stakeholders relating to energy, planning, land use regulations, rezoning requests, and development. An engineer by training, Jaron spent a large portion of his professional career as a manufacturing manager for several large companies across Virginia and Maryland, where he was recognized as a standout leader and spearheaded several continuous improvement projects.|Jaron received his Bachelor of Science in Electrical Engineering from Hampton University. Before transitioning to management, his career included working as a Nuclear Test Engineer for Newport News Shipbuilding, now Northrop Grumman. Most recently, he worked in the aerospace industry as a manager at Eaton Corporation in Beltsville, Maryland. Jaron also serves as a liaison between the foundation and Volt Energy Utility, which established the Sharing the Power Foundation as an independent not-for-profit entity."], ["Eli Hopson", "img/team/eli-hopson.jpg", "Foundation Board Member", ["Executive Director & Chief Operating Officer", "Coalition for Green Capital"], "Eli Hopson is the Executive Director and Chief Operating Officer at the Coalition for Green Capital, which works to create and serve sustainable finance institutions that serve low income and disadvantaged communities. Previously Eli served as the inaugural CEO of the DC Green Bank, Vice President of Legal and Chief Compliance Officer at Eagle Creek Renewable Energy and its predecessor Cube Hydro Partners.|Hopson’s experience also includes roles at Latham & Watkins LLP, the Union of Concerned Scientists, the U.S. House of Representatives Committee on Science, Georgetown Climate Center, and the Office of Energy Efficiency and Renewable Energy at the U.S. Department of Energy. He received his bachelor’s degree and Master of Engineering in environmental engineering from the Massachusetts Institute of Technology, and a law degree from the Georgetown University Law Center."], ["Jean Nelson-Houpert", "img/team/jean-nelson-houpert.jpg", "Financial Counselor", ["Sharing the Power Foundation"], "Jean Nelson-Houpert is the Chief Financial Officer (CFO) of Volt Energy Utility, a national minority-owned utility-scale developer in Washington, DC, and the Financial Counselor at Sharing the Power Foundation. She oversees all financial aspects of the company, ensuring its continued success and stability. Jean volunteers financial counsel to the Sharing the Power Foundation to support organizations that provide services to urban and rural communities disproportionately affected by climate change, air and water pollution, and inaccessibility to renewable energy opportunities.|With over 25 years of experience in finance, public, and corporate accounting, Jean served as the inaugural Chief Financial Officer and Interim CEO at the DC Green Bank for three years, leading the organization from its inception until September 2023. She began her career in public accounting as a financial institution specialist with Grant Thornton, LLP, and has served in corporate positions as interim CEO, Chief Financial Officer, and Director of Accounting at various organizations.|Jean received her Bachelor of Business Administration (BBA) in Finance, graduating cum laude from Temple University’s Fox School of Business, and a Master of Jurisprudence in Labor and Employment from Tulane Law School. She also holds a certification from Columbia Business School in environmental, social, and governance (ESG) investing and a certificate in Sustainable Management.|Jean serves on the Board of Directors of Women of Renewable Industries and Sustainable Energy (WRISE), the Advisory Council of the Washington Area Community Investment Fund (Wacif), and the advisory boards of Village Capital and Halcyon House."], ["Erik Lensch", "img/team/erik-lensch.jpg", "Foundation Board Member", ["CEO", "Leyline Renewable Capital, LLC"], "Erik Lensch is the CEO of Leyline Renewable Capital, a team of former project developers that combat climate change by providing capital to accelerate the deployment of renewable energy projects. Erik is active in renewable energy advocacy, education, and advancement efforts and brings a sales, finance, and management background to Leyline.|Previously, he was CEO and Managing Director at Entropy Solar Integrators, part of York Capital Management, a large global hedge fund. Prior to joining Entropy, Erik spent eight years as the CEO and Founder of Argand Energy Solutions, a commercial and utility scale solar company."], ["Dr. Pamela Carpenter", "img/team/pamela-carpenter.jpg", "Foundation Board Member", ["Founder", "The Healing Oak, LLC"], "Dr. Pam Page Carpenter is the Founder of The Healing Oak, LLC. She has served as the Director of Education and Workforce programs for the PowerAmerica Institute and the Future Renewable Electric Energy Delivery and Management (FREEDM) Systems Center headquartered at North Carolina State University.|Dr. Carpenter has developed and led science, technology, engineering, and mathematics (STEM) programs for secondary and post-secondary education for renewable energy, sustainability, and alternative transportation. She was affiliated associate professor in the Technology, Engineering, and Design department at NC State and earned her doctorate in Technology, Engineering, and Design in the College of Education at NC State University. She is a consultant in clean energy education, training, and workforce. Dr. Carpenter is also a psychotherapist working with clients in a holistic and wellness model to empower her clients. She lives in Raleigh, NC."], ["Nedra Dickson", "img/team/nedra-dickson.jpg", "Foundation Board Member", ["Managing Director", "Accenture"], "Nedra Dickson, Managing Director, leads Accenture’s Client Global Supplier Diversity and Sustainability Programs across 20 countries. With strong expertise in procurement transformation and supplier relationship management, she has managed over $2B in contingent labor spend.|Within her current roles, Nedra oversees Accenture’s procurement and client opportunities with diverse-owned businesses globally. To create an inclusive procurement community, Nedra is credited with expanding Accenture’s award-winning, world-renowned diverse supplier mentoring program, the Diverse Supplier Development Program (DSDP). This program represents a customized curriculum set around helping to grow and develop diverse businesses, to support their successful integration into Accenture’s global supply chain.|Nedra holds several Board of Director positions within the supplier diversity community: Women Business Enterprise National Council (WBENC), Georgia Minority Supplier Diversity Council (GMSDC), Canadian Aboriginal Supplier Development Council (CAMSC), Disability:IN, National LGBT Chamber of Commerce (NGLCC), and Founding Board Member of GSDA – Global Supplier Diversity Alliance.|Nedra was recognized by Atlanta Business Chronicle as one of the Top Diversity and Inclusion Officers of Atlanta, Global Supplier Diversity Champion by NGLCC, Georgia Top 25 Women in their Female Success Factor Series, WE magazine as one of America’s Top 100 Leaders in Corporate Supplier Diversity, Top 25 Women in Power Impacting Diversity, WBENC Corporate Mentor of the Year, USAPCC-SE region Mentor of the Year, Top 30 Champions in Diversity, and she was selected in Leadership Atlanta – class of 2022.|Nedra grew up in Arkansas and holds an MBA from the University of Southern California, a BS degree from Florida State University and a BA degree from California State University, Northridge. Nedra enjoys traveling and has been to over 65 countries. She also enjoys reading and playing golf in her spare time."], ["Paula Glover", "img/team/paula-glover.jpg", "Foundation Board Member", ["President", "Alliance to Save Energy"], "Paula R. Glover has served as President of the Alliance to Save Energy since January 2021 and has been a member of the Board of Directors since 2017. Ms. Glover is the seventh president in the Alliance’s 45-year history. Her leadership at the Alliance is driven by her belief that universal adoption of energy efficiency is foundational to achieving energy affordability, economic growth, and decarbonization. She is responsible for working with the Alliance’s diverse coalition of stakeholders to find lasting, consensus-based solutions. During her tenure, the Alliance has secured billions of dollars in federal funding for energy efficiency programs, amplified its work on energy justice, and worked to advance the next generation of technologies with the Active Efficiency Collaborative.|Ms. Glover previously served as President and CEO of the American Association of Blacks in Energy, a non-profit professional association whose focus is to ensure that African Americans and other minorities have input into the discussions and development of energy policy, regulations, and environmental issues. She serves on the board of the Keystone Policy Center and Groundswell, a community solar development organization. She is also a Trustee for Cardigan Mountain School, a junior boarding school in Canaan, NH. She received her B.S. in Marketing Management from the University of Delaware."], ["Dr. Aisha Dickerson", "img/team/aisha-dickerson.jpg", "Foundation Board Member", ["Bloomberg Assistant Professor of American Health in Environmental Challenges", "Johns Hopkins School of Public Health"], "Dr. Aisha S. Dickerson is Assistant Professor of Epidemiology and a Bloomberg Assistant Professor of American Health in Environmental Challenges at the Johns Hopkins Bloomberg School of Public Health. She is an environmental neuro-epidemiologist with primary research interests in environmental risk factors for neurodevelopmental and neurodegenerative disorders, including autism spectrum disorder, amyotrophic lateral sclerosis, and dementia.|Dr. Dickerson currently serves as Principal Investigator on an NIH-supported research grant on parental occupational exposures and risk of autism in offspring in Denmark. Additionally, she investigates the influence of disparities in autism assessment and service provision along with environmental justice issues in underserved communities.|Dr. Dickerson holds a B.S. in Biology and M.S.P.H. in Epidemiology from the University of Alabama at Birmingham and a Ph.D. in Epidemiology from the University of Texas Health Science Center at Houston. She received a year of postdoctoral training at the US Environmental Protection Agency before completing a postdoctoral fellowship at the Harvard T.H. Chan School of Public Health."], ["Dr. Janelle Burke", "img/team/janelle-burke.jpg", "Foundation Board Member", ["Director of the Interdisciplinary Environmental Studies Program", "Howard University"], "Dr. Janelle Burke is an Associate Professor of Biology and Director of the Interdisciplinary Environmental Studies Program at Howard University. Trained as a botanist, her research expertise is in plant evolution and diversity.|At Howard University, she has served in a leadership role to develop and grow the Environmental Studies and Science program, which was launched in 2016. She has also been instrumental in securing multiple grants and partnerships to support this program and its associated student opportunities. She has a passion for developing innovative, interdisciplinary curricula that prepare HBCU students for leadership roles in environmental and sustainability careers."], ["Dr. Olubemiga Olatidoye", "img/team/olubemiga-olatidoye.jpg", "Foundation Board Member", ["Professor of Engineering", "Clark Atlanta University"], "Dr. Olugbemiga Olatidoye is a Professor of Engineering and the Founder and Director of the Visualization, Simulation and Design Laboratory (ViSiDeL), a virtual reality lab, at Clark Atlanta University (CAU). Other centers that he directs at CAU are the Center for Alternative, Renewable Energy, Technology and Training (CARET2), Atlanta University Center (AUC) Sustainable Campus Community Initiatives (ASCCI), Center for Additive Manufacturing (CAM), Atlanta Electronic Commerce Resource Center (AECRC), Army High Performance Computing Research Center (AHPCRC) and DoD Major Shared Resource Center (Army Research Laboratory (ARL), Army Corps of Engineers Waterways Experiment Station (CEWES), Aeronautical Systems Center (ASC) Wright-Patterson Air Force Base) and Georgia Industrial Assessment Center (GIAC). All centers are Department of Defense (DoD) and Department of Energy (DOE) funded projects.|He served as the Coordinator of the Dual Degree Engineering Program at CAU, which led to the creation of the Engineering Department at CAU in 1994. Dr. Olatidoye received his Bachelor’s degree in Architectural Engineering in the area of Structures from North Carolina A&T State University in 1982. He completed his Master’s degree in Architecture at Virginia Polytechnic Institute and State University, and a Master’s degree in Civil Engineering in Engineering Computer Graphics at Georgia Tech, Atlanta. Other degrees from Georgia Tech are in Knowledge Engineering and a Doctorate with emphasis on Intelligent Graphics. He was a member of the Board of Directors at Georgia Tech."], ["Eric Grant", "img/team/eric-grant.jpg", "Foundation Board Member", ["Partner", "Volt Energy Utility"], "Eric is responsible for Volt’s external affairs, marketing and communications. He also directs the management and governance of the Environmental Justice Community Impact Fund, as stipulated in the Environmental Justice Power Purchase Agreement™.|Eric has over 20 years of experience in the energy sector. As former vice president of government affairs and communications for WGL Energy and Washington Gas, he directed the company’s multi-state government and public affairs, federal government affairs, external and crisis communications, media relations, branding and corporate giving. His government affairs team led the lobbying efforts for the landmark utility infrastructure repair and replacement law in Maryland and the District of Columbia. Early in his career, he served as manager of state government affairs at The American Petroleum Institute. For almost a decade, he served as spokesperson, director of communications, public affairs and corporate philanthropy at The Washington Post.|His non-profit experience includes five years as director of cause marketing and mega city grants for Special Olympics, Inc., structuring major corporate sponsorships with such companies as Lands’ End, Subaru, Raymond Co., AMF, and Hoyle Cards. He has served on several boards including Volt Energy, LLC, the DC and Maryland Chambers of Commerce, Red Cross – National Capital Region, and the Black Student Fund. Eric is a graduate of Dartmouth College and the Landegger International Business Executive Program at Georgetown University."], ["Destiny Okonkwo", "img/team/destiny-okonkwo.jpg", "Fellowship Operations & Partnerships Lead", ["Sharing the Power Foundation"], "Destiny Okonkwo serves as the Fellowship Operations & Partnerships Lead at the Sharing the Power Foundation, where she oversees key aspects of the Foundation’s HBCU Energy and Sustainability Fellowship, including program operations, Fellow engagement, professional development, and strategic partnerships. Through her work, she is committed to expanding opportunities and creating meaningful pathways for the next generation of leaders in clean energy, sustainability, and environmental justice.|Destiny earned both her Master of Public Administration, with a concentration in Urban Planning and Environmental Policy, and her Bachelor of Arts in Political Science from Texas Southern University. Her professional and academic experiences reflect her passion for environmental justice, public policy, community development, and energy equity."]];
+document.getElementById('leaders').innerHTML=LEADERS.map(([n,img,t,lines],i)=>`<article class="leader"><div class="l-photo"><img src="${img}" alt="${esc(n)}" loading="lazy"></div><div class="l-body"><h3>${esc(n)}</h3><p class="l-title"><b>${esc(t)}</b>${lines.map(x=>`<br>${esc(x)}`).join('')}</p><button class="l-bio" type="button" data-i="${i}">Full bio</button></div></article>`).join('');
+const bd=document.getElementById('bio-dlg');
+document.getElementById('leaders').addEventListener('click',e=>{const b=e.target.closest('.l-bio'); if(!b) return; const [n,img,t,lines,bio]=LEADERS[+b.dataset.i];
+ bd.querySelector('.bd-in').innerHTML=`<img src="${img}" alt=""><div><h3>${esc(n)}</h3><p class="l-title"><b>${esc(t)}</b>${lines.map(x=>`<br>${esc(x)}`).join('')}</p>${bio.split('|').map(x=>`<p>${esc(x)}</p>`).join('')}</div>`; bd.showModal(); bd.scrollTop=0;});
+document.getElementById('bio-close').addEventListener('click',()=>bd.close());
+bd.addEventListener('click',e=>{if(e.target===bd) bd.close();});
+
+// intro video with sound in a pop-up player
+(()=>{const d=document.getElementById('film'),fv=document.getElementById('film-vid'),bg=document.getElementById('intro-vid');
+ document.getElementById('film-open').addEventListener('click',()=>{d.showModal(); bg&&bg.pause(); fv.muted=false; fv.play().catch(()=>{});});
+ const close=()=>{fv.pause(); d.close();};
+ document.getElementById('film-close').addEventListener('click',close);
+ d.addEventListener('click',e=>{if(e.target===d) close();});
+ d.addEventListener('close',()=>{fv.pause(); if(bg&&!matchMedia('(prefers-reduced-motion: reduce)').matches) bg.play().catch(()=>{});});})();
+</script>
