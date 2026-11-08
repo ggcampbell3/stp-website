@@ -51,19 +51,19 @@ em.sun{font-style:italic;color:var(--sun)}
 
 /* ---------- top bar (option K: cream logo panel angled into an orange menu) ---------- */
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:#FBF6EF}
-.bar{position:relative;z-index:50;display:flex;flex-direction:column;align-items:center;background:linear-gradient(90deg,#A34F0F,#D9711F 50%,#A34F0F);color:#fff}
-.bar-in{display:flex;align-items:center;justify-content:center;gap:24px;padding:18px 0 16px}
-.bar .logo img{height:96px;width:auto;display:block}
-.bar .logo .logo-c{display:none}
-.bar-band{align-self:stretch;display:flex;justify-content:center;background:#fff;border-bottom:4px solid #D9711F;min-width:0}
-.bar-band ol{list-style:none;margin:0;padding:0;display:flex;justify-content:center;flex-wrap:nowrap;gap:0 52px}
-.bar-band a{display:block;color:var(--ink);text-decoration:none;font-weight:800;text-transform:uppercase;letter-spacing:.1em;font-size:1rem;padding:17px 0 13px;border-bottom:4px solid transparent;white-space:nowrap}
-.bar-band a:hover{color:#B4520F}
-.bar-band a.active{color:#B4520F;border-bottom-color:#D9711F}
-.bar > .cta{position:absolute;right:max(48px,env(safe-area-inset-right,0px));top:40px;margin:0;background:#fff;color:#A34F0F;padding:17px 28px;text-transform:uppercase;letter-spacing:.08em;font-weight:800;font-size:.9rem;white-space:nowrap}
+.bar{position:relative;z-index:50;display:grid;grid-template-columns:1fr auto;align-items:center;background:linear-gradient(90deg,#A34F0F,#D9711F 60%,#A34F0F);border-bottom:4px solid #6E2F07;color:var(--ink)}
+.bar-in{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:24px;background:#fff;padding:18px max(48px,env(safe-area-inset-right,0px)) 16px max(48px,env(safe-area-inset-left,0px))}
+.bar .logo img{height:92px;width:auto;display:block}
+.bar .logo .logo-w{display:none}
+.bar-band{grid-column:1;grid-row:2;min-width:0;padding-left:max(48px,env(safe-area-inset-left,0px))}
+.bar-band ol{list-style:none;margin:0;padding:0;display:flex;justify-content:flex-start;flex-wrap:nowrap;gap:0 44px}
+.bar-band a{display:block;color:#fff;text-decoration:none;font-weight:800;text-transform:uppercase;letter-spacing:.1em;font-size:1rem;padding:18px 0 14px;border-bottom:4px solid transparent;white-space:nowrap}
+.bar-band a:hover{color:#FFE7CF}
+.bar-band a.active{border-bottom-color:#fff}
+.bar > .cta{grid-column:2;grid-row:2;margin:0 max(48px,env(safe-area-inset-right,0px)) 0 24px;background:#fff;color:#A34F0F;padding:12px 26px;text-transform:uppercase;letter-spacing:.08em;font-weight:800;font-size:.88rem;white-space:nowrap}
 .bar > .cta:hover{background:#FFF1E2;color:#8F410B}
-@media (max-width:1320px){.bar-band ol{gap:0 34px}.bar-band a{font-size:.94rem;letter-spacing:.08em}.bar > .cta{right:32px;padding:14px 22px;font-size:.84rem}}
-@media (max-width:1120px){.bar-band ol{gap:0 24px}.bar-band a{font-size:.88rem;letter-spacing:.06em}.bar > .cta{display:none}}
+@media (max-width:1320px){.bar-band ol{gap:0 28px}.bar-band a{font-size:.92rem;letter-spacing:.07em}.bar > .cta{padding:10px 18px;font-size:.8rem}}
+@media (max-width:1120px){.bar-band ol{gap:0 22px}.bar-band a{font-size:.86rem;letter-spacing:.05em}.bar > .cta{display:none}}
 .menu-btn{all:unset;display:none;cursor:pointer;color:var(--ink);font-weight:600;font-size:1rem;padding:10px 4px}
 .menu-btn:focus-visible{outline:3px solid var(--sun)}
 
@@ -482,10 +482,8 @@ dialog.film video{width:100%;height:auto;display:block;border-radius:12px;backgr
 @media (max-width:980px){
   .bar{display:block}
   .bar{padding:0;border-bottom:4px solid #8F410B}
-  .menu-btn{color:#fff}
   .bar-in{justify-content:space-between}
-  .bar-band{margin:0}
-  .bar .logo .logo-w{display:block}
+  .bar-band{margin:0;padding-left:0}
   .bar-band a{text-transform:none;letter-spacing:0;font-weight:600;border-bottom-width:1px}
   .bar-in{clip-path:none;padding-block:12px;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
   .bar .logo img{height:58px}
@@ -544,8 +542,8 @@ dialog.film video{width:100%;height:auto;display:block;border-radius:12px;backgr
       <li><a href="#home" data-page="home">Home</a></li>
       <li><a href="#about" data-page="about">About Us</a></li>
       <li><a href="#our-work" data-page="our-work">Our Work</a></li>
-      <li><a href="#fellowship" data-page="fellowship">Fellowship</a></li>
-      <li><a href="#media" data-page="media">Media &amp; Press</a></li>
+      <li><a href="#fellowship" data-page="fellowship">Fellowship Program</a></li>
+      <li><a href="#media" data-page="media">Media</a></li>
       <li><a href="#contact" data-page="contact">Contact Us</a></li>
     </ol>
   </nav>
@@ -658,7 +656,7 @@ dialog.film video{width:100%;height:auto;display:block;border-radius:12px;backgr
 
   <div class="band">
     <div class="in">
-      <span class="kicker">Media &amp; Press</span>
+      <span class="kicker">Media</span>
       <h2>Latest news</h2>
       <div class="news-list" id="home-news"></div>
     </div>
@@ -910,7 +908,7 @@ dialog.film video{width:100%;height:auto;display:block;border-radius:12px;backgr
 <!-- ================= MEDIA ================= -->
 <section class="page" id="page-media">
   <div class="ph">
-    <div class="in"><span class="kicker">Media &amp; Press</span><h1>News &amp; Media</h1><p class="lede">Expressing our views on clean energy and environmental justice. Press releases, articles and media events from the Sharing the Power Foundation.</p></div>
+    <div class="in"><span class="kicker">Media</span><h1>News &amp; Media</h1><p class="lede">Expressing our views on clean energy and environmental justice. Press releases, articles and media events from the Sharing the Power Foundation.</p></div>
   </div>
   <div class="band">
     <div class="in">
