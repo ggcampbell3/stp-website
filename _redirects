@@ -10,3 +10,5 @@
 /contact-us      /#contact      301
 /leadership/*    /#about        301
 /news/*          /#media        301
+/privacy         /#privacy      301
+/privacy-policy  /#privacy      301

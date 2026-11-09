@@ -495,6 +495,10 @@ dialog.bio-dlg::backdrop{background:rgba(20,16,12,.7)}
 .art-body blockquote{margin:1.6em 0;padding:4px 0 4px 22px;border-left:4px solid var(--sun);font-family:var(--display);font-style:italic;font-size:1.2rem;line-height:1.55;color:var(--ink)}
 .art-body ul{columns:2;column-gap:40px;padding-left:20px;margin:0 0 1.4em}
 .art-body li{margin-bottom:6px;break-inside:avoid}
+.privacy .art-body ul{columns:1}
+.privacy .art-body h3{font-size:1.15rem}
+.cf-consent{margin:0;font-size:.85rem;color:var(--muted)}
+.cf-consent a{color:var(--ember)}
 .art-more{margin-top:64px;border-top:1px solid var(--line);padding-top:28px}
 .art-more h2{font-size:1.5rem}
 .art-more a{display:block;text-decoration:none;padding:16px 0;border-bottom:1px solid var(--line)}
@@ -992,17 +996,64 @@ dialog.film video{width:100%;height:auto;display:block;border-radius:12px;backgr
         <label class="full" for="cf-org">Organization<input id="cf-org" name="org" type="text" autocomplete="organization"></label>
         <label class="full" for="cf-reason">Reason for inquiry<select id="cf-reason" name="reason"><option>Corporate partnership or Community Impact PPA</option><option>Community organization or grant partner</option><option>Fellowship or student programs</option><option>Media</option><option>Other</option></select></label>
         <label class="full" for="cf-msg">Message<textarea id="cf-msg" name="message"></textarea></label>
+        <p class="full cf-consent">By submitting, you agree to our <a href="#privacy">Privacy Policy</a>.</p>
         <div class="full" style="display:flex;gap:18px;align-items:center;flex-wrap:wrap"><button class="btn" type="submit">Send message</button><span class="note" role="status"></span></div>
       </form>
     </div>
   </div>
+</section>
+<section class="page" id="page-privacy">
+  <article class="art in privacy">
+    <span class="kicker">Legal</span>
+    <h1>Privacy Policy</h1>
+    <p class="lede">Effective November 9, 2026</p>
+    <div class="art-body">
+      <p>The Sharing the Power Foundation (“the Foundation,” “we,” “us”) respects your privacy. This policy explains what information we collect through sharingthepower.org (the “Site”), how we use it, and the choices you have.</p>
+      <h3>Information we collect</h3>
+      <ul>
+        <li><strong>Information you give us.</strong> When you use our Contact Us form, we collect your first and last name, email, and reason for inquiry, plus your phone number, organization and message if you choose to provide them. If you email or call us, we receive whatever you choose to share.</li>
+        <li><strong>Information collected automatically.</strong> Like most websites, our hosting and content providers receive basic technical data when you visit, such as your IP address, browser type, device type, pages requested, and the date and time of your visit. This data is used to deliver the Site, keep it secure, and troubleshoot problems.</li>
+      </ul>
+      <h3>Cookies and tracking</h3>
+      <p>The Site does not use advertising cookies, analytics trackers, or cross-site tracking. Our hosting provider may set strictly necessary cookies or use similar technology for security and performance. Third-party sites we link to, such as Vimeo, LinkedIn, X and Instagram, have their own cookie practices once you leave our Site.</p>
+      <h3>How we use information</h3>
+      <ul>
+        <li>To respond to your inquiry and discuss partnerships, grants, fellowship and student programs, media requests or community programs.</li>
+        <li>To operate, maintain, secure and improve the Site.</li>
+        <li>To comply with legal obligations and protect our rights.</li>
+      </ul>
+      <p>We do not sell your personal information, and we do not share it for targeted advertising.</p>
+      <h3>Service providers</h3>
+      <p>We use trusted vendors to run the Site, and they process limited information on our behalf:</p>
+      <ul>
+        <li><strong>Cloudflare</strong> hosts and secures the Site.</li>
+        <li><strong>FormSubmit</strong> (formsubmit.co) delivers Contact Us form submissions to our email.</li>
+        <li><strong>Google Fonts</strong> serves the typefaces used on the Site, which means your browser connects to Google’s servers.</li>
+      </ul>
+      <p>We may also disclose information if required by law, to protect the safety or rights of the Foundation or others, or to an organization that succeeds to our programs.</p>
+      <h3>How long we keep information</h3>
+      <p>We keep inquiry information only as long as needed to respond and maintain our relationship with you, or as required by law.</p>
+      <h3>Your choices and rights</h3>
+      <p>You may ask us to access, correct or delete the personal information you’ve provided, or to stop contacting you. Depending on where you live, you may have additional rights under state privacy laws, and we will honor them as required. We will not discriminate against you for exercising your rights.</p>
+      <h3>Security</h3>
+      <p>We use reasonable safeguards, including encrypted (HTTPS) connections, to protect information. No method of transmission or storage is completely secure.</p>
+      <h3>Children’s privacy</h3>
+      <p>The Site is intended for adults, including college students and partner organizations. We do not knowingly collect personal information from children under 13.</p>
+      <h3>Links to other websites</h3>
+      <p>The Site links to news outlets, Volt Energy Utility, video platforms, partner organizations and social networks. We are not responsible for the privacy practices of those sites.</p>
+      <h3>Changes to this policy</h3>
+      <p>We may update this policy from time to time. The effective date above shows when it was last revised.</p>
+      <h3>Contact us</h3>
+      <p>Sharing the Power Foundation<br>2001 L Street NW, Suite 500, PMB 50532<br>Washington, DC 20036<br><a href="mailto:lstrickland@sharingthepower.org">lstrickland@sharingthepower.org</a></p>
+    </div>
+  </article>
 </section>
 </main>
 
 <footer class="site">
   <div class="in">
     <span>© 2026 Sharing the Power Foundation · 2001 L Street NW, Suite 500, PMB 50532, Washington, DC 20036</span>
-    <span><a href="https://www.linkedin.com/company/sharing-the-power-foundation" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://twitter.com/sharingthepower" target="_blank" rel="noopener">X</a> · <a href="https://www.instagram.com/sharingthepowerfoundation" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.sharingthepower.org/privacy">Privacy Policy</a> · <a href="https://www.sharingthepower.org/terms">Terms of Use</a></span>
+    <span><a href="https://www.linkedin.com/company/sharing-the-power-foundation" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://twitter.com/sharingthepower" target="_blank" rel="noopener">X</a> · <a href="https://www.instagram.com/sharingthepowerfoundation" target="_blank" rel="noopener">Instagram</a> · <a href="#privacy">Privacy Policy</a> · <a href="https://www.sharingthepower.org/terms">Terms of Use</a></span>
   </div>
 </footer>
 
@@ -1107,7 +1158,7 @@ const nav=document.getElementById('nav'), menu=document.getElementById('menu');
 menu.addEventListener('click',()=>{const o=nav.classList.toggle('open'); menu.setAttribute('aria-expanded',o); menu.textContent=o?'Close':'Menu';});
 
 // routing
-const pages=['home','about','our-work','fellowship','media','contact'];
+const pages=['home','about','our-work','fellowship','media','contact','privacy'];
 const artEl=document.getElementById('art');
 function renderArticle(a){
   const body=a.blocks.map(([t,v])=>t==='p'?`<p>${v}</p>`:t==='h'?`<h3>${esc(v)}</h3>`:t==='quote'?`<blockquote>${esc(v)}</blockquote>`:t==='ul'?`<ul>${v.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:'').join('');
@@ -1120,7 +1171,7 @@ document.addEventListener('click',e=>{const a=e.target.closest('[data-jump]'); i
 function jump(){const el=pendingJump&&document.getElementById(pendingJump); pendingJump=null; if(el) el.scrollIntoView({behavior:'smooth',block:'start'});}
 function route(){
   const p=(location.hash||'#home').slice(1); const art=PRESS.find(a=>a.id===p);
-  if(art) renderArticle(art); else document.title='Sharing the Power Foundation';
+  if(art) renderArticle(art); else document.title=p==='privacy'?'Privacy Policy | Sharing the Power Foundation':'Sharing the Power Foundation';
   const page=art?'article':(pages.includes(p)?p:'home');
   document.querySelectorAll('.page').forEach(s=>s.classList.toggle('active',s.id==='page-'+page)); document.body.classList.toggle('on-home',page==='home');
   document.querySelectorAll('.bar-band a').forEach(a=>a.classList.toggle('active',a.dataset.page===(page==='article'?'media':page)));
