@@ -984,6 +984,7 @@ dialog.film video{width:100%;height:auto;display:block;border-radius:12px;backgr
         <img src="img/thank-you.jpg" alt="A multigenerational group of neighbors smiling together outdoors" loading="lazy" style="margin-top:32px;width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:4px">
       </div>
       <form class="cf" novalidate>
+        <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
         <label for="cf-first">First name<input id="cf-first" name="first" type="text" required autocomplete="given-name"></label>
         <label for="cf-last">Last name<input id="cf-last" name="last" type="text" required autocomplete="family-name"></label>
         <label for="cf-email">Email<input id="cf-email" name="email" type="email" required autocomplete="email"></label>
@@ -1074,14 +1075,31 @@ const lb=document.getElementById('lb');
 document.addEventListener('click',e=>{const z=e.target.closest('[data-zoom]'); if(!z) return; lb.querySelector('img').src=z.querySelector('img').src; lb.querySelector('img').alt=z.querySelector('img').alt; lb.showModal();});
 lb.addEventListener('click',e=>{if(e.target===lb) lb.close();});
 
-// contact form
-document.querySelector('form.cf').addEventListener('submit',e=>{
+// contact form: submissions are emailed via FormSubmit (formsubmit.co)
+const FORM_TO='lstrickland@sharingthepower.org';
+document.querySelector('form.cf').addEventListener('submit',async e=>{
   e.preventDefault();
-  const f=e.target, note=f.querySelector('.note');
+  const f=e.target, note=f.querySelector('.note'), btn=f.querySelector('button[type=submit]');
   const bad=[...f.querySelectorAll('[required]')].filter(i=>!i.value.trim()||(i.type==='email'&&!/^\S+@\S+\.\S+$/.test(i.value)));
   if(bad.length){note.className='note err';note.textContent='Please add your first name, last name and a valid email.';bad[0].focus();return;}
-  note.className='note';note.textContent='Thank you. Our team will be in touch shortly. (Draft preview: this form is not connected yet.)';
-  f.reset();
+  if(f.elements._honey&&f.elements._honey.value){f.reset();return;}
+  const v=n=>f.elements[n].value.trim();
+  const data={
+    _subject:'New Sharing the Power website inquiry: '+v('first')+' '+v('last')+(v('org')?' ('+v('org')+')':''),
+    _template:'table', _captcha:'false', _replyto:v('email'),
+    'First name':v('first'),'Last name':v('last'),'Email':v('email'),'Phone':v('phone'),
+    'Organization':v('org'),'Reason for inquiry':v('reason'),'Message':v('message'),'Page':location.href
+  };
+  btn.disabled=true;note.className='note';note.textContent='Sending…';
+  try{
+    const r=await fetch('https://formsubmit.co/ajax/'+FORM_TO,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(data)});
+    const j=await r.json().catch(()=>({}));
+    if(!r.ok||String(j.success)==='false') throw new Error(j.message||r.status);
+    note.className='note';note.textContent='Thank you. Our team will be in touch shortly.';
+    f.reset();
+  }catch(err){
+    note.className='note err';note.textContent='Sorry, your message didn’t go through. Please email '+FORM_TO+'.';
+  }finally{btn.disabled=false;}
 });
 
 // mobile menu
