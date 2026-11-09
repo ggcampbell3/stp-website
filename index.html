@@ -1139,7 +1139,7 @@ document.querySelectorAll('[data-jump]').forEach(a=>a.addEventListener('click',e
 (function(){
   const RX=/Volt Energy Utility/g, URL='https://voltenergyutility.com/';
   const SKIP=new Set(['A','BUTTON','SCRIPT','STYLE','TITLE','TEXTAREA','INPUT','SELECT','OPTION','SVG','NOSCRIPT']);
-  function ok(n){for(let e=n.parentElement;e;e=e.parentElement){if(SKIP.has(e.tagName.toUpperCase()))return false;}return true;}
+  function ok(n){const p=n.parentElement;if(!p||p.closest('.l-title, #page-our-work, [data-no-volt-link]'))return false;for(let e=p;e;e=e.parentElement){if(SKIP.has(e.tagName.toUpperCase()))return false;}return true;}
   function linkify(root){
     const w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{acceptNode:n=>n.nodeValue.includes('Volt Energy Utility')&&ok(n)?NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_REJECT});
     const list=[];while(w.nextNode())list.push(w.currentNode);
