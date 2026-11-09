@@ -264,6 +264,20 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .band.band-mission{padding-bottom:40px}
 .band.band-approach{padding-top:40px}
 @media (max-width:980px){#page-about .ph-about{padding:0 0 48px}.pa-head h1 span{padding:2px 8px}.pa-card .lede{font-size:1.05rem}.pa-hero{height:420px;align-items:flex-end;padding-bottom:84px}.pa-head h1{font-size:1.75rem;line-height:1.38}.pa-head h1 br{display:none}.pa-hero::after{background:linear-gradient(0deg,rgba(30,12,2,.6),rgba(30,12,2,.1) 75%)}.pa-card{margin-top:-48px}.pa-card .lede{padding:24px 22px;border-left-width:6px}.band.band-mission{padding-bottom:24px}.band.band-approach{padding-top:24px}}
+#page-our-work .ph-work{padding-block:80px 72px}
+.ow-top{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:end}
+.ow-top h1{max-width:12em}.ow-top .lede{margin:0}
+.ow-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:48px}
+.ow-tile{position:relative;display:block;height:300px;border-radius:10px;overflow:hidden;color:#fff;text-decoration:none}
+.ow-tile img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.ow-tile::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(30,12,2,.85),rgba(30,12,2,0) 60%);transition:background .3s}
+.ow-tile:hover img{transform:scale(1.05)}
+.ow-tile:hover::after{background:linear-gradient(0deg,rgba(143,65,11,.9),rgba(143,65,11,.1) 70%)}
+.ow-tile span{position:absolute;left:16px;right:16px;bottom:16px;z-index:1;font-weight:700;line-height:1.3}
+.ow-tile b{display:block;font-family:var(--display);color:#F2A65A;font-size:1.5rem;margin-bottom:4px}
+.ow-tile:focus-visible{outline:3px solid #D9711F;outline-offset:3px}
+@media (max-width:1120px){.ow-tile{height:240px}.ow-tile span{font-size:.92rem}}
+@media (max-width:980px){#page-our-work .ph-work{padding-block:48px 48px}.ow-top{grid-template-columns:1fr;gap:16px}.ow-grid{grid-template-columns:1fr 1fr;gap:10px;margin-top:32px}.ow-tile{height:180px}.ow-tile:last-child{grid-column:1/-1}}
 .mission-b{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:stretch}
 .mission-b>*{min-width:0}
 .mb-photo{border-radius:16px;overflow:hidden;min-height:520px;box-shadow:0 18px 40px rgba(90,48,25,.14)}
@@ -763,11 +777,10 @@ dialog.film video{width:100%;height:auto;display:block;border-radius:12px;backgr
 
 <!-- ================= OUR WORK ================= -->
 <section class="page" id="page-our-work">
-  <div class="ph">
-    <svg class="rays" viewBox="0 0 200 200" aria-hidden="true"><g stroke="#D9711F" stroke-width="1" fill="none"><line x1="144.0" y1="100.0" x2="196.0" y2="100.0"/><line x1="142.5" y1="111.4" x2="169.5" y2="118.6"/><line x1="138.1" y1="122.0" x2="183.1" y2="148.0"/><line x1="131.1" y1="131.1" x2="150.9" y2="150.9"/><line x1="122.0" y1="138.1" x2="148.0" y2="183.1"/><line x1="111.4" y1="142.5" x2="118.6" y2="169.5"/><line x1="100.0" y1="144.0" x2="100.0" y2="196.0"/><line x1="88.6" y1="142.5" x2="81.4" y2="169.5"/><line x1="78.0" y1="138.1" x2="52.0" y2="183.1"/><line x1="68.9" y1="131.1" x2="49.1" y2="150.9"/><line x1="61.9" y1="122.0" x2="16.9" y2="148.0"/><line x1="57.5" y1="111.4" x2="30.5" y2="118.6"/><line x1="56.0" y1="100.0" x2="4.0" y2="100.0"/><line x1="57.5" y1="88.6" x2="30.5" y2="81.4"/><line x1="61.9" y1="78.0" x2="16.9" y2="52.0"/><line x1="68.9" y1="68.9" x2="49.1" y2="49.1"/><line x1="78.0" y1="61.9" x2="52.0" y2="16.9"/><line x1="88.6" y1="57.5" x2="81.4" y2="30.5"/><line x1="100.0" y1="56.0" x2="100.0" y2="4.0"/><line x1="111.4" y1="57.5" x2="118.6" y2="30.5"/><line x1="122.0" y1="61.9" x2="148.0" y2="16.9"/><line x1="131.1" y1="68.9" x2="150.9" y2="49.1"/><line x1="138.1" y1="78.0" x2="183.1" y2="52.0"/><line x1="142.5" y1="88.6" x2="169.5" y2="81.4"/></g><circle cx="100" cy="100" r="34" fill="none" stroke="#D9711F" stroke-width="1"/></svg>
+  <div class="ph ph-work">
     <div class="in">
-      <h1>Grantmaking with a purpose</h1>
-      <p class="lede">Every grant starts with the community. Residents, local leaders and community organizations help decide where funding goes, and we work alongside them to deliver, track and report on the results together.</p>
+      <div class="ow-top"><h1>Grantmaking with a purpose</h1><p class="lede">Every grant starts with the community. Residents, local leaders and community organizations help decide where funding goes, and we work alongside them to deliver, track and report on the results together.</p></div>
+      <nav class="ow-grid" aria-label="Focus areas"><a class="ow-tile" href="#p1" data-jump="p1"><img src="img/workforce.jpg" alt="" loading="lazy"><span><b>01</b>Workforce &amp; Economic Development</span></a><a class="ow-tile" href="#p2" data-jump="p2"><img src="img/bill-assist.jpg" alt="" loading="lazy"><span><b>02</b>Energy Affordability</span></a><a class="ow-tile" href="#p3" data-jump="p3"><img src="img/stem-students.jpg" alt="" loading="lazy"><span><b>03</b>STEM Education</span></a><a class="ow-tile" href="#p4" data-jump="p4"><img src="img/food-volunteers.jpg" alt="" loading="lazy"><span><b>04</b>Healthy Communities</span></a><a class="ow-tile" href="#p5" data-jump="p5"><img src="img/convening-circle.jpg" alt="" loading="lazy"><span><b>05</b>Community Engagement</span></a></nav>
     </div>
   </div>
 
@@ -1119,6 +1132,7 @@ bd.addEventListener('click',e=>{if(e.target===bd) bd.close();});
  document.getElementById('film-close').addEventListener('click',close);
  d.addEventListener('click',e=>{if(e.target===d) close();});
  d.addEventListener('close',()=>{fv.pause(); if(bg&&!matchMedia('(prefers-reduced-motion: reduce)').matches) bg.play().catch(()=>{});});})();
+document.querySelectorAll('[data-jump]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();const t=document.getElementById(a.dataset.jump);if(t)t.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});}));
 </script>
 
 </body>
