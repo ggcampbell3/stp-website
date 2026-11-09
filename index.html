@@ -1098,7 +1098,7 @@ document.querySelector('form.cf').addEventListener('submit',async e=>{
     note.className='note';note.textContent='Thank you. Our team will be in touch shortly.';
     f.reset();
   }catch(err){
-    note.className='note err';note.textContent='Sorry, your message didn’t go through. Please email '+FORM_TO+'.';
+    console.warn('Form service:',err);note.className='note err';note.textContent='Sorry, your message didn’t go through. Please email '+FORM_TO+'.'+(err&&err.message?' ('+err.message+')':'');
   }finally{btn.disabled=false;}
 });
 
