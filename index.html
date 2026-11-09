@@ -19,9 +19,7 @@
 <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
 <title>Sharing the Power Foundation</title>
 <meta name="description" content="Sharing the Power Foundation is an independent 501(c)(3) that turns clean energy infrastructure into lasting community benefit.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="fonts/fonts.css?v=202611091440">
 <style>
 /* traditional ampersand: only the & glyph in headings comes from a classic serif */
 @font-face{font-family:'AmpFix';src:local('Georgia'),local('Times New Roman'),local('Noto Serif'),local('DejaVu Serif');font-weight:100 500;unicode-range:U+0026}
@@ -496,7 +494,7 @@ dialog.bio-dlg::backdrop{background:rgba(20,16,12,.7)}
 .art-body ul{columns:2;column-gap:40px;padding-left:20px;margin:0 0 1.4em}
 .art-body li{margin-bottom:6px;break-inside:avoid}
 .privacy .art-body ul{columns:1}
-.privacy .art-body h3{font-size:1.15rem}
+.privacy .art-body h3{font-size:1.15rem;scroll-margin-top:28px}
 .cf-consent{margin:0;font-size:.85rem;color:var(--muted)}
 .cf-consent a{color:var(--ember)}
 .art-more{margin-top:64px;border-top:1px solid var(--line);padding-top:28px}
@@ -1014,7 +1012,7 @@ dialog.film video{width:100%;height:auto;display:block;border-radius:12px;backgr
         <li><strong>Information you give us.</strong> When you use our Contact Us form, we collect your first and last name, email, and reason for inquiry, plus your phone number, organization and message if you choose to provide them. If you email or call us, we receive whatever you choose to share.</li>
         <li><strong>Information collected automatically.</strong> Like most websites, our hosting and content providers receive basic technical data when you visit, such as your IP address, browser type, device type, pages requested, and the date and time of your visit. This data is used to deliver the Site, keep it secure, and troubleshoot problems.</li>
       </ul>
-      <h3>Cookies and tracking</h3>
+      <h3 id="cookies">Cookies and tracking</h3>
       <p>The Site does not use advertising cookies, analytics trackers, or cross-site tracking. Our hosting provider may set strictly necessary cookies or use similar technology for security and performance. Third-party sites we link to, such as Vimeo, LinkedIn, X and Instagram, have their own cookie practices once you leave our Site.</p>
       <h3>How we use information</h3>
       <ul>
@@ -1028,7 +1026,6 @@ dialog.film video{width:100%;height:auto;display:block;border-radius:12px;backgr
       <ul>
         <li><strong>Cloudflare</strong> hosts and secures the Site.</li>
         <li><strong>FormSubmit</strong> (formsubmit.co) delivers Contact Us form submissions to our email.</li>
-        <li><strong>Google Fonts</strong> serves the typefaces used on the Site, which means your browser connects to Google’s servers.</li>
       </ul>
       <p>We may also disclose information if required by law, to protect the safety or rights of the Foundation or others, or to an organization that succeeds to our programs.</p>
       <h3>How long we keep information</h3>
@@ -1048,12 +1045,42 @@ dialog.film video{width:100%;height:auto;display:block;border-radius:12px;backgr
     </div>
   </article>
 </section>
+<section class="page" id="page-terms">
+  <article class="art in privacy">
+    <span class="kicker">Legal</span>
+    <h1>Terms of Use</h1>
+    <p class="lede">Effective November 9, 2026</p>
+    <div class="art-body">
+      <p>Welcome to sharingthepower.org (the “Site”), operated by the Sharing the Power Foundation (“the Foundation,” “we,” “us”). By using the Site, you agree to these Terms of Use. If you do not agree, please do not use the Site.</p>
+      <h3>Use of the Site</h3>
+      <p>You may view and use the Site for lawful, informational purposes. You agree not to misuse the Site, including by attempting to disrupt it, gain unauthorized access to it, scrape it in bulk, or submit false, spam or harmful content through our forms.</p>
+      <h3>Information only</h3>
+      <p>Content on the Site, including descriptions of programs, grants, fellowships, partners and impact figures, is provided for general information about the Foundation. It is not a promise or offer of a grant, fellowship, scholarship or other funding, and it is not legal, financial or tax advice. Any grant or program award is made only through the Foundation’s own application and agreement process. Program details and plans may change.</p>
+      <h3>Intellectual property</h3>
+      <p>The Site’s text, photos, video, graphics, logos and design belong to the Foundation or its licensors and are protected by copyright and trademark law. You may share links to the Site and quote brief excerpts with attribution. Otherwise, you may not copy, modify, republish or use our content or marks without our written permission. Names and logos of partners and other organizations belong to their owners.</p>
+      <h3>Your submissions</h3>
+      <p>When you contact us through the Site, you confirm that the information you provide is accurate. Please don’t send confidential or proprietary information through the contact form. Our handling of personal information is described in our <a href="#privacy">Privacy Policy</a>.</p>
+      <h3>Third-party links</h3>
+      <p>The Site links to news articles, video platforms, social networks and other websites we don’t control. We are not responsible for their content, availability or practices.</p>
+      <h3>Disclaimers</h3>
+      <p>The Site is provided “as is” and “as available.” We work to keep it accurate and current, but we make no warranties of any kind, express or implied, about its accuracy, completeness or availability, or that it will be free of errors or viruses.</p>
+      <h3>Limitation of liability</h3>
+      <p>To the fullest extent permitted by law, the Foundation and its directors, officers, employees and partners will not be liable for any indirect, incidental, consequential or punitive damages arising from your use of, or inability to use, the Site.</p>
+      <h3>Governing law</h3>
+      <p>These Terms are governed by the laws of the District of Columbia, without regard to its conflict-of-law rules.</p>
+      <h3>Changes to these Terms</h3>
+      <p>We may update these Terms from time to time. The effective date above shows when they were last revised, and continued use of the Site means you accept the updated Terms.</p>
+      <h3>Contact us</h3>
+      <p>Sharing the Power Foundation<br>2001 L Street NW, Suite 500, PMB 50532<br>Washington, DC 20036<br><a href="mailto:lstrickland@sharingthepower.org">lstrickland@sharingthepower.org</a></p>
+    </div>
+  </article>
+</section>
 </main>
 
 <footer class="site">
   <div class="in">
     <span>© 2026 Sharing the Power Foundation · 2001 L Street NW, Suite 500, PMB 50532, Washington, DC 20036</span>
-    <span><a href="https://www.linkedin.com/company/sharing-the-power-foundation" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://twitter.com/sharingthepower" target="_blank" rel="noopener">X</a> · <a href="https://www.instagram.com/sharingthepowerfoundation" target="_blank" rel="noopener">Instagram</a> · <a href="#privacy">Privacy Policy</a> · <a href="https://www.sharingthepower.org/terms">Terms of Use</a></span>
+    <span><a href="https://www.linkedin.com/company/sharing-the-power-foundation" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://twitter.com/sharingthepower" target="_blank" rel="noopener">X</a> · <a href="https://www.instagram.com/sharingthepowerfoundation" target="_blank" rel="noopener">Instagram</a> · <a href="#privacy">Privacy Policy</a> · <a href="#terms">Terms of Use</a></span>
   </div>
 </footer>
 
@@ -1158,7 +1185,7 @@ const nav=document.getElementById('nav'), menu=document.getElementById('menu');
 menu.addEventListener('click',()=>{const o=nav.classList.toggle('open'); menu.setAttribute('aria-expanded',o); menu.textContent=o?'Close':'Menu';});
 
 // routing
-const pages=['home','about','our-work','fellowship','media','contact','privacy'];
+const pages=['home','about','our-work','fellowship','media','contact','privacy','terms'];
 const artEl=document.getElementById('art');
 function renderArticle(a){
   const body=a.blocks.map(([t,v])=>t==='p'?`<p>${v}</p>`:t==='h'?`<h3>${esc(v)}</h3>`:t==='quote'?`<blockquote>${esc(v)}</blockquote>`:t==='ul'?`<ul>${v.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:'').join('');
@@ -1170,14 +1197,15 @@ let pendingJump=null;
 document.addEventListener('click',e=>{const a=e.target.closest('[data-jump]'); if(a){pendingJump=a.dataset.jump; if(location.hash==='#our-work'){e.preventDefault(); jump();}}});
 function jump(){const el=pendingJump&&document.getElementById(pendingJump); pendingJump=null; if(el) el.scrollIntoView({behavior:'smooth',block:'start'});}
 function route(){
-  const p=(location.hash||'#home').slice(1); const art=PRESS.find(a=>a.id===p);
-  if(art) renderArticle(art); else document.title=p==='privacy'?'Privacy Policy | Sharing the Power Foundation':'Sharing the Power Foundation';
+  const h=(location.hash||'#home').slice(1); const p=h==='cookies'?'privacy':h; const art=PRESS.find(a=>a.id===p);
+  if(art) renderArticle(art); else document.title=({privacy:'Privacy Policy | ',terms:'Terms of Use | '}[p]||'')+'Sharing the Power Foundation';
   const page=art?'article':(pages.includes(p)?p:'home');
   document.querySelectorAll('.page').forEach(s=>s.classList.toggle('active',s.id==='page-'+page)); document.body.classList.toggle('on-home',page==='home');
   document.querySelectorAll('.bar-band a').forEach(a=>a.classList.toggle('active',a.dataset.page===(page==='article'?'media':page)));
   nav.classList.remove('open'); menu.setAttribute('aria-expanded','false'); menu.textContent='Menu';
   window.scrollTo({top:0});
   if(pendingJump) requestAnimationFrame(jump);
+  if(h==='cookies'){const c=document.getElementById('cookies');if(c)requestAnimationFrame(()=>c.scrollIntoView({block:'start'}));}
 }
 window.addEventListener('hashchange',route); route();
 
