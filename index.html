@@ -1154,7 +1154,7 @@ document.addEventListener('click',e=>{const z=e.target.closest('[data-zoom]'); i
 lb.addEventListener('click',e=>{if(e.target===lb) lb.close();});
 
 // contact form: submissions are emailed via FormSubmit (formsubmit.co)
-const FORM_TO='lstrickland@sharingthepower.org';
+const FORM_TO='gcampbell@voltenergyutility.com'; // temporary while Lauren Strickland is traveling
 document.querySelector('form.cf').addEventListener('submit',async e=>{
   e.preventDefault();
   const f=e.target, note=f.querySelector('.note'), btn=f.querySelector('button[type=submit]');
